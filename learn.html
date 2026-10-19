@@ -1,0 +1,1226 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master the Stock Market | PRRSAAR Vidyapeeth</title>
+    <link rel="stylesheet" href="MAIN_FIXED.css">
+    <script src="JAVA.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Hero Section */
+        .learn-hero-wrapper {
+            background: var(--bg-gradient);
+            padding: 65px 20px 75px;
+            border-bottom: 1px solid #E6EEF8;
+            position: relative;
+        }
+
+        .hero-main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        /* Left Content */
+        .hero-left-content {
+            flex: 1.25;
+        }
+
+        .hero-badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #E8F2FF;
+            color: var(--prrasar-blue);
+            border: 1px solid #D2E4FD;
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: var(--radius-pill);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .hero-left-content h1 {
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--prrasar-navy);
+            line-height: 1.22;
+            margin-bottom: 18px;
+            letter-spacing: -0.6px;
+        }
+
+            .hero-left-content h1 span {
+                color: var(--psv-green, #008C45);
+            }
+
+        .hero-left-content p.hero-para {
+            font-size: 16px;
+            color: var(--text-medium);
+            line-height: 1.65;
+            margin-bottom: 26px;
+            max-width: 600px;
+        }
+
+        /* Hindi Motto Pill */
+        .hindi-motto-strip {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #FFFFFF;
+            border: 1.5px solid #E1E8F2;
+            padding: 9px 24px;
+            border-radius: var(--radius-pill);
+            font-size: 15px;
+            font-weight: 700;
+            color: #1E293B;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 14px rgba(18, 59, 143, 0.04);
+        }
+
+            .hindi-motto-strip .sep-dot {
+                color: var(--psv-green, #008C45);
+                font-size: 16px;
+            }
+
+        /* Hero Stats Strip */
+        .hero-features-strip {
+            display: flex;
+            gap: 28px;
+            border-top: 1px solid #E1E9F5;
+            padding-top: 22px;
+            flex-wrap: wrap;
+        }
+
+        .feature-metric-unit strong {
+            display: block;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--prrasar-navy);
+        }
+
+        .feature-metric-unit span {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Right Side Portal Box */
+        .hero-right-portal-box {
+            flex: 0.85;
+            display: flex;
+            justify-content: center;
+        }
+
+        .psv-showcase-card {
+            background: linear-gradient(160deg, #DCFCE7 0%, #F0FDF4 55%, #FFFFFF 100%);
+            border: 1.5px solid #A7F3D0;
+            border-radius: var(--radius-card, 16px);
+            padding: 38px 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 370px;
+            box-shadow: 0 16px 36px rgba(0, 140, 69, 0.12);
+            position: relative;
+            transition: var(--transition, all 0.3s ease);
+        }
+
+        .psv-logo-stage {
+            width: auto;
+            height: auto;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+            .psv-logo-stage img {
+                max-height: 95px;
+                width: auto;
+                object-fit: contain;
+                display: block;
+            }
+
+        .psv-showcase-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--prrasar-navy, #0E1E38);
+            margin-bottom: 8px;
+        }
+
+        .psv-showcase-card p {
+            font-size: 13.5px;
+            color: var(--text-medium, #475569);
+            line-height: 1.55;
+            margin-bottom: 24px;
+        }
+
+        .btn-visit-psv {
+            background: linear-gradient(135deg, var(--prrasar-blue, #123B8F), #1D4ED8);
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transition, all 0.3s ease);
+            box-shadow: 0 6px 16px rgba(18, 59, 143, 0.2);
+        }
+
+            .btn-visit-psv:hover {
+                background: linear-gradient(135deg, var(--psv-green, #008C45), #006F37);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(0, 140, 69, 0.25);
+            }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 75px 20px 45px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header-block {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+            .section-header-block span.tag {
+                font-size: 12px;
+                font-weight: 800;
+                color: var(--psv-green, #008C45);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                display: inline-block;
+                margin-bottom: 8px;
+            }
+
+            .section-header-block h2 {
+                font-size: 34px;
+                font-weight: 800;
+                color: var(--prrasar-navy);
+                letter-spacing: -0.5px;
+            }
+
+            .section-header-block p {
+                font-size: 15px;
+                color: var(--text-light);
+                margin-top: 8px;
+            }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .why-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-soft);
+            border-radius: 16px;
+            padding: 28px 22px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+            .why-card:hover {
+                transform: translateY(-4px);
+                border-color: var(--psv-green, #008C45);
+                box-shadow: 0 12px 28px rgba(0, 140, 69, 0.09);
+            }
+
+        .why-icon-unit {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 140, 69, 0.1);
+            color: var(--psv-green, #008C45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 0 auto 16px;
+            transition: var(--transition);
+        }
+
+            .why-icon-unit i {
+                color: var(--psv-green, #008C45);
+                transition: color 0.2s ease;
+            }
+
+        /* Fixed Icon Hover State */
+        .why-card:hover .why-icon-unit {
+            background: var(--psv-green, #008C45);
+            color: #FFFFFF;
+        }
+
+            .why-card:hover .why-icon-unit i {
+                color: #FFFFFF !important;
+            }
+
+        .why-card h4 {
+            font-size: 16.5px;
+            font-weight: 700;
+            color: var(--prrasar-navy);
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            font-size: 13.5px;
+            color: var(--text-medium);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Courses Deck */
+        .courses-deck-section {
+            padding: 45px 20px 90px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .courses-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .course-box-card {
+            border-radius: var(--radius-card);
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            min-height: 30px;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+            .course-box-card:hover {
+                transform: translateY(-7px);
+            }
+
+        /* Course Card Themes */
+        .card-emerald {
+            background: #F2FBF7;
+            border: 1px solid #D5F3E5;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.08);
+        }
+
+            .card-emerald:hover {
+                border-color: #6EE7B7;
+                box-shadow: 0 18px 36px rgba(16, 185, 129, 0.18);
+            }
+
+        .card-cyan {
+            background: #F1F8FE;
+            border: 1px solid #D8EBFA;
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.08);
+        }
+
+            .card-cyan:hover {
+                border-color: #7DD3FC;
+                box-shadow: 0 18px 36px rgba(2, 132, 199, 0.18);
+            }
+
+        .card-deep-navy {
+            background: #0E1726;
+            border: 1px solid #1E293B;
+            color: #FFFFFF;
+            box-shadow: 0 14px 32px rgba(15, 23, 42, 0.25);
+        }
+
+            .card-deep-navy:hover {
+                border-color: #334155;
+                box-shadow: 0 20px 42px rgba(15, 23, 42, 0.38);
+            }
+
+        .card-lavender {
+            background: #F7F5FE;
+            border: 1px solid #EAE5FD;
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.08);
+        }
+
+            .card-lavender:hover {
+                border-color: #C4B5FD;
+                box-shadow: 0 18px 36px rgba(124, 58, 237, 0.18);
+            }
+
+        /* Card Elements */
+        .card-head-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+
+        .card-icon-pill {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-emerald .card-icon-pill {
+            color: #059669;
+        }
+
+        .card-cyan .card-icon-pill {
+            color: #0284C7;
+        }
+
+        .card-deep-navy .card-icon-pill {
+            background: #1E293B;
+            color: #F59E0B;
+        }
+
+        .card-lavender .card-icon-pill {
+            color: #7C3AED;
+        }
+
+        .card-top-arrow {
+            font-size: 15px;
+            color: #94A3B8;
+            transition: var(--transition);
+        }
+
+        .course-box-card:hover .card-top-arrow {
+            transform: translate(2px, -2px);
+            color: var(--text-dark);
+        }
+
+        .card-deep-navy:hover .card-top-arrow {
+            color: #F59E0B;
+        }
+
+        .course-box-card h3.course-name {
+            font-size: 21px;
+            font-weight: 800;
+            color: #0F172A;
+            margin-bottom: 6px;
+            line-height: 1.25;
+        }
+
+        .card-deep-navy h3.course-name {
+            color: #FFFFFF;
+        }
+
+        .course-duration-tag {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .card-deep-navy .course-duration-tag {
+            color: #94A3B8;
+        }
+
+        .course-feature-line {
+            font-size: 13.5px;
+            color: var(--text-medium);
+            line-height: 1.55;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .card-deep-navy .course-feature-line {
+            color: #CBD5E1;
+        }
+
+        .course-feature-line i {
+            color: var(--psv-green, #008C45);
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .card-deep-navy .course-feature-line i {
+            color: #F59E0B;
+        }
+
+        .card-price-row {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(0, 0, 0, 0.08);
+            margin-bottom: 18px;
+        }
+
+        .card-deep-navy .card-price-row {
+            border-top-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .val-current {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0F172A;
+        }
+
+        .card-deep-navy .val-current {
+            color: #FFFFFF;
+        }
+
+        .val-striked {
+            font-size: 13px;
+            color: #94A3B8;
+            text-decoration: line-through;
+            margin-left: 6px;
+        }
+
+        .card-tag-pill {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: var(--radius-pill);
+            margin-top: 8px;
+        }
+
+        .tag-golden {
+            background: #F59E0B;
+            color: #000000;
+        }
+
+        .tag-red {
+            background: #FEE2E2;
+            color: #DC2626;
+        }
+
+        .card-action-link {
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .card-emerald .card-action-link {
+            color: #059669;
+        }
+
+        .card-cyan .card-action-link {
+            color: #0284C7;
+        }
+
+        .card-deep-navy .card-action-link {
+            color: #F59E0B;
+        }
+
+        .card-lavender .card-action-link {
+            color: #7C3AED;
+        }
+
+        .course-box-card:hover .card-action-link {
+            gap: 10px;
+        }
+
+        /* Bottom Promo Banner */
+        .official-portal-banner {
+            background: linear-gradient(135deg, var(--prrasar-navy) 0%, #111D32 100%);
+            color: #FFFFFF;
+            padding: 42px 35px;
+            border-radius: var(--radius-card);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 45px;
+            box-shadow: 0 15px 35px rgba(10, 30, 63, 0.2);
+        }
+
+        .portal-banner-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .portal-icon-box {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: #38BDF8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .portal-banner-left h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .portal-banner-left p {
+            font-size: 14px;
+            color: #CBD5E1;
+            margin: 0;
+        }
+
+        .btn-visit-full-portal {
+            background: var(--psv-green, #008C45);
+            color: #FFFFFF;
+            padding: 13px 26px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .btn-visit-full-portal:hover {
+                background: #006F37;
+                transform: translateY(-2px);
+            }
+
+        /* Footer */
+        .prrasar-exact-footer {
+            background-color: #03142e;
+            color: #94a3b8;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            line-height: 1.6;
+            border-top: 1px solid #0f274a;
+            position: relative;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero-main-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-left-content p.hero-para {
+                margin: 0 auto 24px;
+            }
+
+            .hero-features-strip {
+                justify-content: center;
+            }
+
+            .courses-grid-4,
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .official-portal-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .portal-banner-left {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-left-content h1 {
+                font-size: 34px;
+            }
+
+            .courses-grid-4,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LOGO.png" alt="PRRSAAR Logo">
+            </a>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="PP.HTML" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-left">
+                        <a href="PP.HTML#calculators-section" class="tab-link active" data-tab="calculators-tab">Calculators</a>
+                        <a href="PP.HTML#pricing-section" class="tab-link" data-tab="pricing-tab">Pricing</a>
+                        <a href="PP.HTML#services-section" class="tab-link" data-tab="services-tab">Services</a>
+                    </div>
+                    <div class="dropdown-right">
+                        <div id="calculators-tab" class="tab-content active">
+                            <h5>All Calculators</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#calculators-section">Brokerage Calculator</a>
+                                <a href="PP.HTML#calculators-section">Margin Calculator</a>
+                                <a href="PP.HTML#calculators-section">SIP Calculator</a>
+                            </div>
+                            <a href="PP.HTML#calculators-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="pricing-tab" class="tab-content">
+                            <h5>Pricing Plans</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#pricing-section">Equity Delivery (Free)</a>
+                                <a href="PP.HTML#pricing-section">Intraday Charges</a>
+                                <a href="PP.HTML#pricing-section">F&O Pricing</a>
+                            </div>
+                            <a href="PP.HTML#pricing-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="services-tab" class="tab-content">
+                            <h5>Our Services</h5>
+                            <div class="tab-links-list">
+                                <a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open An Account</a>
+                                <a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a>
+                                <a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a>
+                            </div>
+                            <a href="PP.HTML#services-section" class="view-all-btn">View All →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="AA.HTML">About us</a>
+            <a href="learn.html" style="color: var(--green);">Learn</a>
+            <a href="mm.html">Market info</a>
+            <a href="f&q.html">F&Q</a>
+        </nav>
+        <div class="nav-buttons">
+            <button type="button" class="bag">LOG IN</button>
+            <button type="button" class="primary">Open Account</button>
+        </div>
+    </header>
+
+    <!-- Stock Ticker -->
+    <div class="stock-ticker-container">
+        <div class="ticker-wrap">
+            <div class="ticker-item">NIFTY 50 <span class="up">24,150.45 (+0.45%)</span></div>
+            <div class="ticker-item">SENSEX <span class="up">79,200.80 (+0.38%)</span></div>
+            <div class="ticker-item">RELIANCE <span class="down">2,450.15 (-0.12%)</span></div>
+            <div class="ticker-item">TCS <span class="up">4,120.30 (+1.20%)</span></div>
+            <div class="ticker-item">INFY <span class="up">1,940.65 (+0.75%)</span></div>
+            <div class="ticker-item">HDFC BANK <span class="down">1,650.00 (-0.40%)</span></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="learn-hero-wrapper">
+        <div class="hero-main-container">
+
+            <!-- Hero Left -->
+            <div class="hero-left-content">
+                <div class="hero-badge-tag">
+                    <i class="fa-solid fa-graduation-cap"></i> EDUCATION DIVISION OF PRRSAAR
+                </div>
+
+                <h1>We Build The Skill <span>To Build The Future</span></h1>
+
+                <p class="hero-para">
+                    Build practical market confidence with structured lessons, institutional charting tools, and mentor-led learning. From beginner basics to advanced professional trading strategies.
+                </p>
+
+                <!-- Tagline Pill -->
+                <div class="hindi-motto-strip">
+                    <span>सीख कर</span>
+                    <span class="sep-dot">•</span>
+                    <span>इन्वेस्ट कर</span>
+                    <span class="sep-dot">•</span>
+                    <span>मौज कर</span>
+                </div>
+
+                <!-- Metrics Strip -->
+                <div class="hero-features-strip">
+                    <div class="feature-metric-unit">
+                        <strong>50+</strong>
+                        <span>LIVE-STYLE SESSIONS</span>
+                    </div>
+                    <div class="feature-metric-unit">
+                        <strong>LMS</strong>
+                        <span>SECURE COURSE ACCESS</span>
+                    </div>
+                    <div class="feature-metric-unit">
+                        <strong>Online + Offline</strong>
+                        <span>LEARNING MODES</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Right -->
+            <div class="hero-right-portal-box">
+                <div class="psv-showcase-card">
+                    <div class="psv-logo-stage">
+                        <img src="psv.jpeg" alt="PRRSAAR Vidyapeeth Symbol Logo">
+                    </div>
+
+                    <h3>PRRSAAR Vidyapeeth</h3>
+                    <p>
+                        Explore our complete learning ecosystem, batch dates, live terminals, and counselor assistance desks.
+                    </p>
+
+                    <a href="https://prrsaarvidyapeeth.com/" target="_blank" class="btn-visit-psv">
+                        Visit PSV Official Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section">
+        <div class="section-header-block">
+            <span class="tag">WHY CHOOSE US</span>
+            <h2>Why Learn with PRRSAAR Vidyapeeth?</h2>
+            <p>Institutional market experience brought directly to aspiring traders and wealth builders.</p>
+        </div>
+
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon-unit"><i class="fa-solid fa-award"></i></div>
+                <h4>20+ Years Broking Legacy</h4>
+                <p>Curriculum crafted by an established SEBI-registered stockbroker and CDSL Depository Participant.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon-unit"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <h4>Learn from Experts</h4>
+                <p>Education led by professional active traders and certified financial research analysts.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon-unit"><i class="fa-solid fa-building"></i></div>
+                <h4>Physical Classroom Lab</h4>
+                <p>Live trading floor and offline classroom center located in New Delhi with real tick analysis.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-icon-unit"><i class="fa-solid fa-infinity"></i></div>
+                <h4>Lifetime LMS Access</h4>
+                <p>Continuous access to updated course modules, recordings, community discussions, and tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="courses-deck-section" id="courses-deck">
+        <div class="section-header-block">
+            <span class="tag">OUR COURSES</span>
+            <h2>Master the Stock Market with Our Courses</h2>
+            <p>From beginner basics to advanced trading strategies, we have the perfect course to kickstart your journey.</p>
+        </div>
+
+        <div class="courses-grid-4">
+
+            <!-- Card 1: Trading Hero -->
+            <a href="https://prrsaarvidyapeeth.com/" target="_blank" class="course-box-card card-emerald">
+                <div>
+                    <div class="card-head-row">
+                        <div class="card-icon-pill">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square card-top-arrow"></i>
+                    </div>
+
+                    <h3 class="course-name">Trading Hero</h3>
+                    <span class="course-duration-tag">Foundational · 3 months</span>
+
+                    <div class="course-feature-line">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Master Share Market Basics &amp; Technical Analysis</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-price-row">
+                        <span class="val-current">₹6,249</span>
+                        <span class="val-striked">₹12,999</span>
+                    </div>
+                    <span class="card-action-link">
+                        Explore course <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Card 2: Trading Masters -->
+            <a href="https://prrsaarvidyapeeth.com/" target="_blank" class="course-box-card card-cyan">
+                <div>
+                    <div class="card-head-row">
+                        <div class="card-icon-pill">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square card-top-arrow"></i>
+                    </div>
+
+                    <h3 class="course-name">Trading Masters</h3>
+                    <span class="course-duration-tag">Advanced · 5 months</span>
+
+                    <div class="course-feature-line">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Everything in Hero + Advanced Concepts + Options Trading</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-price-row">
+                        <span class="val-current">₹18,749</span>
+                        <span class="val-striked">₹29,999</span>
+                    </div>
+                    <span class="card-action-link">
+                        Explore course <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Card 3: Pro Trading Career Blueprint -->
+            <a href="https://prrsaarvidyapeeth.com/" target="_blank" class="course-box-card card-deep-navy">
+                <div>
+                    <div class="card-head-row">
+                        <div class="card-icon-pill">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square card-top-arrow"></i>
+                    </div>
+
+                    <h3 class="course-name">Pro Trading Career Blueprint</h3>
+                    <span class="course-duration-tag">Career Focused · 6 months</span>
+
+                    <div class="course-feature-line">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Trading Hero &amp; Masters + Live ODIN Terminal + Broking House Compliances Training + 100% Placement assistance</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-price-row">
+                        <span class="val-current">₹1,23,750</span>
+                        <span class="val-striked">₹1,50,000</span>
+                        <br>
+                        <span class="card-tag-pill tag-golden">★ 100% PLACEMENT ASSISTANCE</span>
+                    </div>
+                    <span class="card-action-link">
+                        Explore course <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Card 4: Offline Trading Course -->
+            <a href="https://prrsaarvidyapeeth.com/" target="_blank" class="course-box-card card-lavender">
+                <div>
+                    <div class="card-head-row">
+                        <div class="card-icon-pill">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square card-top-arrow"></i>
+                    </div>
+
+                    <h3 class="course-name">Offline Trading Course</h3>
+                    <span class="course-duration-tag">Immersive · 4 months</span>
+
+                    <div class="course-feature-line">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Practical Live Market Classroom Training (Mon-Fri)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-price-row">
+                        <span class="val-current">₹61,250</span>
+                        <span class="val-striked">₹90,000</span>
+                        <br>
+                        <span class="card-tag-pill tag-red">● OFFLINE CAMPUS</span>
+                    </div>
+                    <span class="card-action-link">
+                        Explore course <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Banner Redirection -->
+        <div class="official-portal-banner">
+            <div class="portal-banner-left">
+                <div class="portal-icon-box">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3>Explore All Batches &amp; Study Materials</h3>
+                    <p>Visit PRRSAAR Vidyapeeth's official portal for detailed brochures, demo lectures, and counselor support.</p>
+                </div>
+            </div>
+            <a href="https://prrsaarvidyapeeth.com/" target="_blank" class="btn-visit-full-portal">
+                Explore Our Courses <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="prrasar-exact-footer">
+        <div class="footer-columns-container">
+
+            <!-- Col 1: Contact -->
+            <div class="footer-box col-contact">
+                <a href="contact.html"</a>
+
+                <h3 class="box-title">Contact Us</h3>
+                <div class="contact-row">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Phone:</strong>
+                        <p>91-11-45350000 (Board Lines)</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <a href="mailto:info@prrsaar.com">info@prrsaar.com</a>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address:</strong>
+                        <p>17A/35, 2nd Floor, West Punjabi Bagh, New Delhi - 110026</p>
+                    </div>
+                </div>
+
+                <div class="store-buttons-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.wave.prrsaarshri" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div>
+                            <small>ANDROID APP ON</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="https://apps.apple.com/in/app/prrsaar-shri/id1603438370" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-apple"></i>
+                        <div>
+                            <small>Download on the</small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 2: Services -->
+            <div class="footer-box">
+                <h3 class="box-title">We Are Offering</h3>
+                <ul class="footer-nav">
+                    <li><a href="PP.HTML#product-flow">Equity</a></li>
+                    <li><a href="PP.HTML#product-flow">Derivative (Future and Option)</a></li>
+                    <li><a href="PP.HTML#product-flow">Currency</a></li>
+                    <li><a href="PP.HTML#product-flow">Commodity</a></li>
+                    <li><a href="PP.HTML#product-flow">IPO</a></li>
+                    <li><a href="PP.HTML#product-flow">Mutual Fund</a></li>
+                    <li><a href="PP.HTML#product-flow">G-Bonds</a></li>
+                    <li><a href="PP.HTML#product-flow">Depository</a></li>
+                    <li><a href="PP.HTML#product-flow">API Key</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Policies -->
+            <div class="footer-box">
+                <h3 class="box-title">Policies</h3>
+                <ul class="footer-nav">
+                    <li><a href="policy1.html">Policy for voluntary freezing of client's online access</a></li>
+                    <li><a href="policy2.html">Privacy Policy</a></li>
+                    <li><a href="policy3.html">Surveillance Policy</a></li>
+                    <li><a href="policy4.html">PMLA Policy</a></li>
+                    <li><a href="policy5.html">Policy on prefunded instrument</a></li>
+                    <li><a href="policy6.html">Policy on Unauthenticated News Circulation</a></li>
+                    <li><a href="policy7.html">Policy of Limit Setting</a></li>
+                    <li><a href="policy8.html">Inactive Account Policy</a></li>
+                    <li><a href="policy9.html">Conflict of Interest Policy</a></li>
+                    <li><a href="policy10.html">CLD Policy</a></li>
+                    <li><a href="policy11.html">Refund &amp; Cancellation Policy</a></li>
+                    <li><a href="policy12.html">Investor Complaint Redressal Mechanism</a></li>
+                    <li><a href="policy13.html">Internal Policy</a></li>
+                    <li><a href="policy14.html">CUSPA Policy</a></li>
+                    <li><a href="policy15.html">Terms &amp; Condition</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Other -->
+            <div class="footer-box">
+                <h3 class="box-title">Other</h3>
+                <ul class="footer-nav">
+                    <li><a href="other.html#research-disclaimer">Risk Disclaimer and Disclosure - Research Analysts</a></li>
+                    <li><a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open an Account</a></li>
+                    <li><a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a></li>
+                    <li><a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a></li>
+                    <li><a href="other.html#attention-investors">Investors Awareness</a></li>
+                    <li><a href="PD.html#payment-bank-details">Payment Bank Details</a></li>
+                    <li><a href="PD.html#downloads-section">Downloads</a></li>
+                    <li><a href="other.html#risk-derivatives">Risk Disclosures on Derivatives</a></li>
+                    <li><a href="https://www.sebi.gov.in/" target="_blank">SEBI Investor website</a></li>
+                    <li><a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a></li>
+                    <li><a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a></li>
+                    <li><a href="https://www.mcxindia.com/about-us#legal-framework">MCX Rules and Bye-Laws</a></li>
+                    <li><a href="other.html#demat-advisory">CDSL DOs &amp; DONTs</a></li>
+                    <li><a href="chartstock.html">Investors Charter For Stock</a></li>
+                    <li><a href="chartstock.html">Investors Charter For DP</a></li>
+                    <li><a href="other.html#kyc-validation">KYC Validation Process</a></li>
+                    <li><a href="other.html#pro-trading">Pro Trading Disclosure</a></li>
+                    <li><a href="other.html#fraud-alert">Fraud Alert</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Links Row -->
+        <div class="useful-links-row">
+            <h4>Useful Links</h4>
+            <div class="links-inline">
+                <a href="policy12.html">Investor Complaint Redressal Mechanism</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/inspection-and-audit#vernacularLanguage">Vernacular Language MCX</a>
+                <span>|</span>
+                <a href="https://www.ncdex.com/Investor/Client_Reg_Doc.aspx" target="_blank" rel="noopener">Vernacular Language NCDEX</a>
+                <span>|</span>
+                <a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a>
+                <span>|</span>
+                <a href="https://www.cdslindia.com/downloads/DP/SOP%20for%20Incapacitated%20investor%20Final.pdf">SOP for Depository Participants</a>
+            </div>
+        </div>
+
+        <!-- Compliance Text -->
+        <div class="legal-compliance-section">
+            <p><strong>Statutory Warning:</strong> Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
+            <p><strong>Attention Investors:</strong> "Brokerage will not exceed the SEBI prescribed limit"</p>
+
+            <p class="notice-head">Filing of complaints through SEBI's online portal 'SCORES' and 'SMARTODR portal' - Easy &amp; Quick</p>
+            <p class="notice-sub">
+                a. Register on SCORES / SMARTODR Portal.<br>
+                b. Mandatory Details For Filing Complaints on SCORES:<br>
+                &gt; Name<br>
+                &gt; PAN<br>
+                &gt; Address<br>
+                &gt; Mobile Number<br>
+                &gt; Email ID<br>
+                c. Benefits:<br>
+                (i) Effective Communication<br>
+                (ii) Speedy Redressal of Grievance / Dispute
+            </p>
+
+            <p class="portal-links">
+                <a href="http://scores.sebi.gov.in" target="_blank">http://scores.sebi.gov.in</a><br>
+                <a href="https://smartodr.in/login" target="_blank">https://smartodr.in/login</a>
+            </p>
+
+            <p class="circular-title">SEBI Master Circular on ODR updated on December 28, 2023</p>
+            <p class="circular-link">
+                <a href="https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794.html" target="_blank">https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794</a>
+            </p>
+
+            <p class="disclaimer-text">
+                Disclaimer: "The Stock Exchange, Mumbai is not in any manner answerable, responsible or liable to any person or persons for any acts of omission or commission, errors, mistakes and/or violation, actual or perceived, by us or our partners, agents, associates etc., of any of the Rules, Regulations, Bye-laws of the Stock Exchange, Mumbai, SEBI Act or any other laws in force from time to time. The Stock Exchange, Mumbai is not answerable, responsible or liable for any information on this Website or for any services rendered by our employees, our servants, and us."
+            </p>
+        </div>
+
+        <!-- Marquee -->
+        <div class="yellow-sliding-marquee-bar">
+            <div class="marquee-track">
+                <span class="marquee-item">
+                    1.&gt;Attention Investors   1. Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 01, 2020.
+                    2. Update your email id and mobile number with your stock broker / depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.
+                    3. Check your securities / MF / bonds in the consolidated account statement issued by NSDL/CDSL every month.   ... Issued in the interest of Investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    2.Information Regarding: SEBI Complaint Redress System (SCORES). Filing of Complaints on SCORES - Easy &amp; Quick.
+                    (a) Register on SCORES portal.
+                    (b) Mandatory details for filing complaints on SCORES:
+                    i). Name, PAN, Address, Mobile Number, Email ID. (c) Benefits: i). Effective communication. ii). Speedy redressal of the grievances.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    3.   ATTENTION INVESTORS: Prevent Unauthorized Transactions in your demat account --&gt; Update your Mobile Number with your Depository Participant.
+                    Receive alerts on your Registered Mobile for all debit and other important transactions in your demat account directly from CDSL on the same day issued in the interest of investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    4. "KYC is one time exercise while dealing in securities markets -
+                    once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">5. No need to issue cheques by investors while subscribing to IPO.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">6. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">7. No worries for refund as the money remains in investor's account.</span>
+                <span class="marquee-sep">✦</span>
+            </div>
+        </div>
+
+        <!-- Grievances -->
+        <div class="grievance-compliance-block">
+            <p class="kyc-rule-note">
+                "KYC is one time exercise while dealing in securities markets - once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+            </p>
+            <p class="ipo-note">
+                No need to issue cheques by investors while subscribing to IPO. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment. No worries for refund as the money remains in investor's account.
+            </p>
+
+            <p class="grievance-contact-label">In case of any grievances/complaint against the Stock Broker /Depository Participant:</p>
+            <p class="grievance-email-links">
+                Email-id at:
+                <a href="mailto:grievance@prrsaar.com">grievance@prrsaar.com</a>,
+                <a href="mailto:dpgrievances@prrsaar.com">dpgrievances@prrsaar.com</a>
+            </p>
+
+            <div class="official-portal-links">
+                <a href="https://scores.sebi.gov.in" target="_blank" class="badge-link">SCORES PORTAL</a>
+                <span class="link-divider">|</span>
+                <a href="https://smartodr.in/login" target="_blank" class="badge-link odr-highlight">
+                    SMART<span>ODR</span> PORTAL
+                </a>
+            </div>
+
+            <p class="sebi-numbers">
+                SEBI Regn No: INZ000027432, DP IN-DP-563-2021<br>
+                NSE: 13457, BSE: 6270, MCX: 10815, NCDEX: 00536 &amp; CDSL-12091700
+            </p>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="bottom-copyright-strip">
+            <p>© 2026 Prrsaar Sampada Private Limited | All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

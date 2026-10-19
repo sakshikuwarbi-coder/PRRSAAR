@@ -1,0 +1,1120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us &amp; Investor Grievance - PRRSAAR</title>
+    <link rel="stylesheet" href="MAIN_FIXED.css">
+    <script src="JAVA.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Page Header */
+        .contact-hero-banner {
+            background: linear-gradient(135deg, #091C38 0%, #03142E 100%);
+            padding: 55px 20px 65px;
+            color: #FFFFFF;
+            text-align: center;
+            border-bottom: 1px solid #1E3A8A;
+        }
+
+        .contact-hero-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 140, 69, 0.18);
+            color: #34D399;
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            font-size: 11.5px;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .contact-hero-banner h1 {
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+
+        .contact-hero-banner p {
+            font-size: 14.5px;
+            color: #CBD5E1;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Main Stream Wrapper */
+        .contact-stream-container {
+            max-width: 1140px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+        }
+
+        /* Head Office & Map Split Section */
+        .office-map-split-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 1.15fr;
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .office-details-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 34px 30px;
+            box-shadow: 0 6px 20px rgba(14, 30, 56, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .office-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: #EFF6FF;
+            color: var(--prrasar-blue, #1D4ED8);
+            border: 1px solid #BFDBFE;
+            width: fit-content;
+            margin-bottom: 14px;
+        }
+
+        .office-details-card h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--prrasar-navy, #0E1E38);
+            margin: 0 0 6px;
+        }
+
+        .company-subtitle {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--prrasar-green, #008C45);
+            margin-bottom: 20px;
+        }
+
+        .office-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .info-row-unit {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+            .info-row-unit i {
+                width: 36px;
+                height: 36px;
+                border-radius: 8px;
+                background: #F8FAFC;
+                border: 1px solid #E2E8F0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+                color: var(--prrasar-blue, #1D4ED8);
+                flex-shrink: 0;
+                margin-top: 2px;
+            }
+
+            .info-row-unit strong {
+                display: block;
+                font-size: 13px;
+                color: #1E293B;
+                margin-bottom: 2px;
+            }
+
+            .info-row-unit span,
+            .info-row-unit a {
+                font-size: 13px;
+                color: #64748B;
+                line-height: 1.5;
+                text-decoration: none;
+            }
+
+                .info-row-unit a:hover {
+                    color: var(--prrasar-green, #008C45);
+                }
+
+        .compliance-officer-strip {
+            background: #F8FAFC;
+            border-left: 4px solid var(--prrasar-green, #008C45);
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            font-size: 12.5px;
+            color: #334155;
+            margin-top: 10px;
+        }
+
+            .compliance-officer-strip strong {
+                color: var(--prrasar-navy, #0E1E38);
+            }
+
+        /* Map Embed Card */
+        .map-embed-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(14, 30, 56, 0.04);
+            min-height: 380px;
+            position: relative;
+        }
+
+            .map-embed-card iframe {
+                width: 100%;
+                height: 100%;
+                min-height: 420px;
+                border: none;
+                display: block;
+            }
+
+        /* Universal Section Block Card */
+        .compliance-block-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 32px 34px;
+            box-shadow: 0 6px 20px rgba(14, 30, 56, 0.04);
+        }
+
+        .card-header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #F1F5F9;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+            .card-header-bar.no-toggle {
+                cursor: default;
+            }
+
+        .header-left-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            background: rgba(0, 140, 69, 0.1);
+            color: var(--prrasar-green, #008C45);
+            flex-shrink: 0;
+        }
+
+        .card-header-bar h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--prrasar-navy, #0E1E38);
+            margin: 0;
+        }
+
+        .toggle-arrow-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid #CBD5E1;
+            background: #F8FAFC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #475569;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-active .toggle-arrow-btn {
+            transform: rotate(180deg);
+            background: var(--prrasar-green, #008C45);
+            border-color: var(--prrasar-green, #008C45);
+            color: #FFFFFF;
+        }
+
+        /* Collapsible Container - Fixed height restriction */
+        .collapsible-table-wrap {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+            .collapsible-table-wrap.is-open {
+                max-height: none;
+                overflow: visible;
+            }
+
+        /* Responsive Custom Tables */
+        .table-responsive-box {
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            margin-top: 12px;
+        }
+
+        .custom-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            text-align: left;
+            background: #FFFFFF;
+            min-width: 650px;
+        }
+
+            .custom-data-table th {
+                background: #0E1E38;
+                color: #FFFFFF;
+                padding: 12px 14px;
+                font-weight: 700;
+                letter-spacing: 0.3px;
+                white-space: nowrap;
+            }
+
+            .custom-data-table td {
+                padding: 12px 14px;
+                border-bottom: 1px solid #F1F5F9;
+                color: #334155;
+                vertical-align: middle;
+                line-height: 1.5;
+            }
+
+            .custom-data-table tr:hover td {
+                background: #F8FAFC;
+            }
+
+        /* Status Badges */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+            .status-badge.approved {
+                background: #DCFCE7;
+                color: #166534;
+                border: 1px solid #86EFAC;
+            }
+
+            .status-badge.cancelled {
+                background: #FEE2E2;
+                color: #991B1B;
+                border: 1px solid #FCA5A5;
+            }
+
+        /* Escalation Portals Alert Box */
+        .escalation-portal-note {
+            background: #EFF6FF;
+            border: 1px solid #BFDBFE;
+            border-radius: 10px;
+            padding: 16px 18px;
+            margin-top: 18px;
+            font-size: 12.5px;
+            color: #1E3A8A;
+            line-height: 1.6;
+        }
+
+            .escalation-portal-note a {
+                color: #1D4ED8;
+                font-weight: 700;
+                text-decoration: underline;
+            }
+
+        /* Branches Accordion Sub-box */
+        .branch-badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 14px;
+            margin-top: 12px;
+        }
+
+        .branch-card-unit {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 12.5px;
+            line-height: 1.5;
+            color: #334155;
+        }
+
+            .branch-card-unit strong {
+                display: block;
+                color: var(--prrasar-navy, #0E1E38);
+                font-size: 13.5px;
+                margin-bottom: 4px;
+            }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .office-map-split-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .compliance-block-card {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation Header -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LOGO.png" alt="PRRSAAR Logo">
+            </a>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="PP.HTML" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-left">
+                        <a href="PP.HTML#calculators-section" class="tab-link active" data-tab="calculators-tab">Calculators</a>
+                        <a href="PP.HTML#pricing-section" class="tab-link" data-tab="pricing-tab">Pricing</a>
+                        <a href="PP.HTML#services-section" class="tab-link" data-tab="services-tab">Services</a>
+                    </div>
+                    <div class="dropdown-right">
+                        <div id="calculators-tab" class="tab-content active">
+                            <h5>All Calculators</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#calculators-section">Brokerage Calculator</a>
+                                <a href="PP.HTML#calculators-section">Margin Calculator</a>
+                                <a href="PP.HTML#calculators-section">SIP Calculator</a>
+                            </div>
+                            <a href="PP.HTML#calculators-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="pricing-tab" class="tab-content">
+                            <h5>Pricing Plans</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#pricing-section">Equity Delivery (Free)</a>
+                                <a href="PP.HTML#pricing-section">Intraday Charges</a>
+                                <a href="PP.HTML#pricing-section">F&amp;O Pricing</a>
+                            </div>
+                            <a href="PP.HTML#pricing-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="services-tab" class="tab-content">
+                            <h5>Our Services</h5>
+                            <div class="tab-links-list">
+                                <a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open An Account</a>
+                                <a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a>
+                                <a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a>
+                            </div>
+                            <a href="PP.HTML#services-section" class="view-all-btn">View All →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="AA.HTML">About us</a>
+            <a href="learn.html">Learn</a>
+            <a href="mm.html">Market info</a>
+            <a href="f&q.html">F&Q</a>
+        </nav>
+        <div class="nav-buttons">
+            <button type="button" class="bag">LOG IN</button>
+            <button type="button" class="primary">Open Account</button>
+        </div>
+    </header>
+
+    <!-- Top Hero Banner -->
+    <section class="contact-hero-banner">
+        <div class="contact-hero-inner">
+            <span class="hero-pill"><i class="fa-solid fa-headset"></i> WE ARE HERE TO HELP</span>
+            <h1>Contact Us &amp; Escalation Desk</h1>
+            <p>Access registered office locations, authorized escalation points of contact, and SEBI/Exchange mandatory compliance disclosures.</p>
+        </div>
+    </section>
+
+    <!-- Content Stream -->
+    <main class="contact-stream-container">
+
+        <!-- 01. HEAD OFFICE & GOOGLE MAP SPLIT SECTION -->
+        <section class="office-map-split-grid">
+            <div class="office-details-card">
+                <div>
+                    <span class="office-badge"><i class="fa-solid fa-building-flag"></i> HEAD OFFICE</span>
+                    <h2>Prrsaar Sampada Private Limited</h2>
+                    <span class="company-subtitle">(Member: NSE, BSE, MSEI, MCX, NCDEX, CDSL)</span>
+
+                    <div class="office-info-list">
+                        <div class="info-row-unit">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Registered Address</strong>
+                                <span>17A/35, 2nd Floor, West Punjabi Bagh, New Delhi - 110026</span>
+                            </div>
+                        </div>
+
+                        <div class="info-row-unit">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Board Telephone Lines</strong>
+                                <span>+91-11-45350000</span>
+                            </div>
+                        </div>
+
+                        <div class="info-row-unit">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <div>
+                                <strong>Direct Lines for Trading</strong>
+                                <span>011-45350019, 011-45350020, 011-45350035</span>
+                            </div>
+                        </div>
+
+                        <div class="info-row-unit">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Official Correspondence</strong>
+                                <a href="mailto:info@prrsaar.com">info@prrsaar.com</a> | <a href="https://www.prrsaar.com" target="_blank">www.prrsaar.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="compliance-officer-strip">
+                    <strong>Compliance Officer:</strong> Mr. Ravi Kant | <strong>Phone:</strong> 011-45350017 | <strong>Email:</strong> ravikant@prrsaar.com
+                </div>
+            </div>
+
+            <!-- Google Map Embed Container -->
+            <div class="map-embed-card">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.467389539327!2d77.12648707549742!3d28.667791882103447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d037a54fae0a7%3A0xe1043aa4112e3e57!2s17A%2F35%2C%20West%20Punjabi%20Bagh%2C%20Punjabi%20Bagh%2C%20Delhi%2C%20110026!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="PRRSAAR Head Office Location">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- 02. INVESTOR GRIEVANCES ESCALATION MATRIX -->
+        <section class="compliance-block-card">
+            <div class="card-header-bar no-toggle">
+                <div class="header-left-title">
+                    <div class="header-icon-box"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h3>Investor Grievances Escalation Matrix (DP &amp; Stock Broking)</h3>
+                </div>
+            </div>
+
+            <div class="table-responsive-box">
+                <table class="custom-data-table">
+                    <thead>
+                        <tr>
+                            <th>Particulars</th>
+                            <th>Contact Person</th>
+                            <th>Address</th>
+                            <th>Contact No.</th>
+                            <th>Email Id</th>
+                            <th>Working Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Client Servicing</strong></td>
+                            <td>VANSH MAHESHWARI</td>
+                            <td>HEAD OFFICE-PUNJABI BAGH, DELHI</td>
+                            <td>01145350005</td>
+                            <td>
+                                Query: <a href="mailto:DP@PRRSAAR.COM">DP@PRRSAAR.COM</a><br>
+                                Complaints: <a href="mailto:grievance@prrsaar.com">grievance@prrsaar.com</a>, <a href="mailto:dpgrievances@prrsaar.com">dpgrievances@prrsaar.com</a>
+                            </td>
+                            <td>Mon-Fri: 9:00 am to 05:00 pm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Head of Client Servicing</strong></td>
+                            <td>CHANCHAL GUPTA</td>
+                            <td>HEAD OFFICE-PUNJABI BAGH, DELHI</td>
+                            <td>01145350006</td>
+                            <td><a href="mailto:CHANCHAL@PRRSAAR.COM">CHANCHAL@PRRSAAR.COM</a></td>
+                            <td>Mon-Fri: 10:00 am to 05:00 pm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Compliance Officer</strong></td>
+                            <td>RAVI KANT</td>
+                            <td>HEAD OFFICE-PUNJABI BAGH, DELHI</td>
+                            <td>01145350017</td>
+                            <td><a href="mailto:RAVIKANT@PRRSAAR.COM">RAVIKANT@PRRSAAR.COM</a></td>
+                            <td>Mon-Fri: 10:00 am to 05:00 pm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CEO</strong></td>
+                            <td>VED PARKASH GUPTA</td>
+                            <td>HEAD OFFICE-PUNJABI BAGH, DELHI</td>
+                            <td>01145350008</td>
+                            <td><a href="mailto:VPG@PRRSAAR.COM">VPG@PRRSAAR.COM</a></td>
+                            <td>Mon-Fri: 11:00 am to 04:00 pm</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="escalation-portal-note">
+                <i class="fa-solid fa-circle-info"></i> In absence of response/complaint not addressed to your satisfaction, you may lodge a complaint with
+                SEBI at <a href="https://scores.sebi.gov.in/" target="_blank">SCORES</a> or Exchanges at
+                <a href="https://investorhelpline.nseindia.com/NICEPLUS" target="_blank">NSE NICEPLUS</a>,
+                <a href="https://bsecrs.bseindia.com/ecomplaint/frmInvestorHome.aspx" target="_blank">BSE e-Complaint</a>,
+                <a href="https://ncdex.com/investor_complaint" target="_blank">NCDEX Grievance</a>,
+                <a href="https://www.mcxindia.com/Investor-Services" target="_blank">MCX Investor Services</a>, and
+                <a href="https://www.cdslindia.com/Footer/grievances.aspx" target="_blank">CDSL Grievance Portal</a>.
+                Please quote your Service Ticket/Complaint Ref No. while raising your complaint at SEBI SCORES/Exchange portal.
+            </div>
+        </section>
+
+        <!-- 03. ANNEXURE B - BASIC DETAILS & BRANCHES (COLLAPSIBLE ACCORDION) -->
+        <section class="compliance-block-card">
+            <div class="card-header-bar toggle-active" onclick="toggleAccordion('branchesSection', this)">
+                <div class="header-left-title">
+                    <div class="header-icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Annexure B - Basic Details of Stock Broker &amp; Registered Branches</h3>
+                </div>
+                <div class="toggle-arrow-btn"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+
+            <div class="collapsible-table-wrap is-open" id="branchesSection">
+                <div class="table-responsive-box">
+                    <table class="custom-data-table">
+                        <thead>
+                            <tr>
+                                <th>Stock Broker</th>
+                                <th>Registration Number</th>
+                                <th>Registered Office Address</th>
+                                <th>Contact &amp; Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Prrsaar Sampada Private Limited</strong></td>
+                                <td>
+                                    SEBI Reg. no.: <strong>INZ000027432</strong><br>
+                                    NSE-TM ID: 13457 | BSE-TM ID: 6270<br>
+                                    MCX-TM ID: 10815 | NCDEX-TM ID: 00536<br>
+                                    SEBI DP R no.: IN-DP-563-2021 | DP ID: 12091700
+                                </td>
+                                <td>17A/35, IIND FLOOR, PUNJABI BAGH WEST, NEW DELHI - 110026</td>
+                                <td>
+                                    Phone: +91-11-45350000<br>
+                                    Email: <a href="mailto:info@prrsaar.com">info@prrsaar.com</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 style="margin: 22px 0 10px; font-size: 14.5px; color: var(--prrasar-navy); font-weight: 700;">
+                    Branch Office Network (7 Operational Units)
+                </h4>
+
+                <div class="branch-badge-grid">
+                    <div class="branch-card-unit">
+                        <strong>(1) Shalimar Bagh Branch (Delhi)</strong>
+                        DDA Built-up Janta Flat No. 34, A-Block &amp; Pocket AJ, Shalimar Bagh, New Delhi, East Delhi, Delhi - 110088
+                    </div>
+                    <div class="branch-card-unit">
+                        <strong>(2) Peeragarhi Branch (Delhi)</strong>
+                        487/39 IInd Floor, National Market, Peeragarhi, New Delhi, East Delhi, Delhi - 110087
+                    </div>
+                    <div class="branch-card-unit">
+                        <strong>(3) Laxminagar Branch (Delhi)</strong>
+                        Office No. 203, IInd Floor, A15 Gurunanakpura, Gali No. 3, Laxminagar, New Delhi, East Delhi, Delhi - 110092
+                    </div>
+                    <div class="branch-card-unit">
+                        <strong>(4) Faridabad-1 Branch (Haryana)</strong>
+                        SCF 115, Part-1, HUDA Market, Sector-19, Faridabad, Haryana - 121002
+                    </div>
+                    <div class="branch-card-unit">
+                        <strong>(5) Gannaur Branch (Haryana)</strong>
+                        First Floor, Shop No. 22, Near ICICI Bank, Near Moolchand Hospital, Devilal Chowk, Ganaur, Dist. Sonipat - 131101
+                    </div>
+                    <div class="branch-card-unit">
+                        <strong>(6) Hamirpur Branch (Himachal Pradesh)</strong>
+                        Village Lahar, Post Office &amp; Tehsil Dugha, Hamirpur, Himachal Pradesh - 177001
+                    </div>
+                    <div class="branch-card-unit">
+                        <strong>(7) Palwal-2 Branch (Haryana)</strong>
+                        NH-2, Hotel Arya Building, Near SBI, New Grain Market, Palwal, Haryana - 121102
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. KEY MANAGERIAL PERSONNEL (KMP) -->
+        <section class="compliance-block-card">
+            <div class="card-header-bar no-toggle">
+                <div class="header-left-title">
+                    <div class="header-icon-box"><i class="fa-solid fa-users-gear"></i></div>
+                    <h3>Key Managerial Personnel (KMP) Contact Details</h3>
+                </div>
+            </div>
+
+            <div class="table-responsive-box">
+                <table class="custom-data-table">
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Name of the Individual</th>
+                            <th>Designation</th>
+                            <th>Mobile Number</th>
+                            <th>Email Id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>VED PARKASH GUPTA</strong></td>
+                            <td>DIRECTOR</td>
+                            <td>9313813880</td>
+                            <td><a href="mailto:VPG@PRRSAAR.COM">VPG@PRRSAAR.COM</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>RAVI KANT</strong></td>
+                            <td>Compliance Officer</td>
+                            <td>9311115751</td>
+                            <td><a href="mailto:RAVIKANT@PRRSAAR.COM">RAVIKANT@PRRSAAR.COM</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>PRITI GUPTA</strong></td>
+                            <td>DIRECTOR</td>
+                            <td>7350012657</td>
+                            <td><a href="mailto:PRITIGUPTA@PRRSAAR.COM">PRITIGUPTA@PRRSAAR.COM</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 05. AUTHORISED PERSONS LIST (COLLAPSIBLE WITH ARROW TOGGLE) -->
+        <section class="compliance-block-card">
+            <div class="card-header-bar" onclick="toggleAccordion('apTableSection', this)">
+                <div class="header-left-title">
+                    <div class="header-icon-box"><i class="fa-solid fa-address-book"></i></div>
+                    <h3>List of Authorised Persons (AP) - 70 Records</h3>
+                </div>
+                <div class="toggle-arrow-btn"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+
+            <div class="collapsible-table-wrap" id="apTableSection">
+                <div class="table-responsive-box">
+                    <table class="custom-data-table">
+                        <thead>
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Authorised Person's Name</th>
+                                <th>AP Code (Exchange Wise)</th>
+                                <th>Constitution</th>
+                                <th>Status</th>
+                                <th>Registered Address</th>
+                                <th>City / State / PIN</th>
+                                <th>Terminal Allotted</th>
+                                <th>No. of Terminals</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>SONU JHA</td><td>NSE- AP2395000621</td><td>INDIVIDUAL</td><td><span class="status-badge approved">Approved</span></td><td>HOUSE NO.A-94 PH-II NIHAL VIHAR NANGLOI,DELHI,WEST DELHI</td><td>DELHI, DELHI 110041</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>2</td><td>NANCY GOEL</td><td>NSE- AP2395000611 &amp; MCX- 166277</td><td>INDIVIDUAL</td><td><span class="status-badge approved">Approved</span></td><td>H.NO. 169, B BLOCK NEAR MEERA BAGH, STATE BANK NAGAR PASCHIM VIHAR</td><td>NEW DELHI, DELHI 110063</td><td>YES</td><td>1</td></tr>
+                            <tr><td>3</td><td>DAKSH</td><td>NSE- AP2395000591 &amp; BSE- AP01627001160427</td><td>INDIVIDUAL</td><td><span class="status-badge approved">Approved</span></td><td>GROUND FLOOR SHOP NO.2 SAT JINDA KALYANA MANDIR</td><td>SONIPAT, HARYANA 131001</td><td>YES</td><td>1</td></tr>
+                            <tr><td>4</td><td>ROHIT MALHOTRA</td><td>NSE- AP2395000151 &amp; MCX- 159669</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>UNIT NO.615, 6TH FLOOR, RING ROAD MALL, PLOT NO.21, MANGLAM PLACE, SEC 3 ROHINI</td><td>NEW DELHI, DELHI 110085</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>5</td><td>AMIT KANODIA</td><td>NSE- AP2395000521 &amp; MCX- 163021</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>FLAT NO. O ON SECOND FLOOR, SOUTH PATAL NAGAR</td><td>NEW DELHI, DELHI 110008</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>6</td><td>DEEPTI GARG</td><td>NSE- AP2395000551 &amp; BSE- AP01627001157914</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>E-4/61 1ST FLOOR SECTOR-7 ROHINI</td><td>NEW DELHI, DELHI 110085</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>7</td><td>YOGESH JINDAL</td><td>MCX-126316 &amp; NCDEX-126316</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>S NO-2635/8/2 S/F NAYA BAZAR DELHI</td><td>NEW DELHI, DELHI 110006</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>8</td><td>UMESH CHNDRA AGARWAL</td><td>MCX-159457</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>CHANDAUSI NAGAR KE BAZAR PURANI PAITH</td><td>CHANDAUSI, UTTAR PRADESH 202412</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>9</td><td>GARGI DEVI</td><td>MCX-159458</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>M O RAAJ</td><td>CHANDAUSI, UTTAR PRADESH 202414</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>10</td><td>VISHWA SHARMA</td><td>MCX- 163082</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>HOUSE NO.60 1ST FLOOR, GALI NO.1, NEW SABHAPUR GIJRAN KARAWAL NAGAR</td><td>KARAWAL NAGAR, DELHI 110094</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>11</td><td>YASH GOEL</td><td>MCX- 164543</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>SHOP NO.1 YAMUNA VIHAR</td><td>NEW DELHI, DELHI 110053</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>12</td><td>PAYAL GOEL</td><td>NSE-AP2395000581</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>E-27 4TH FLOOR BHAGWAN DASS NAGAR PUNJABI BAGH EAST</td><td>NEW DELHI, DELHI 110026</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>13</td><td>VINOD KUMAR CHAUHAN</td><td>NSE- AP2395000091</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>G-30, FIRST FLOOR KARAMPURA</td><td>NEW DELHI, DELHI 110015</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>14</td><td>SUNIL KUMAR RANA</td><td>NSE- AP2395000111</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>ONE ROOM ON 3RD FLOOR, GH6 FLAT NO. 3 PASCHIM VIHAR SUNDER VIHAR</td><td>NEW DELHI, DELHI 110087</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>15</td><td>MANPREET SINGH JUDGE</td><td>NSE- AP2395000191</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>K36 FATEH NAGAR TILAK NAGAR</td><td>NEW DELHI, DELHI 110018</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>16</td><td>SURENDER GOEL</td><td>NSE- AP2395000201</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H.NO-40 PVT NO -203 2ND FLR DLF RADHA MOHAN PLAZA KIRTI NAGAR</td><td>NEW DELHI, DELHI 110015</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>17</td><td>MAYANK BHARDWAJ</td><td>NSE- AP2395000231</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>NH-2 HOTEL AARYA 1ST FLOOR PALWAL</td><td>PALWAL, HARYANA 121102</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>18</td><td>RITA</td><td>NSE- AP2395000241</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>NO.2251/BM, KHASRA NO.688/335 MUNSHIRAMBAGH RANJITNAGAR</td><td>NEW DELHI, DELHI 110008</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>19</td><td>SUSHMA</td><td>NSE- AP2395000271</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>C-8/152 YAMUNA VIHAR KHANPUR</td><td>NEW DELHI, DELHI 110053</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>20</td><td>SURESH KUMAR AHUJA</td><td>NSE- AP2395000331</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>HOUSE 555 FIRST FLOOR SECTOR 9 NEAR GYM KHAANA CLUB</td><td>BAHADURGARH, HARYANA 124507</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>21</td><td>SUGEET GUPTA</td><td>NSE- AP2395000361 &amp; MCX- 159325</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>FLAT NO-1404 TOWER NO-4 ORANGE COUNTY AHINSA KHAND-1</td><td>INDIRAPURAM, UTTAR PRADESH 201014</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>22</td><td>HARDEEP KAUR</td><td>NSE- AP2395000341</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>204 S/F PLOT -6 BALA JI PLAZA LSC BHERA</td><td>NEW DELHI, DELHI 110087</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>23</td><td>PRIYA JINDAL</td><td>NSE- AP2395000351 &amp; MCX- 159081</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>811/17, INDRA BAJAR JIND</td><td>JIND, HARYANA 126102</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>24</td><td>NARESH KUMAR GARG</td><td>NSE- AP2395000381 &amp; MCX- 158154</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>HOUSE NO. 624 SIRI NAGAR SHAKUR BASTI</td><td>NEW DELHI, DELHI 110034</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>25</td><td>SUDHIR BANSAL</td><td>NSE- AP2395000391</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>E-126 FIRST FLOOR BLOCK-E KARAMPURA WEST</td><td>NEW DELHI, DELHI 110015</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>26</td><td>DEEPAK JAIN</td><td>NSE- AP2395000371</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>SHOP NO-4 VARDHMAN GARMENTS KATH MANDI SAMALKHA</td><td>SAMALKHA, HARYANA 132101</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>27</td><td>PRABHAT KUMAR JHA</td><td>NSE- AP2395000411, MCX- 158208, NCDEX- 126361</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>NO.A-515/B, BUDHA MARG, MANDA WALI FAZALPUR</td><td>NEW DELHI, DELHI 110092</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>28</td><td>SALONI GUPTA</td><td>NSE- AP2395000421, MCX- 158351, NCDEX- 126298</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>F- 3/2 1ST FLOOR MODEL TOWN 2 G.T.B NAGAR</td><td>NEW DELHI, DELHI 110009</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>29</td><td>ANUBHAV GUPTA</td><td>NSE- AP2395000431, MCX- 158505, NCDEX- 126286</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>C-21 C- BLOCK C.C. COLONY R.P BAGH MODEL TOWN</td><td>NEW DELHI, DELHI 110007</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>30</td><td>AJIT PRASHAD JAIN</td><td>NSE- AP2395000441 &amp; BSE- AP01627001150026</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>HOUSE NO. 220 BLOCK- E SHASTRI NAGAR</td><td>NEW DELHI, DELHI 110052</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>31</td><td>ANKIT RAWAT</td><td>NSE- AP2395000451, MCX- 160200, BSE, NCDEX</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>OFFICE NO 506 SUN AND MOON CHAMBERS AJMER ROAD</td><td>JAIPUR, RAJASTHAN 302006</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>32</td><td>PIYUSH SONAL</td><td>NSE- AP2395000461, MCX- 163244, NCDEX- 126746</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>1/7, EAST PATEL NAGAR, 3RD FLOOR</td><td>NEW DELHI, DELHI 110008</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>33</td><td>MANDEEP JANGRA</td><td>NSE- AP2395000471 &amp; BSE- AP01627001153819</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>SCO 48 HUDDA GROUND JIND</td><td>JIND, HARYANA 126102</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>34</td><td>AJIT SHARMA</td><td>MCX-161148 &amp; NSE- AP2395000601</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H. NO.-60, GALI NO.-1 NEW SABAPUR GUJRAN, KARAWAL NAGAR</td><td>NORTH EAST DELHI, DELHI 110094</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>35</td><td>DINESH NANDKISHORE CHHANGANI</td><td>NSE- AP2395000511 &amp; MCX- 163054</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>SHOP NO. S16 ZOOM PLAZA LT ROAD GORAI BORIVALI WEST</td><td>MUMBAI, MAHARASHTRA 400092</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>36</td><td>DEVINDER KUMAR</td><td>NSE- AP2395000561 &amp; BSE- AP01627001159283</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>57-F GADODIA ROAD PLOT NO.9 ANAND PARBAT THAN SINGH NAGAR</td><td>NEW DELHI, DELHI 110005</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>37</td><td>PANKAJ JAIN</td><td>NSE- AP2395000311</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>NO.K-113 SHOP NO.1 MANGAL BAZAR ROAD UTTAM NAGAR</td><td>NEW DELHI, DELHI 110059</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>38</td><td>HIMANI GUPTA</td><td>NSE- AP2395000571 &amp; MCX- 164614</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO.529, 5TH FLOOR, S G SHOPPING MALL SEC-9 ROHINI</td><td>NEW DELHI, DELHI 110085</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>39</td><td>MOHAN LAL SHARMA</td><td>NSE- AP2395000031</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>UTTAM NAGAR</td><td>NEW DELHI, DELHI 110085</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>40</td><td>POOJA</td><td>NSE- AP2395000041</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>C4 MARKET SHOP NO-4 1ST FLOOR LAWRANCE ROAD KESAV PURAM</td><td>NEW DELHI, DELHI 110035</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>41</td><td>SREEKANTH REDDY ALLURI</td><td>NSE- AP2395000061</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>FLAT NO-305 BLOCK-I HARIVILLU APTS MANIKONDA</td><td>HYDERABAD, TELANGANA 500089</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>42</td><td>KARAN NARANG</td><td>NSE-AP2395000071</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>3RD FLOOR PLOT NO-1 HWW ROAD GOLDEN AVENUE</td><td>AMRITSAR, PUNJAB 143001</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>43</td><td>VAKUL TYAGI</td><td>NSE- AP2395000131</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H-4/1741 JAHANGIRPURI N.S MANDI DELHI</td><td>NORTH WEST DELHI, DELHI 110033</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>44</td><td>LUV KHANNA</td><td>NSE- AP2395000211</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>FLAT NO-171 G/F NAGIN LAKE APTS PEERAGARHI PASCHIM VIHAR</td><td>NEW DELHI, DELHI 110063</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>45</td><td>RAHUL GARG</td><td>NSE- AP2395000221, MCX- 137871, NCDEX- 123110</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>VILLAGE PITHO ROAD NH-7 BHTHINDA BARNALA ROAD</td><td>RAMPURA PHUL, PUNJAB 151103</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>46</td><td>VIKASH CHANDRA JHA</td><td>NSE- AP2395000281 &amp; MCX- 148944</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>F99/A WEST VINOD NAGAR GALI NO-3 SHAKARPUR</td><td>NEW DELHI, DELHI 110092</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>47</td><td>VIRENDER ARORA</td><td>NSE-AP2395000481 &amp; BSE- AP01627001154984</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H.NO.-245, BHARAT APARTMENT SECTOR-13 ROHINI</td><td>NORTH WEST DELHI, DELHI 110085</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>48</td><td>TARUN KUMAR</td><td>NSE- AP2395000321</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>345, 3RD FLOOR POCKET 1 DELHI GOVT DISPANSARY PASCHIM PURI</td><td>NEW DELHI, DELHI 110063</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>49</td><td>SUDHIR KUMAR</td><td>MCX-27123</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO.169, VILLAGE ZAINABAD</td><td>REWARI, HARYANA 123411</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>50</td><td>YOGESH SHARMA</td><td>MCX- 27124</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO.76, SHANKAR VIHAR, RAMGHAT ROAD</td><td>ALIGARH, UTTAR PRADESH 111111</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>51</td><td>YOGESH YADAV</td><td>MCX-27125</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO.213, VILLAGE ZAINABAD</td><td>REWARI, HARYANA 123411</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>52</td><td>YOGESH YADAV</td><td>MCX-27126</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO.213, VILLAGE ZAINABAD</td><td>REWARI, HARYANA 123411</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>53</td><td>NARAIN DASS</td><td>MCX-27127</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO.19, VILLAGE GANGAICHAJAT PO MASTAPURI</td><td>REWARI, HARYANA 123411</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>54</td><td>VIVEK VASHISHT</td><td>MCX-29913</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO.196, HARMILAP NAGAR BALTANA ZIRAKPUR</td><td>ZIRAKPUR, PUNJAB 140604</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>55</td><td>JASBIR YADAV</td><td>MCX-30041</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO.645, VILLAGE DAHINA</td><td>REWARI, HARYANA 123411</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>56</td><td>PUNEET SEHDEV</td><td>MCX-30279</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO. T-99, RAMESH NAGAR, BANDER WALI KHUI</td><td>NEW DELHI, DELHI 110015</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>57</td><td>VIKAS KUMAR GUPTA</td><td>MCX-34333</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>D3/6 K S NAGAR NANGLOI</td><td>NEW DELHI, DELHI 110041</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>58</td><td>NIRMALA RAGHAV</td><td>MCX-35970</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO 2/25 DINDAYAL CAMPUS, KELA NAGAR</td><td>ALIGARH, UTTAR PRADESH 202001</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>59</td><td>KIRAN YADAV</td><td>MCX-35971</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>VILL BALIER KHURD P O TURKIYAWAS</td><td>REWARI, HARYANA 123411</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>60</td><td>NAVEEN KUMAR GUPTA</td><td>MCX-36017</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>121 PREM NAGAR HISSAR</td><td>HISSAR, HARYANA 125001</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>61</td><td>VARINDER S SOHAL</td><td>MCX-48408</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>H NO 2127 SECTOR-79 SAS NAGAR</td><td>MOHALI, PUNJAB 160022</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>62</td><td>RAJ KUMAR</td><td>MCX-159049</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>PURANI PAITH CHANDAUSI</td><td>CHANDAUSI, UTTAR PRADESH 202412</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>63</td><td>DHRUV BOHRA</td><td>NSE- AP2395000491 &amp; BSE- AP016270011</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>807-A, P.J. TOWER, DALAL STREET, FORT</td><td>MUMBAI, MAHARASHTRA 400001</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>64</td><td>ADITI GOEL</td><td>MCX-148241</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>C-8/152, YAMUNA VIHAR KHAN PUR DHANI</td><td>NEW DELHI, DELHI 110053</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>65</td><td>MUKESH AGARWAL</td><td>MCX-159633</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>BARA BAZAR CHANDAUSI</td><td>CHANDAUSI, UTTAR PRADESH 202414</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>66</td><td>YOGESH KUMAR BANSAL</td><td>NSE- AP2395000531</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>PLOT NO. 161 DARA MILKANA BAIRUN PARASPURAM</td><td>SAHARANPUR, UTTAR PRADESH 247001</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>67</td><td>PRIYANKA</td><td>NSE- AP2395000541</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>A-25 RAJEEV NAGAR EXT., BEGUMPUR</td><td>NEW DELHI, DELHI 110086</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>68</td><td>VISHWMITRA MEENA</td><td>NSE- AP2395000401</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>LG 66 LOWER GROUND FLOOR JAIPUR TEXTILE MARKET MALVIYA NAGAR</td><td>JAIPUR, RAJASTHAN 302017</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>69</td><td>KAWARLAL KISHAN GOPAL BOHRA</td><td>NSE- AP2395000501</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>WARD NO 6, GOPAL CHOWK LATIYAL ROAD</td><td>PHALODI, RAJASTHAN 342301</td><td>NO</td><td>NO</td></tr>
+                            <tr><td>70</td><td>LAKSHMAN JHA</td><td>NSE- AP2395000101</td><td>INDIVIDUAL</td><td><span class="status-badge cancelled">Cancelled</span></td><td>111, 1ST FLOOR VAISHALI COMMUNITY BUILDING PASCHIM VIHAR</td><td>NEW DELHI, DELHI 110041</td><td>NO</td><td>NO</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. APs CANCELLED ON ACCOUNT OF DISCIPLINARY REASONS -->
+        <section class="compliance-block-card">
+            <div class="card-header-bar no-toggle">
+                <div class="header-left-title">
+                    <div class="header-icon-box"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <h3>Authorised Persons Cancelled on Account of Disciplinary Reasons</h3>
+                </div>
+            </div>
+
+            <div class="table-responsive-box">
+                <table class="custom-data-table">
+                    <thead>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Authorised Person's Name</th>
+                            <th>Status</th>
+                            <th>Cancellation Details</th>
+                            <th>Date</th>
+                            <th>Reason</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6" style="text-align: center; color: #64748B; padding: 20px;">
+                                <em>Nil / No Authorised Persons have been cancelled on account of disciplinary grounds.</em>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+    08. FOOTER
+    ===================================================== -->
+    <footer class="prrasar-exact-footer">
+
+        <!-- 01. MAIN 4-COLUMN SECTION -->
+        <div class="footer-columns-container">
+
+            <!-- COLUMN 1: CONTACT US -->
+            <div class="footer-box col-contact">
+                <h3 class="box-title">Contact Us</h3>
+                <div class="contact-row">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Phone:</strong>
+                        <p>91-11-45350000 (Board Lines)</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <a href="mailto:info@prrsaar.com">info@prrsaar.com</a>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address:</strong>
+                        <p>17A/35, 2nd Floor, West Punjabi Bagh, New Delhi - 110026</p>
+                    </div>
+                </div>
+
+                <div class="store-buttons-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.wave.prrsaarshri" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div>
+                            <small>ANDROID APP ON</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="https://apps.apple.com/in/app/prrsaar-shri/id1603438370" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-apple"></i>
+                        <div>
+                            <small>Download on the</small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: WE ARE OFFERING -->
+            <div class="footer-box">
+                <h3 class="box-title">We Are Offering</h3>
+                <ul class="footer-nav">
+                    <li><a href="PP.HTML#product-flow">Equity</a></li>
+                    <li><a href="PP.HTML#product-flow">Derivative (Future and Option)</a></li>
+                    <li><a href="PP.HTML#product-flow">Currency</a></li>
+                    <li><a href="PP.HTML#product-flow">Commodity</a></li>
+                    <li><a href="PP.HTML#product-flow">IPO</a></li>
+                    <li><a href="PP.HTML#product-flow">Mutual Fund</a></li>
+                    <li><a href="PP.HTML#product-flow">G-Bonds</a></li>
+                    <li><a href="PP.HTML#product-flow">Depository</a></li>
+                    <li><a href="PP.HTML#product-flow">API Key</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 3: POLICIES -->
+            <div class="footer-box">
+                <h3 class="box-title">Policies</h3>
+                <ul class="footer-nav">
+                    <li><a href="policy1.html">Policy for voluntary freezing of client's online access</a></li>
+                    <li><a href="policy2.html">Privacy Policy</a></li>
+                    <li><a href="policy3.html">Surveillance Policy</a></li>
+                    <li><a href="policy4.html">PMLA Policy</a></li>
+                    <li><a href="policy5.html">Policy on prefunded instrument</a></li>
+                    <li><a href="policy6.html">Policy on Unauthenticated News Circulation</a></li>
+                    <li><a href="policy7.html">Policy of Limit Setting</a></li>
+                    <li><a href="policy8.html">Inactive Account Policy</a></li>
+                    <li><a href="policy9.html">Conflict of Interest Policy</a></li>
+                    <li><a href="policy10.html">CLD Policy</a></li>
+                    <li><a href="policy11.html">Refund &amp; Cancellation Policy</a></li>
+                    <li><a href="policy12.html">Investor Complaint Redressal Mechanism</a></li>
+                    <li><a href="policy13.html">Internal Policy</a></li>
+                    <li><a href="policy14.html">CUSPA Policy</a></li>
+                    <li><a href="policy15.html">Terms &amp; Condition</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 4: OTHER -->
+            <div class="footer-box">
+                <h3 class="box-title">Other</h3>
+                <ul class="footer-nav">
+                    <li><a href="other.html#research-disclaimer">Risk Disclaimer and Disclosure - Research Analysts</a></li>
+                    <li><a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open an Account</a></li>
+                    <li><a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a></li>
+                    <li><a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a></li>
+                    <li><a href="other.html#attention-investors">Investors Awareness</a></li>
+                    <li><a href="PD.html#payment-bank-details">Payment Bank Details</a></li>
+                    <li><a href="PD.html#downloads-section">Downloads</a></li>
+                    <li><a href="other.html#risk-derivatives">Risk Disclosures on Derivatives</a></li>
+                    <li><a href="https://www.sebi.gov.in/" target="_blank">SEBI Investor website</a></li>
+                    <li><a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a></li>
+                    <li><a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a></li>
+                    <li><a href="https://www.mcxindia.com/about-us#legal-framework">MCX Rules and Bye-Laws</a></li>
+                    <li><a href="other.html#demat-advisory">CDSL DOs &amp; DONTs</a></li>
+                    <li><a href="chartstock.html">Investors Charter For Stock</a></li>
+                    <li><a href="chartstock.html">Investors Charter For DP</a></li>
+                    <li><a href="other.html#kyc-validation">KYC Validation Process</a></li>
+                    <li><a href="other.html#pro-trading">Pro Trading Disclosure</a></li>
+                    <li><a href="other.html#fraud-alert">Fraud Alert</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 02. USEFUL LINKS STRIP -->
+        <div class="useful-links-row">
+            <h4>Useful Links</h4>
+            <div class="links-inline">
+                <a href="policy12.html">Investor Complaint Redressal Mechanism</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/inspection-and-audit#vernacularLanguage">Vernacular Language MCX</a>
+                <span>|</span>
+                <a href="https://www.ncdex.com/Investor/Client_Reg_Doc.aspx" target="_blank" rel="noopener">Vernacular Language NCDEX</a>
+                <span>|</span>
+                <a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a>
+                <span>|</span>
+                <a href="https://www.cdslindia.com/downloads/DP/SOP%20for%20Incapacitated%20investor%20Final.pdf">SOP for Depository Participants</a>
+            </div>
+        </div>
+
+        <!-- 03. STATUTORY WARNINGS & DISCLOSURES -->
+        <div class="legal-compliance-section">
+            <p><strong>Statutory Warning:</strong> Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
+            <p><strong>Attention Investors:</strong> "Brokerage will not exceed the SEBI prescribed limit"</p>
+
+            <p class="notice-head">Filing of complaints through SEBI's online portal 'SCORES' and 'SMARTODR portal' - Easy &amp; Quick</p>
+            <p class="notice-sub">
+                a. Register on SCORES / SMARTODR Portal.<br>
+                b. Mandatory Details For Filing Complaints on SCORES:<br>
+                &gt; Name<br>
+                &gt; PAN<br>
+                &gt; Address<br>
+                &gt; Mobile Number<br>
+                &gt; Email ID<br>
+                c. Benefits:<br>
+                (i) Effective Communication<br>
+                (ii) Speedy Redressal of Grievance / Dispute
+            </p>
+
+            <p class="portal-links">
+                <a href="http://scores.sebi.gov.in" target="_blank">http://scores.sebi.gov.in</a><br>
+                <a href="https://smartodr.in/login" target="_blank">https://smartodr.in/login</a>
+            </p>
+
+            <p class="circular-title">SEBI Master Circular on ODR updated on December 28, 2023</p>
+            <p class="circular-link">
+                <a href="https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794.html" target="_blank">https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794</a>
+            </p>
+
+            <p class="disclaimer-text">
+                Disclaimer: "The Stock Exchange, Mumbai is not in any manner answerable, responsible or liable to any person or persons for any acts of omission or commission, errors, mistakes and/or violation, actual or perceived, by us or our partners, agents, associates etc., of any of the Rules, Regulations, Bye-laws of the Stock Exchange, Mumbai, SEBI Act or any other laws in force from time to time. The Stock Exchange, Mumbai is not answerable, responsible or liable for any information on this Website or for any services rendered by our employees, our servants, and us."
+            </p>
+        </div>
+
+        <!-- 04. YELLOW SLIDING MARQUEE LINE (SEBI Rules / Notices Sliding Bar) -->
+        <div class="yellow-sliding-marquee-bar">
+            <div class="marquee-track">
+                <span class="marquee-item">
+                    1.&gt;Attention Investors   1. Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 01, 2020.
+                    2. Update your email id and mobile number with your stock broker / depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.
+                    3. Check your securities / MF / bonds in the consolidated account statement issued by NSDL/CDSL every month.   ... Issued in the interest of Investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    2.Information Regarding: SEBI Complaint Redress System (SCORES). Filing of Complaints on SCORES - Easy &amp; Quick.
+                    (a) Register on SCORES portal.
+                    (b) Mandatory details for filing complaints on SCORES:
+                    i). Name, PAN, Address, Mobile Number, Email ID. (c) Benefits: i). Effective communication. ii). Speedy redressal of the grievances.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    3.   ATTENTION INVESTORS: Prevent Unauthorized Transactions in your demat account --&gt; Update your Mobile Number with your Depository Participant.
+                    Receive alerts on your Registered Mobile for all debit and other important transactions in your demat account directly from CDSL on the same day issued in the interest of investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    4. "KYC is one time exercise while dealing in securities markets -
+                    once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">5. No need to issue cheques by investors while subscribing to IPO.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">6. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">7. No worries for refund as the money remains in investor's account.</span>
+                <span class="marquee-sep">✦</span>
+            </div>
+        </div>
+
+        <!-- 05. GRIEVANCE SECTION & REGISTRATIONS -->
+        <div class="grievance-compliance-block">
+            <p class="kyc-rule-note">
+                "KYC is one time exercise while dealing in securities markets - once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+            </p>
+            <p class="ipo-note">
+                No need to issue cheques by investors while subscribing to IPO. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment. No worries for refund as the money remains in investor's account.
+            </p>
+
+            <p class="grievance-contact-label">In case of any grievances/complaint against the Stock Broker /Depository Participant:</p>
+            <p class="grievance-email-links">
+                Email-id at:
+                <a href="mailto:grievance@prrsaar.com">grievance@prrsaar.com</a>,
+                <a href="mailto:dpgrievances@prrsaar.com">dpgrievances@prrsaar.com</a>
+            </p>
+
+            <!-- OFFICIAL BUTTONS -->
+            <div class="official-portal-links">
+                <a href="https://scores.sebi.gov.in" target="_blank" class="badge-link">SCORES PORTAL</a>
+                <span class="link-divider">|</span>
+                <a href="https://smartodr.in/login" target="_blank" class="badge-link odr-highlight">
+                    SMART<span>ODR</span> PORTAL
+                </a>
+            </div>
+
+            <p class="sebi-numbers">
+                SEBI Regn No: INZ000027432, DP IN-DP-563-2021<br>
+                NSE: 13457, BSE: 6270, MCX: 10815, NCDEX: 00536 &amp; CDSL-12091700
+            </p>
+        </div>
+
+        <!-- 06. COPYRIGHT BAR -->
+        <div class="bottom-copyright-strip">
+            <p>© 2026 Prrsaar Sampada Private Limited | All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- Accordion Toggle JavaScript -->
+    <script>
+                function toggleAccordion(contentId, headerElement) {
+                    const content = document.getElementById(contentId);
+                    if (!content) return;
+
+                    const isOpen = content.classList.contains('is-open');
+
+                    if (isOpen) {
+                        content.classList.remove('is-open');
+                        headerElement.classList.remove('toggle-active');
+                    } else {
+                        content.classList.add('is-open');
+                        headerElement.classList.add('toggle-active');
+                    }
+                }
+    </script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy On Unauthenticated News Circulation - PRRSAAR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="MAIN_FIXED.css">
+    <script src="JAVA.js"></script>
+
+    <style>
+        .policy-hero {
+            background: linear-gradient(135deg, #091C38, #03142E);
+            padding: 50px 20px 60px;
+            color: #FFF;
+            border-bottom: 1px solid #1E3A8A;
+        }
+
+        .policy-hero-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .policy-hero h1 {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .policy-hero p {
+            font-size: 14.5px;
+            color: #CBD5E1;
+        }
+
+        .policy-wrap {
+            max-width: 1240px;
+            margin: 35px auto 80px;
+            padding: 0 20px;
+        }
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .policy-sidebar {
+            background: #FFF;
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            padding: 24px 20px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-badge {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--prrasar-green, #008C45);
+            background: #E8F5E9;
+            padding: 5px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 14px;
+        }
+
+        .policy-sidebar h4 {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--prrasar-navy);
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 10px;
+        }
+
+        .policy-nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+            .policy-nav-list a {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 14px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-size: 13.5px;
+                font-weight: 600;
+                color: #475569;
+
+            }
+
+                .policy-nav-list a:hover {
+                    background: #F1F5F9;
+                    color: var(--prrasar-blue);
+                }
+
+                .policy-nav-list a.active-policy {
+                    background: rgba(0, 140, 69, 0.09);
+                    color: var(--prrasar-green, #008C45);
+                    font-weight: 700;
+                    border-left: 3.5px solid var(--prrasar-green, #008C45);
+                }
+
+        .breadcrumb-trail {
+            font-size: 13px;
+            color: #94A3B8;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .breadcrumb-trail a {
+                color: #38BDF8;
+                text-decoration: none;
+            }
+
+        .policy-article {
+            background: #FFF;
+            border: 1px solid var(--border-light);
+            border-radius: 14px;
+            padding: 42px 45px;
+        }
+
+            .policy-article h2 {
+                font-size: 24px;
+                font-weight: 800;
+                color: var(--prrasar-navy);
+                margin-bottom: 12px;
+            }
+
+            .policy-article h3 {
+                font-size: 18px;
+                font-weight: 800;
+                color: var(--prrasar-navy);
+                margin: 24px 0 10px;
+            }
+
+            .policy-article p {
+                font-size: 14.5px;
+                color: #334155;
+                margin-bottom: 14px;
+                line-height: 1.7;
+            }
+
+            .policy-article ul {
+                margin: 0 0 18px 24px;
+            }
+
+            .policy-article li {
+                font-size: 14.5px;
+                color: #334155;
+                margin-bottom: 8px;
+            }
+
+
+        @media (max-width: 992px) {
+            .policy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .policy-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LOGO.png" alt="PRRSAAR Logo">
+            </a>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="PP.HTML" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-left">
+                        <a href="PP.HTML#calculators-section" class="tab-link active" data-tab="calculators-tab">Calculators</a>
+                        <a href="PP.HTML#pricing-section" class="tab-link" data-tab="pricing-tab">Pricing</a>
+                        <a href="PP.HTML#services-section" class="tab-link" data-tab="services-tab">Services</a>
+                    </div>
+                    <div class="dropdown-right">
+                        <div id="calculators-tab" class="tab-content active">
+                            <h5>All Calculators</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#calculators-section">Brokerage Calculator</a>
+                                <a href="PP.HTML#calculators-section">Margin Calculator</a>
+                                <a href="PP.HTML#calculators-section">SIP Calculator</a>
+                            </div>
+                            <a href="PP.HTML#calculators-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="pricing-tab" class="tab-content">
+                            <h5>Pricing Plans</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#pricing-section">Equity Delivery (Free)</a>
+                                <a href="PP.HTML#pricing-section">Intraday Charges</a>
+                                <a href="PP.HTML#pricing-section">F&O Pricing</a>
+                            </div>
+                            <a href="PP.HTML#pricing-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="services-tab" class="tab-content">
+                            <h5>Our Services</h5>
+                            <div class="tab-links-list">
+                                <a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open An Account</a>
+                                <a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a>
+                                <a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a>
+                            </div>
+                            <a href="PP.HTML#services-section" class="view-all-btn">View All →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="AA.HTML">About us</a>
+            <a href="learn.html">Learn</a>
+            <a href="mm.html">Market info</a>
+            <a href="f&q.html">F&Q</a>
+        </nav>
+        <div class="nav-buttons">
+            <button type="button" class="bag">LOG IN</button>
+            <button type="button" class="primary">Open Account</button>
+        </div>
+    </header>
+
+
+
+    <section class="policy-hero">
+        <div class="policy-hero-inner">
+            <div class="breadcrumb-trail">
+                <a href="index.html">Home</a> &gt; <span>Policies</span> &gt; <span>Policy on Unauthenticated News Circulation</span>
+            </div>
+            <h1>Policy on Unauthenticated News Circulation</h1>
+            <p>Guidelines on code of conduct regarding circulation of rumors and unauthenticated market news.</p>
+        </div>
+    </section>
+
+    <div class="policy-wrap">
+        <div class="policy-grid">
+            <aside class="policy-sidebar">
+                <span class="sidebar-badge">LEGAL &amp; COMPLIANCE</span>
+                <h4>All Company Policies</h4>
+                <ul class="policy-nav-list">
+                    <li>
+                        <a href="policy1.html" >
+                            <span>Policy for voluntary freezing</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy2.html">
+                            <span>Privacy Policy</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy3.html">
+                            <span>Surveillance Policy</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy4.html">
+                            <span>PMLA Policy</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy5.html">
+                            <span>Policy on prefunded instrument</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy6.html"class="active-policy">
+                            <span>Policy on Unauthenticated News Circulation</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy7.html">
+                            <span>Policy of Limit Setting</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy8.html">
+                            <span>Inactive Account Policy</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy9.html">
+                            <span>Conflict of Interest Policy</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy10.html">
+                            <span>CLD Policy</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy11.html">
+                            <span>Refund &amp; Cancellation Policy</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy12.html">
+                            <span>Investor Complaint Redressal Mechanism</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy13.html">
+                            <span>Internal Policy</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="policy14.html">
+                            <span>CUSPA Policy</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="policy15.html">
+                            <span>Terms &amp; Condition</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <article class="policy-article">
+                <h2>Policy on Unauthenticated News Circulation</h2>
+                <p>In terms of SEBI circular Cir/ISD/1/2011 dated March 23, 2011, Stock Brokers are being directed to formulate a policy to monitor the transmission of market-related rumors, tips, or unauthenticated information via modern communication modes.</p>
+
+                <h3>1. Prohibition on Rumor Circulation:</h3>
+                <p>Employees, dealers, associates, and authorized persons of Prrsaar are strictly prohibited from circulating or transmitting any rumors, tips, or unauthenticated news related to listed companies, stocks, or market indices.</p>
+
+                <h3>2. Restriction on Social Media and Blogs:</h3>
+                <ul>
+                    <li>Employees shall not use blogs, chat rooms, discussion forums, messengers, WhatsApp, Telegram, or other social media channels to post or circulate unauthorized tips or company-related speculation.</li>
+                    <li>Access to unauthorized messaging applications on trading desk terminals is strictly restricted and monitored through internal firewall logs.</li>
+                </ul>
+
+                <h3>3. Verification Before Dissemination:</h3>
+                <p>Any stock-related research, analytical note, or news circulated to clients must be duly verified by the Compliance Officer / Research Desk and backed by verified exchange filings or certified news agencies.</p>
+
+                <h3>4. Disciplinary Action:</h3>
+                <p>Any employee or dealer found violating this policy by encouraging, initiating, or forwarding unverified news shall face strict internal disciplinary action, which may include suspension, termination of employment, and intimation to the Stock Exchanges and SEBI.</p>
+            </article>
+        </div>
+    </div>
+    <!-- =====================================================
+    08. FOOTER
+    ===================================================== -->
+    <!-- =====================================================
+     OFFICIAL PRRSAAR FOOTER
+     ===================================================== -->
+    <footer class="prrasar-exact-footer">
+
+        <!-- 01. MAIN 4-COLUMN SECTION -->
+        <div class="footer-columns-container">
+
+            <!-- COLUMN 1: CONTACT US -->
+            <div class="footer-box col-contact">
+                <a href="contact.html"</a>
+
+                <h3 class="box-title">Contact Us</h3>
+                <div class="contact-row">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Phone:</strong>
+                        <p>91-11-45350000 (Board Lines)</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <a href="mailto:info@prrsaar.com">info@prrsaar.com</a>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address:</strong>
+                        <p>17A/35, 2nd Floor, West Punjabi Bagh, New Delhi - 110026</p>
+                    </div>
+                </div>
+
+                <div class="store-buttons-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.wave.prrsaarshri" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div>
+                            <small>ANDROID APP ON</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="https://apps.apple.com/in/app/prrsaar-shri/id1603438370" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-apple"></i>
+                        <div>
+                            <small>Download on the</small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: WE ARE OFFERING -->
+            <div class="footer-box">
+                <h3 class="box-title">We Are Offering</h3>
+                <ul class="footer-nav">
+                    <li><a href="PP.HTML#product-flow">Equity</a></li>
+                    <li><a href="PP.HTML#product-flow">Derivative (Future and Option)</a></li>
+                    <li><a href="PP.HTML#product-flow">Currency</a></li>
+                    <li><a href="PP.HTML#product-flow">Commodity</a></li>
+                    <li><a href="PP.HTML#product-flow">IPO</a></li>
+                    <li><a href="PP.HTML#product-flow">Mutual Fund</a></li>
+                    <li><a href="PP.HTML#product-flow">G-Bonds</a></li>
+                    <li><a href="PP.HTML#product-flow">Depository</a></li>
+                    <li><a href="PP.HTML#product-flow">API Key</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 3: POLICIES -->
+            <div class="footer-box">
+                <h3 class="box-title">Policies</h3>
+                <ul class="footer-nav">
+                    <li><a href="policy1.html">Policy for voluntary freezing of client's online access</a></li>
+                    <li><a href="policy2.html">Privacy Policy</a></li>
+                    <li><a href="policy3.html">Surveillance Policy</a></li>
+                    <li><a href="policy4.html">PMLA Policy</a></li>
+                    <li><a href="policy5.html">Policy on prefunded instrument</a></li>
+                    <li><a href="policy6.html">Policy on Unauthenticated News Circulation</a></li>
+                    <li><a href="policy7.html">Policy of Limit Setting</a></li>
+                    <li><a href="policy8.html">Inactive Account Policy</a></li>
+                    <li><a href="policy9.html">Conflict of Interest Policy</a></li>
+                    <li><a href="policy10.html">CLD Policy</a></li>
+                    <li><a href="policy11.html">Refund &amp; Cancellation Policy</a></li>
+                    <li><a href="policy12.html">Investor Complaint Redressal Mechanism</a></li>
+                    <li><a href="policy13.html">Internal Policy</a></li>
+                    <li><a href="policy14.html">CUSPA Policy</a></li>
+                    <li><a href="policy15.html">Terms &amp; Condition</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 4: OTHER -->
+            <div class="footer-box">
+                <h3 class="box-title">Other</h3>
+                <ul class="footer-nav">
+                    <li><a href="other.html#research-disclaimer">Risk Disclaimer and Disclosure - Research Analysts</a></li>
+                    <li><a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open an Account</a></li>
+                    <li><a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a></li>
+                    <li><a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a></li>
+                    <li><a href="other.html#attention-investors">Investors Awareness</a></li>
+                    <li><a href="PD.html#payment-bank-details">Payment Bank Details</a></li>
+                    <li><a href="PD.html#downloads-section">Downloads</a></li>
+                    <li><a href="other.html#risk-derivatives">Risk Disclosures on Derivatives</a></li>
+                    <li><a href="https://www.sebi.gov.in/" target="_blank">SEBI Investor website</a></li>
+                    <li><a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a></li>
+                    <li><a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a></li>
+                    <li><a href="https://www.mcxindia.com/about-us#legal-framework">MCX Rules and Bye-Laws</a></li>
+                    <li><a href="other.html#demat-advisory">CDSL DOs &amp; DONTs</a></li>
+                    <li><a href="chartstock.html">Investors Charter For Stock</a></li>
+                    <li><a href="chartstock.html">Investors Charter For DP</a></li>
+                    <li><a href="other.html#kyc-validation">KYC Validation Process</a></li>
+                    <li><a href="other.html#pro-trading">Pro Trading Disclosure</a></li>
+                    <li><a href="other.html#fraud-alert">Fraud Alert</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 02. USEFUL LINKS STRIP -->
+        <div class="useful-links-row">
+            <h4>Useful Links</h4>
+            <div class="links-inline">
+                <a href="policy12.html">Investor Complaint Redressal Mechanism</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/inspection-and-audit#vernacularLanguage">Vernacular Language MCX</a>
+                <span>|</span>
+                <a href="https://www.ncdex.com/Investor/Client_Reg_Doc.aspx" target="_blank" rel="noopener">Vernacular Language NCDEX</a>
+                <span>|</span>
+                <a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a>
+                <span>|</span>
+                <a href="https://www.cdslindia.com/downloads/DP/SOP%20for%20Incapacitated%20investor%20Final.pdf">SOP for Depository Participants</a>
+            </div>
+        </div>
+
+        <!-- 03. STATUTORY WARNINGS & DISCLOSURES -->
+        <div class="legal-compliance-section">
+            <p><strong>Statutory Warning:</strong> Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
+            <p><strong>Attention Investors:</strong> "Brokerage will not exceed the SEBI prescribed limit"</p>
+
+            <p class="notice-head">Filing of complaints through SEBI's online portal 'SCORES' and 'SMARTODR portal' - Easy &amp; Quick</p>
+            <p class="notice-sub">
+                a. Register on SCORES / SMARTODR Portal.<br>
+                b. Mandatory Details For Filing Complaints on SCORES:<br>
+                &gt; Name<br>
+                &gt; PAN<br>
+                &gt; Address<br>
+                &gt; Mobile Number<br>
+                &gt; Email ID<br>
+                c. Benefits:<br>
+                (i) Effective Communication<br>
+                (ii) Speedy Redressal of Grievance / Dispute
+            </p>
+
+            <p class="portal-links">
+                <a href="http://scores.sebi.gov.in" target="_blank">http://scores.sebi.gov.in</a><br>
+                <a href="https://smartodr.in/login" target="_blank">https://smartodr.in/login</a>
+            </p>
+
+            <p class="circular-title">SEBI Master Circular on ODR updated on December 28, 2023</p>
+            <p class="circular-link">
+                <a href="https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794.html" target="_blank">https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794</a>
+            </p>
+
+            <p class="disclaimer-text">
+                Disclaimer: "The Stock Exchange, Mumbai is not in any manner answerable, responsible or liable to any person or persons for any acts of omission or commission, errors, mistakes and/or violation, actual or perceived, by us or our partners, agents, associates etc., of any of the Rules, Regulations, Bye-laws of the Stock Exchange, Mumbai, SEBI Act or any other laws in force from time to time. The Stock Exchange, Mumbai is not answerable, responsible or liable for any information on this Website or for any services rendered by our employees, our servants, and us."
+            </p>
+        </div>
+
+        <!-- 04. YELLOW SLIDING MARQUEE LINE (SEBI Rules / Notices Sliding Bar) -->
+        <div class="yellow-sliding-marquee-bar">
+            <div class="marquee-track">
+                <span class="marquee-item">
+                    1.>Attention Investors   1. Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 01, 2020.
+                    2. Update your email id and mobile number with your stock broker / depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.
+                    3. Check your securities / MF / bonds in the consolidated account statement issued by NSDL/CDSL every month.   ... Issued in the interest of Investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    2.Information Regarding: SEBI Complaint Redress System (SCORES). Filing of Complaints on SCORES - Easy & Quick.
+                    (a) Register on SCORES portal.
+                    (b) Mandatory details for filing complaints on SCORES:
+                    i). Name, PAN, Address, Mobile Number, Email ID. (c) Benefits: i). Effective communication. ii). Speedy redressal of the grievances.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    3.                 ATTENTION INVESTORS: Prevent Unauthorized Transactions in your demat account --> Update your Mobile Number with your Depository Participant.
+                    Receive alerts on your Registered Mobile for all debit and other important transactions in your demat account directly from CDSL on the same day issued in the interest of investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    4.
+                    "KYC is one time exercise while dealing in securities markets -
+                    once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">5.  No need to issue cheques by investors while subscribing to IPO.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">6. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">7. No worries for refund as the money remains in investor's account.</span>
+                <span class="marquee-sep">✦<</span>
+            </div>
+        </div>
+
+        <!-- 05. GRIEVANCE SECTION & REGISTRATIONS -->
+        <div class="grievance-compliance-block">
+            <p class="kyc-rule-note">
+                "KYC is one time exercise while dealing in securities markets - once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+            </p>
+            <p class="ipo-note">
+                No need to issue cheques by investors while subscribing to IPO. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment. No worries for refund as the money remains in investor's account.
+            </p>
+
+            <p class="grievance-contact-label">In case of any grievances/complaint against the Stock Broker /Depository Participant:</p>
+            <p class="grievance-email-links">
+                Email-id at:
+                <a href="mailto:grievance@prrsaar.com">grievance@prrsaar.com</a>,
+                <a href="mailto:dpgrievances@prrsaar.com">dpgrievances@prrsaar.com</a>
+            </p>
+
+            <!-- OFFICIAL BUTTONS -->
+            <div class="official-portal-links">
+                <a href="https://scores.sebi.gov.in" target="_blank" class="badge-link">SCORES PORTAL</a>
+                <span class="link-divider">|</span>
+                <a href="https://smartodr.in/login" target="_blank" class="badge-link odr-highlight">
+                    SMART<span>ODR</span> PORTAL
+                </a>
+            </div>
+
+            <p class="sebi-numbers">
+                SEBI Regn No: INZ000027432, DP IN-DP-563-2021<br>
+                NSE: 13457, BSE: 6270, MCX: 10815, NCDEX: 00536 &amp; CDSL-12091700
+            </p>
+        </div>
+
+        <!-- 06. COPYRIGHT BAR -->
+        <div class="bottom-copyright-strip">
+            <p>© 2026 Prrsaar Sampada Private Limited | All Rights Reserved.</p>
+        </div>
+
+    </footer>
+</body>
+</html>

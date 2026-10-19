@@ -1,0 +1,1243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Bank Details & Downloads - PRRSAAR</title>
+    <link rel="stylesheet" href="MAIN_FIXED.css">
+    <script src="JAVA.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Hero Banner */
+        .page-hero-banner {
+            background: linear-gradient(135deg, #091C38 0%, #03142E 100%);
+            padding: 55px 20px 65px;
+            color: #FFFFFF;
+            text-align: center;
+            border-bottom: 1px solid #1E3A8A;
+        }
+
+        .hero-banner-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 140, 69, 0.18);
+            color: #34D399;
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            font-size: 11.5px;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .page-hero-banner h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+
+        .page-hero-banner p {
+            font-size: 14.5px;
+            color: #CBD5E1;
+            margin: 0;
+        }
+
+        /* Content Stream Container */
+        .portal-stream-container {
+            max-width: 1060px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+        }
+
+        /* Main Cards */
+        .compliance-block-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: var(--card-radius, 12px);
+            padding: 38px 42px;
+            box-shadow: 0 6px 20px rgba(14, 30, 56, 0.04);
+            scroll-margin-top: 100px;
+            position: relative;
+        }
+
+        .card-top-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .card-category-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: #EFF6FF;
+            color: var(--prrasar-blue, #1D4ED8);
+            border: 1px solid #BFDBFE;
+        }
+
+        .card-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-bottom: 1px solid #F1F5F9;
+            padding-bottom: 16px;
+            margin-bottom: 22px;
+        }
+
+            .card-title-row .title-left {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+            }
+
+            .card-title-row .title-icon-box {
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                flex-shrink: 0;
+                background: rgba(0, 140, 69, 0.1);
+                color: var(--prrasar-green, #008C45);
+            }
+
+            .card-title-row h2 {
+                font-size: 22px;
+                font-weight: 800;
+                color: var(--prrasar-navy, #0E1E38);
+                margin: 0;
+            }
+
+        /* Search Bar */
+        .search-filter-box {
+            position: relative;
+            width: 320px;
+            max-width: 100%;
+        }
+
+            .search-filter-box .search-icon {
+                position: absolute;
+                left: 14px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #94A3B8;
+                font-size: 14px;
+            }
+
+            .search-filter-box input {
+                width: 100%;
+                padding: 9px 16px 9px 38px;
+                font-size: 13.5px;
+                border: 1px solid #CBD5E1;
+                border-radius: 8px;
+                background: #F8FAFC;
+                color: var(--prrasar-navy, #0E1E38);
+                outline: none;
+                transition: all 0.2s ease;
+            }
+
+                .search-filter-box input:focus {
+                    background: #FFFFFF;
+                    border-color: var(--prrasar-blue, #1D4ED8);
+                    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+                }
+
+        /* Table Styling */
+        .bank-table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .custom-bank-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+            text-align: left;
+            background: #FFFFFF;
+        }
+
+            .custom-bank-table th {
+                background: #0E1E38;
+                color: #FFFFFF;
+                padding: 12px 14px;
+                font-weight: 700;
+                letter-spacing: 0.3px;
+                white-space: nowrap;
+            }
+
+            .custom-bank-table td {
+                padding: 12px 14px;
+                border-bottom: 1px solid #F1F5F9;
+                color: #334155;
+                vertical-align: middle;
+            }
+
+            .custom-bank-table tr:last-child td {
+                border-bottom: none;
+            }
+
+            .custom-bank-table tr:hover td {
+                background-color: #F8FAFC;
+            }
+
+        .upi-highlight-row td {
+            background: #F0FDF4;
+            font-weight: 600;
+        }
+
+        .upi-badge {
+            background: var(--prrasar-green, #008C45);
+            color: #FFFFFF;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            margin-right: 6px;
+        }
+
+        /* Accordion Styling */
+        .collapsible-text-wrapper {
+            position: relative;
+        }
+
+        .collapsible-hidden-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+        }
+
+        .collapsible-text-wrapper.is-expanded .collapsible-hidden-content {
+            max-height: 2500px;
+            opacity: 1;
+        }
+
+        .read-more-action-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px dashed #E2E8F0;
+        }
+
+        .btn-read-more-pill {
+            background: #F1F5F9;
+            border: 1px solid #CBD5E1;
+            color: var(--prrasar-navy, #0E1E38);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 100px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+            .btn-read-more-pill:hover {
+                background: var(--prrasar-green, #008C45);
+                border-color: var(--prrasar-green, #008C45);
+                color: #FFFFFF;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 140, 69, 0.25);
+            }
+
+            .btn-read-more-pill i {
+                font-size: 11px;
+                transition: transform 0.3s ease;
+            }
+
+        .collapsible-text-wrapper.is-expanded .btn-read-more-pill i {
+            transform: rotate(180deg);
+        }
+
+        /* Segment Notices */
+        .exchange-notices-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .exchange-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-left: 5px solid var(--prrasar-blue, #1D4ED8);
+            border-radius: 10px;
+            padding: 18px 20px;
+        }
+
+            .exchange-card.mcx {
+                border-left-color: #D97706;
+            }
+
+            .exchange-card.ncdex {
+                border-left-color: var(--prrasar-green, #008C45);
+            }
+
+            .exchange-card .tag-title {
+                font-size: 14.5px;
+                font-weight: 800;
+                color: var(--prrasar-navy, #0E1E38);
+                margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .exchange-card p {
+                font-size: 13.5px;
+                color: #475569;
+                margin: 0;
+                line-height: 1.65;
+            }
+
+        /* Downloads Grid */
+        .dl-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .dl-chip {
+            padding: 8px 18px;
+            border-radius: 999px;
+            border: 1px solid #CBD5E1;
+            background: #FFFFFF;
+            color: #334155;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+            .dl-chip:hover {
+                border-color: var(--prrasar-blue, #1D4ED8);
+                color: var(--prrasar-blue, #1D4ED8);
+            }
+
+            .dl-chip.active {
+                background: var(--prrasar-navy, #0E1E38);
+                border-color: var(--prrasar-navy, #0E1E38);
+                color: #FFFFFF;
+            }
+
+        .doc-type {
+            display: inline-block;
+            margin-top: 6px;
+            padding: 2px 8px;
+            border-radius: 6px;
+            background: #EFF6FF;
+            color: var(--prrasar-blue, #1D4ED8);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+        }
+
+        .dl-empty-msg {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #64748B;
+            font-size: 14px;
+            padding: 30px 10px;
+            display: none;
+        }
+
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .download-item-card {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+
+            .download-item-card:hover {
+                background: #FFFFFF;
+                border-color: var(--prrasar-green, #008C45);
+                box-shadow: 0 4px 14px rgba(0, 140, 69, 0.08);
+                transform: translateY(-2px);
+            }
+
+            .download-item-card.is-hidden {
+                display: none !important;
+            }
+
+        .doc-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .doc-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: #EFF6FF;
+            color: var(--prrasar-blue, #1D4ED8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .doc-info strong {
+            display: block;
+            font-size: 13.5px;
+            color: var(--prrasar-navy, #0E1E38);
+            margin-bottom: 2px;
+        }
+
+        .doc-info span {
+            font-size: 11.5px;
+            color: #64748B;
+        }
+
+        .btn-download-action {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            color: var(--prrasar-navy, #0E1E38);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .download-item-card:hover .btn-download-action {
+            background: var(--prrasar-green, #008C45);
+            border-color: var(--prrasar-green, #008C45);
+            color: #FFFFFF;
+        }
+
+        /* View toggle button */
+        .view-more-wrap {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .btn-view-toggle {
+            padding: 10px 24px;
+            border-radius: 8px;
+            border: 1px solid #CBD5E1;
+            background: #FFFFFF;
+            color: #1E293B;
+            font-weight: 600;
+            font-size: 13.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+            .btn-view-toggle:hover {
+                background: #F1F5F9;
+            }
+
+        @media (max-width: 768px) {
+            .compliance-block-card {
+                padding: 24px 20px;
+            }
+
+            .page-hero-banner h1 {
+                font-size: 24px;
+            }
+
+            .search-filter-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LOGO.png" alt="PRRSAAR Logo">
+            </a>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="PP.HTML" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-left">
+                        <a href="PP.HTML#calculators-section" class="tab-link active" data-tab="calculators-tab">Calculators</a>
+                        <a href="PP.HTML#pricing-section" class="tab-link" data-tab="pricing-tab">Pricing</a>
+                        <a href="PP.HTML#services-section" class="tab-link" data-tab="services-tab">Services</a>
+                    </div>
+                    <div class="dropdown-right">
+                        <div id="calculators-tab" class="tab-content active">
+                            <h5>All Calculators</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#calculators-section">Brokerage Calculator</a>
+                                <a href="PP.HTML#calculators-section">Margin Calculator</a>
+                                <a href="PP.HTML#calculators-section">SIP Calculator</a>
+                            </div>
+                            <a href="PP.HTML#calculators-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="pricing-tab" class="tab-content">
+                            <h5>Pricing Plans</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#pricing-section">Equity Delivery (Free)</a>
+                                <a href="PP.HTML#pricing-section">Intraday Charges</a>
+                                <a href="PP.HTML#pricing-section">F&O Pricing</a>
+                            </div>
+                            <a href="PP.HTML#pricing-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="services-tab" class="tab-content">
+                            <h5>Our Services</h5>
+                            <div class="tab-links-list">
+                                <a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open An Account</a>
+                                <a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a>
+                                <a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a>
+                            </div>
+                            <a href="PP.HTML#services-section" class="view-all-btn">View All →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>     <a href="AA.HTML">About us</a>
+            <a href="learn.html">Learn</a>
+            <a href="mm.html">Market info</a>
+            <a href="f&q.html">F&Q</a>
+        </nav>
+        <div class="nav-buttons">
+            <button type="button" class="bag">LOG IN</button>
+            <button type="button" class="primary">Open Account</button>
+        </div>
+    </header>
+
+    <!-- Page Hero Banner -->
+    <section class="page-hero-banner">
+        <div class="hero-banner-inner">
+            <span class="hero-badge-pill"><i class="fa-solid fa-building-columns"></i> BANKING &amp; FORMS HUB</span>
+            <h1>Payment Bank Details &amp; Downloads</h1>
+            <p>Official designated USCNBA client bank accounts for funds transfer and downloadable application forms.</p>
+        </div>
+    </section>
+
+    <!-- Content Stream Container -->
+    <main class="portal-stream-container">
+
+        <!-- SECTION 1: PAYMENT BANK DETAILS -->
+        <section class="compliance-block-card" id="payment-bank-details">
+            <div class="card-top-bar">
+                <span class="card-category-badge"><i class="fa-solid fa-shield-halved"></i> SEBI MANDATED CLIENT ACCOUNT</span>
+            </div>
+            <div class="card-title-row">
+                <div class="title-left">
+                    <div class="title-icon-box"><i class="fa-solid fa-wallet"></i></div>
+                    <h2>Payment Bank Detail</h2>
+                </div>
+            </div>
+
+            <div class="collapsible-text-wrapper" id="paymentBankAccordion">
+                <div class="bank-table-responsive">
+                    <table class="custom-bank-table">
+                        <thead>
+                            <tr>
+                                <th>Beneficiary Name</th>
+                                <th>Acount No</th>
+                                <th>Bank Name</th>
+                                <th>Branch Name &amp; Address of Bank</th>
+                                <th>Type of Account</th>
+                                <th>RTGS/NEFT/IFSC Code</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Prrsaar Sampada Private Limited USCNBA</strong></td>
+                                <td>57500000498431</td>
+                                <td>HDFC BANK LIMITED</td>
+                                <td>K.G. MARG, NEW DELHI</td>
+                                <td>CURRENT</td>
+                                <td><strong>HDFC0000003</strong></td>
+                            </tr>
+                            <tr class="upi-highlight-row">
+                                <td><strong>Prrsaar Sampada Private Limited USCNBA</strong></td>
+                                <td><span class="upi-badge">UPI</span> UPI ID</td>
+                                <td colspan="4" style="color: var(--prrasar-green, #008C45); font-weight: 700; font-size: 14px;">
+                                    prrsaar.brk@validhdfc
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="collapsible-hidden-content">
+                    <div class="exchange-notices-container">
+
+                        <div class="exchange-card mcx">
+                            <div class="tag-title">
+                                <i class="fa-solid fa-circle-info" style="color: #D97706;"></i> FOR MCX
+                            </div>
+                            <p>“Investors are requested to note that Stock broker Prrsaar Sampada Private Limited (formerly known as) PRRSAAR COMMODITIES PVT LTD is permitted to receive money from investor through designated bank accounts only named as Up streaming Client Nodal Bank Account (USCNBA). Stock broker Prrsaar Sampada Private Limited (formerly known as) PRRSAAR COMMODITIES PVT LTD is also required to disclose these USCNB accounts to Stock Exchange. Hence, you are requested to use following USCNB accounts only for the purpose of dealings in your trading account with us. The details of these USCNB accounts are also displayed by Stock Exchanges on their website under “Membership→→→Notice Board→→→Member &amp; AP Details.”</p>
+                        </div>
+
+                        <div class="exchange-card">
+                            <div class="tag-title">
+                                <i class="fa-solid fa-circle-info" style="color: var(--prrasar-blue, #1D4ED8);"></i> FOR NSE/BSE
+                            </div>
+                            <p>“Investors are requested to note that Stock broker Prrsaar Sampada Private Limited (formerly known as) PRRSAAR COMMODITIES PVT LTD is permitted to receive money from investor through designated bank accounts only named as Up streaming Client Nodal Bank Account (USCNBA). Stock broker Prrsaar Sampada Private Limited (formerly known as) PRRSAAR COMMODITIES PVT LTD is also required to disclose these USCNB accounts to Stock Exchange. Hence, you are requested to use following USCNB accounts only for the purpose of dealings in your trading account with us. The details of these USCNB accounts are also displayed by Stock Exchanges on their website under “Know/ Locate your Stock Broker.”</p>
+                        </div>
+
+                        <div class="exchange-card ncdex">
+                            <div class="tag-title">
+                                <i class="fa-solid fa-circle-info" style="color: var(--prrasar-green, #008C45);"></i> FOR NCDEX
+                            </div>
+                            <p>“Investors are requested to note that Stock broker Prrsaar Sampada Private Limited (formerly known as) PRRSAAR COMMODITIES PVT LTD is permitted to receive/pay money from/to investor through designated bank accounts only named as Up streaming Client Nodal Bank Account (USCNBA). Stock broker Prrsaar Sampada Private Limited (formerly known as) PRRSAAR COMMODITIES PVT LTD is also required to disclose these USCNB bank accounts to Stock Exchange. Hence, you are requested to use following USCNB bank accounts only for the purpose of dealings in your trading account with us. The details of these USCNB bank accounts are also displayed by the Stock Exchange on their website.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="read-more-action-bar">
+                    <button type="button" class="btn-read-more-pill" onclick="toggleReadMore('paymentBankAccordion', this)">
+                        <span>Read More</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DOWNLOADS -->
+        <section class="compliance-block-card" id="downloads-section">
+            <div class="card-top-bar">
+                <span class="card-category-badge"><i class="fa-solid fa-folder-open"></i> CLIENT REPOSITORY</span>
+            </div>
+
+            <div class="card-title-row">
+                <div class="title-left">
+                    <div class="title-icon-box"><i class="fa-solid fa-download"></i></div>
+                    <h2>Downloads</h2>
+                </div>
+
+                <div class="search-filter-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="downloadSearchInput" placeholder="Search forms (e.g. Bank, CDSL, Closure)..." onkeyup="filterDownloads()">
+                </div>
+            </div>
+
+            <p style="color: #64748B; font-size: 14px; margin-bottom: 15px;">
+                Download essential service request forms, account modification formats, and statutory circulars.
+            </p>
+
+            <div class="dl-chips" id="dlChips">
+                <button type="button" class="dl-chip active" data-cat="all" onclick="setDownloadCat('all', this)">All</button>
+                <button type="button" class="dl-chip" data-cat="kyc" onclick="setDownloadCat('kyc', this)">Account &amp; KYC</button>
+                <button type="button" class="dl-chip" data-cat="demat" onclick="setDownloadCat('demat', this)">Demat Updates</button>
+                <button type="button" class="dl-chip" data-cat="trading" onclick="setDownloadCat('trading', this)">Trading &amp; Margin</button>
+                <button type="button" class="dl-chip" data-cat="closure" onclick="setDownloadCat('closure', this)">Closure</button>
+                <button type="button" class="dl-chip" data-cat="servers" onclick="setDownloadCat('servers', this)">Trading Software</button>
+            </div>
+
+            <div class="downloads-grid" id="downloadsGrid">
+
+                <!-- 1. Change Address -->
+                <div class="download-item-card" data-cat="demat">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Change Address Form</strong>
+                            <span>Correspondence &amp; permanent address</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/Change-Address.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 2. Change Bank Details -->
+                <div class="download-item-card" data-cat="demat">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Change Bank Details</strong>
+                            <span>Update or add bank account</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/Change-Bank-Details.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 3. Change Phone & Email -->
+                <div class="download-item-card" data-cat="demat">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Change Phone &amp; Email</strong>
+                            <span>Update mobile number &amp; email ID</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/Change-Phone-&-Email.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 4. Change Demat Account -->
+                <div class="download-item-card" data-cat="demat">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Change Demat Account</strong>
+                            <span>Modify or link Demat details</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/Change-Demat-Account.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 5. Signature Change Form CDSL -->
+                <div class="download-item-card" data-cat="demat">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Signature Change Form (CDSL)</strong>
+                            <span>Update specimen signature</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/SIGNATURE-CHANGE-FORM-CDSL.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 6. Declaration for Signature & Name Mismatch -->
+                <div class="download-item-card" data-cat="demat">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Signature &amp; Name Mismatch</strong>
+                            <span>Declaration format</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/Declaration-for-Signature-&-Name-Mismatch.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 7. Nomination Form -->
+                <div class="download-item-card" data-cat="demat">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Nomination Form</strong>
+                            <span>Add / Update Demat Nominee</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/Nomination%20Form%201.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 8. DIS Requisition Form -->
+                <div class="download-item-card" data-cat="trading">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>DIS Requisition Form</strong>
+                            <span>Delivery Instruction Slip Book</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/DIS-ISSUE.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 9. Account Opening Form - Common -->
+                <div class="download-item-card" data-cat="kyc">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Account Opening Form (Common)</strong>
+                            <span>All market segments</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/Prrsaar_KYC.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 10. DP Account Opening Form CDSL -->
+                <div class="download-item-card" data-cat="kyc">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>DP Account Opening Form (CDSL)</strong>
+                            <span>Demat account registration</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/PCPL%20CDSL%20FORM.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 11. Saral Form -->
+                <div class="download-item-card" data-cat="kyc">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Saral Form</strong>
+                            <span>Simplified individual account form</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/SARAL_FORM.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 12. Pledge / Unpledge Form (PRF) -->
+                <div class="download-item-card" data-cat="trading">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Pledge / Unpledge Form (PRF)</strong>
+                            <span>Margin Pledge Requisition</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 13. Voluntary Freezing Format -->
+                <div class="download-item-card" data-cat="trading">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Voluntary Freezing Format</strong>
+                            <span>Online access suspension</span>
+                            <span class="doc-type">FORM</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/home/freezingblockingonlinetradingaccount" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 14. Closure Form CDSL -->
+                <div class="download-item-card" data-cat="closure">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Closure Form (CDSL)</strong>
+                            <span>Demat Account closure</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/CLOSER-FORM-CDSL.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 15. Closure Form Trading -->
+                <div class="download-item-card" data-cat="closure">
+                    <div class="doc-meta">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-info">
+                            <strong>Closure Form (Trading)</strong>
+                            <span>Trading Account closure</span>
+                            <span class="doc-type">PDF</span>
+                        </div>
+                    </div>
+                    <a href="https://www.prrsaar.com/docs/bk-docs/29-04-2025/Trading-Account-Closure-Form.pdf" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 16. Download Server 1 -->
+                <div class="download-item-card" data-cat="servers">
+                    <div class="doc-meta">
+                        <div class="doc-icon" style="background: #F0FDF4; color: var(--prrasar-green, #008C45);"><i class="fa-solid fa-server"></i></div>
+                        <div class="doc-info">
+                            <strong>Download Server 1</strong>
+                            <span>Trading software / exe</span>
+                            <span class="doc-type">FTP</span>
+                        </div>
+                    </div>
+                    <a href="ftp://103.175.30.195/" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- 17. Download Server 2 -->
+                <div class="download-item-card" data-cat="servers">
+                    <div class="doc-meta">
+                        <div class="doc-icon" style="background: #F0FDF4; color: var(--prrasar-green, #008C45);"><i class="fa-solid fa-server"></i></div>
+                        <div class="doc-info">
+                            <strong>Download Server 2</strong>
+                            <span>Trading software / backup</span>
+                            <span class="doc-type">FTP</span>
+                        </div>
+                    </div>
+                    <a href="ftp://182.73.27.69/" target="_blank" class="btn-download-action" title="Download"><i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <div class="dl-empty-msg" id="dlEmptyMsg"><i class="fa-solid fa-magnifying-glass"></i> No forms match this category or search.</div>
+
+            </div>
+
+            <!-- View More / Less Toggle Button -->
+            <div class="view-more-wrap">
+                <button type="button" class="btn-view-toggle" id="viewToggleBtn" onclick="toggleViewMore(this)">
+                    View All Forms (17) <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="prrasar-exact-footer">
+
+        <!-- 01. MAIN 4-COLUMN SECTION -->
+        <div class="footer-columns-container">
+
+            <!-- COLUMN 1: CONTACT US -->
+            <div class="footer-box col-contact">
+                <a href="contact.html"</a>
+
+                <h3 class="box-title">Contact Us</h3>
+                <div class="contact-row">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Phone:</strong>
+                        <p>91-11-45350000 (Board Lines)</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <a href="mailto:info@prrsaar.com">info@prrsaar.com</a>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address:</strong>
+                        <p>17A/35, 2nd Floor, West Punjabi Bagh, New Delhi - 110026</p>
+                    </div>
+                </div>
+
+                <div class="store-buttons-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.wave.prrsaarshri" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div>
+                            <small>ANDROID APP ON</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="https://apps.apple.com/in/app/prrsaar-shri/id1603438370" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-apple"></i>
+                        <div>
+                            <small>Download on the</small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: WE ARE OFFERING -->
+            <div class="footer-box">
+                <h3 class="box-title">We Are Offering</h3>
+                <ul class="footer-nav">
+                    <li><a href="PP.HTML#product-flow">Equity</a></li>
+                    <li><a href="PP.HTML#product-flow">Derivative (Future and Option)</a></li>
+                    <li><a href="PP.HTML#product-flow">Currency</a></li>
+                    <li><a href="PP.HTML#product-flow">Commodity</a></li>
+                    <li><a href="PP.HTML#product-flow">IPO</a></li>
+                    <li><a href="PP.HTML#product-flow">Mutual Fund</a></li>
+                    <li><a href="PP.HTML#product-flow">G-Bonds</a></li>
+                    <li><a href="PP.HTML#product-flow">Depository</a></li>
+                    <li><a href="PP.HTML#product-flow">API Key</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 3: POLICIES -->
+            <div class="footer-box">
+                <h3 class="box-title">Policies</h3>
+                <ul class="footer-nav">
+                    <li><a href="policy1.html">Policy for voluntary freezing of client's online access</a></li>
+                    <li><a href="policy2.html">Privacy Policy</a></li>
+                    <li><a href="policy3.html">Surveillance Policy</a></li>
+                    <li><a href="policy4.html">PMLA Policy</a></li>
+                    <li><a href="policy5.html">Policy on prefunded instrument</a></li>
+                    <li><a href="policy6.html">Policy on Unauthenticated News Circulation</a></li>
+                    <li><a href="policy7.html">Policy of Limit Setting</a></li>
+                    <li><a href="policy8.html">Inactive Account Policy</a></li>
+                    <li><a href="policy9.html">Conflict of Interest Policy</a></li>
+                    <li><a href="policy10.html">CLD Policy</a></li>
+                    <li><a href="policy11.html">Refund &amp; Cancellation Policy</a></li>
+                    <li><a href="policy12.html">Investor Complaint Redressal Mechanism</a></li>
+                    <li><a href="policy13.html">Internal Policy</a></li>
+                    <li><a href="policy14.html">CUSPA Policy</a></li>
+                    <li><a href="policy15.html">Terms &amp; Condition</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 4: OTHER -->
+            <div class="footer-box">
+                <h3 class="box-title">Other</h3>
+                <ul class="footer-nav">
+                    <li><a href="other.html#research-disclaimer">Risk Disclaimer and Disclosure - Research Analysts</a></li>
+                    <li><a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open an Account</a></li>
+                    <li><a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a></li>
+                    <li><a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a></li>
+                    <li><a href="other.html#attention-investors">Investors Awareness</a></li>
+                    <li><a href="PD.html#payment-bank-details">Payment Bank Details</a></li>
+                    <li><a href="PD.html#downloads-section">Downloads</a></li>
+                    <li><a href="other.html#risk-derivatives">Risk Disclosures on Derivatives</a></li>
+                    <li><a href="https://www.sebi.gov.in/" target="_blank">SEBI Investor website</a></li>
+                    <li><a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a></li>
+                    <li><a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a></li>
+                    <li><a href="https://www.mcxindia.com/about-us#legal-framework">MCX Rules and Bye-Laws</a></li>
+                    <li><a href="other.html#demat-advisory">CDSL DOs &amp; DONTs</a></li>
+                    <li><a href="chartstock.html">Investors Charter For Stock</a></li>
+                    <li><a href="chartstock.html">Investors Charter For DP</a></li>
+                    <li><a href="other.html#kyc-validation">KYC Validation Process</a></li>
+                    <li><a href="other.html#pro-trading">Pro Trading Disclosure</a></li>
+                    <li><a href="other.html#fraud-alert">Fraud Alert</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 02. USEFUL LINKS STRIP -->
+        <div class="useful-links-row">
+            <h4>Useful Links</h4>
+            <div class="links-inline">
+                <a href="policy12.html">Investor Complaint Redressal Mechanism</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/inspection-and-audit#vernacularLanguage">Vernacular Language MCX</a>
+                <span>|</span>
+                <a href="https://www.ncdex.com/Investor/Client_Reg_Doc.aspx" target="_blank" rel="noopener">Vernacular Language NCDEX</a>
+                <span>|</span>
+                <a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a>
+                <span>|</span>
+                <a href="https://www.cdslindia.com/downloads/DP/SOP%20for%20Incapacitated%20investor%20Final.pdf">SOP for Depository Participants</a>
+            </div>
+        </div>
+
+        <!-- 03. STATUTORY WARNINGS & DISCLOSURES -->
+        <div class="legal-compliance-section">
+            <p><strong>Statutory Warning:</strong> Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
+            <p><strong>Attention Investors:</strong> "Brokerage will not exceed the SEBI prescribed limit"</p>
+
+            <p class="notice-head">Filing of complaints through SEBI's online portal 'SCORES' and 'SMARTODR portal' - Easy &amp; Quick</p>
+            <p class="notice-sub">
+                a. Register on SCORES / SMARTODR Portal.<br>
+                b. Mandatory Details For Filing Complaints on SCORES:<br>
+                &gt; Name<br>
+                &gt; PAN<br>
+                &gt; Address<br>
+                &gt; Mobile Number<br>
+                &gt; Email ID<br>
+                c. Benefits:<br>
+                (i) Effective Communication<br>
+                (ii) Speedy Redressal of Grievance / Dispute
+            </p>
+
+            <p class="portal-links">
+                <a href="http://scores.sebi.gov.in" target="_blank">http://scores.sebi.gov.in</a><br>
+                <a href="https://smartodr.in/login" target="_blank">https://smartodr.in/login</a>
+            </p>
+
+            <p class="circular-title">SEBI Master Circular on ODR updated on December 28, 2023</p>
+            <p class="circular-link">
+                <a href="https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794.html" target="_blank">https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794</a>
+            </p>
+
+            <p class="disclaimer-text">
+                Disclaimer: "The Stock Exchange, Mumbai is not in any manner answerable, responsible or liable to any person or persons for any acts of omission or commission, errors, mistakes and/or violation, actual or perceived, by us or our partners, agents, associates etc., of any of the Rules, Regulations, Bye-laws of the Stock Exchange, Mumbai, SEBI Act or any other laws in force from time to time. The Stock Exchange, Mumbai is not answerable, responsible or liable for any information on this Website or for any services rendered by our employees, our servants, and us."
+            </p>
+        </div>
+
+        <!-- 04. YELLOW SLIDING MARQUEE LINE -->
+        <div class="yellow-sliding-marquee-bar">
+            <div class="marquee-track">
+                <span class="marquee-item">
+                    1.>Attention Investors   1. Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 01, 2020.
+                    2. Update your email id and mobile number with your stock broker / depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.
+                    3. Check your securities / MF / bonds in the consolidated account statement issued by NSDL/CDSL every month.   ... Issued in the interest of Investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    2.Information Regarding: SEBI Complaint Redress System (SCORES). Filing of Complaints on SCORES - Easy &amp; Quick.
+                    (a) Register on SCORES portal.
+                    (b) Mandatory details for filing complaints on SCORES:
+                    i). Name, PAN, Address, Mobile Number, Email ID. (c) Benefits: i). Effective communication. ii). Speedy redressal of the grievances.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    3.   ATTENTION INVESTORS: Prevent Unauthorized Transactions in your demat account --&gt; Update your Mobile Number with your Depository Participant.
+                    Receive alerts on your Registered Mobile for all debit and other important transactions in your demat account directly from CDSL on the same day issued in the interest of investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    4. "KYC is one time exercise while dealing in securities markets -
+                    once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">5. No need to issue cheques by investors while subscribing to IPO.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">6. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">7. No worries for refund as the money remains in investor's account.</span>
+                <span class="marquee-sep">✦</span>
+            </div>
+        </div>
+
+        <!-- 05. GRIEVANCE SECTION & REGISTRATIONS -->
+        <div class="grievance-compliance-block">
+            <p class="kyc-rule-note">
+                "KYC is one time exercise while dealing in securities markets - once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+            </p>
+            <p class="ipo-note">
+                No need to issue cheques by investors while subscribing to IPO. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment. No worries for refund as the money remains in investor's account.
+            </p>
+
+            <p class="grievance-contact-label">In case of any grievances/complaint against the Stock Broker /Depository Participant:</p>
+            <p class="grievance-email-links">
+                Email-id at:
+                <a href="mailto:grievance@prrsaar.com">grievance@prrsaar.com</a>,
+                <a href="mailto:dpgrievances@prrsaar.com">dpgrievances@prrsaar.com</a>
+            </p>
+
+            <div class="official-portal-links">
+                <a href="https://scores.sebi.gov.in" target="_blank" class="badge-link">SCORES PORTAL</a>
+                <span class="link-divider">|</span>
+                <a href="https://smartodr.in/login" target="_blank" class="badge-link odr-highlight">
+                    SMART<span>ODR</span> PORTAL
+                </a>
+            </div>
+
+            <p class="sebi-numbers">
+                SEBI Regn No: INZ000027432, DP IN-DP-563-2021<br>
+                NSE: 13457, BSE: 6270, MCX: 10815, NCDEX: 00536 &amp; CDSL-12091700
+            </p>
+        </div>
+
+        <!-- 06. COPYRIGHT BAR -->
+        <div class="bottom-copyright-strip">
+            <p>© 2026 Prrsaar Sampada Private Limited | All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+                function toggleReadMore(wrapperId, btnElement) {
+                    const wrapper = document.getElementById(wrapperId);
+                    if (!wrapper) return;
+
+                    const isExpanded = wrapper.classList.toggle('is-expanded');
+                    const btnText = btnElement.querySelector('span');
+
+                    if (isExpanded) {
+                        btnText.textContent = 'Read Less';
+                    } else {
+                        btnText.textContent = 'Read More';
+                        wrapper.closest('.compliance-block-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                }
+
+                let isExpanded = false;
+                let activeCat = 'all';
+
+                function getCards() {
+                    return document.querySelectorAll('.download-item-card');
+                }
+
+                function initCardLimit() {
+                    applyDownloadFilter();
+                }
+
+                function setDownloadCat(cat, btn) {
+                    activeCat = cat;
+                    document.querySelectorAll('.dl-chip').forEach(c => c.classList.remove('active'));
+                    if (btn) btn.classList.add('active');
+                    applyDownloadFilter();
+                }
+
+                function applyDownloadFilter() {
+                    const input = document.getElementById('downloadSearchInput');
+                    const query = input ? input.value.toLowerCase().trim() : '';
+                    const cards = getCards();
+                    const toggleWrap = document.querySelector('.view-more-wrap');
+                    const emptyMsg = document.getElementById('dlEmptyMsg');
+                    let shown = 0;
+
+                    cards.forEach((card, index) => {
+                        const text = card.querySelector('.doc-info').innerText.toLowerCase();
+                        const cat = card.dataset.cat || 'other';
+
+                        let show;
+                        if (query !== '') {
+                            show = text.includes(query) || cat.includes(query);
+                        } else if (activeCat !== 'all') {
+                            show = cat === activeCat;
+                        } else {
+                            show = isExpanded || index < 6;
+                        }
+
+                        card.classList.toggle('is-hidden', !show);
+                        if (show) shown++;
+                    });
+
+                    if (toggleWrap) {
+                        toggleWrap.style.display = (query === '' && activeCat === 'all') ? 'block' : 'none';
+                    }
+
+                    const btn = document.getElementById('viewToggleBtn');
+                    if (btn) {
+                        btn.innerHTML = isExpanded
+                            ? 'Show Less <i class="fa-solid fa-chevron-up"></i>'
+                            : 'View All Forms (17) <i class="fa-solid fa-chevron-down"></i>';
+                    }
+
+                    if (emptyMsg) emptyMsg.style.display = shown === 0 ? 'block' : 'none';
+                }
+
+                function toggleViewMore(btn) {
+                    isExpanded = !isExpanded;
+                    applyDownloadFilter();
+                }
+
+                function filterDownloads() {
+                    applyDownloadFilter();
+                }
+
+                document.addEventListener('DOMContentLoaded', initCardLimit);
+    </script>
+</body>
+
+</html>

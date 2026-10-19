@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRRSAAR - Share Ka Bazaar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="MAIN_FIXED.css">
+    <script src="JAVA.js"></script>
+</head>
+
+<body>
+    <!-- ================= SEBI AWARENESS POPUP MODAL ================= -->
+    <div class="sebi-modal-overlay" id="sebiModalOverlay">
+        <div class="sebi-popup-card">
+            <div class="sebi-popup-header">
+                <div class="sebi-title-wrap">
+                    <span class="sebi-blue-dot"></span>
+                    <h3>SEBI presents</h3>
+                </div>
+                <button type="button" class="sebi-close-btn" id="closeSebiModal" aria-label="Close Popup">&times;</button>
+            </div>
+
+            <div class="sebi-popup-body">
+                <h4>Samajh Se Investing Simple :</h4>
+                <ul class="sebi-points-list">
+                    <li>
+                        <span class="sebi-tick-icon">✓</span>
+                        <span>Understand Before You Invest</span>
+                    </li>
+                    <li>
+                        <span class="sebi-tick-icon">✓</span>
+                        <span>Choose Regulated Investment Products</span>
+                    </li>
+                    <li>
+                        <span class="sebi-tick-icon">✓</span>
+                        <span>Start Early, Stay Invested</span>
+                    </li>
+                    <li>
+                        <span class="sebi-tick-icon">✓</span>
+                        <span>Beware of Investment Frauds</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= RISK DISCLOSURES ON DERIVATIVES POPUP (opens after SEBI popup) ================= -->
+    <div class="sebi-modal-overlay" id="rdModalOverlay">
+        <div class="sebi-popup-card">
+            <div class="sebi-popup-header rd-header">
+                <h3 class="rd-title">Risk Disclosures On Derivatives</h3>
+                <button type="button" class="sebi-close-btn" id="closeRdModal" aria-label="Close Popup">&times;</button>
+            </div>
+
+            <div class="sebi-popup-body rd-body">
+                <ul class="rd-list">
+                    <li>9 out of 10 individual traders in equity Futures and Options Segment, incurred net losses.</li>
+                    <li>On an average, loss makers registered net trading loss close to &#8377;50,000.</li>
+                    <li>Over and above the net trading losses incurred, loss makers expended an additional 28% of net trading losses as transaction costs.</li>
+                    <li>Those making net trading profits, incurred between 15% to 50% of such profits as transaction cost.</li>
+                </ul>
+                <p class="rd-note">SEBI study dated January 25, 2023 on "Analysis of Profit and Loss of Individual Traders dealing in equity Futures and Options (F&amp;O) Segment", wherein Aggregate Level findings are based on annual Profit/Loss incurred by individual traders in equity F&amp;O during FY 2021-22.</p>
+                <button type="button" class="rd-ok-btn" id="rdOkBtn">I Understand &mdash; Close This Notice</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LOGO.png" alt="PRRSAAR Logo">
+            </a>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="PP.HTML" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-left">
+                        <a href="PP.HTML#calculators-section" class="tab-link active" data-tab="calculators-tab">Calculators</a>
+                        <a href="PP.HTML#pricing-section" class="tab-link" data-tab="pricing-tab">Pricing</a>
+                        <a href="PP.HTML#services-section" class="tab-link" data-tab="services-tab">Services</a>
+                    </div>
+                    <div class="dropdown-right">
+                        <div id="calculators-tab" class="tab-content active">
+                            <h5>All Calculators</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#calculators-section">Brokerage Calculator</a>
+                                <a href="PP.HTML#calculators-section">Margin Calculator</a>
+                                <a href="PP.HTML#calculators-section">SIP Calculator</a>
+                            </div>
+                            <a href="PP.HTML#calculators-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="pricing-tab" class="tab-content">
+                            <h5>Pricing Plans</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#pricing-section">Equity Delivery (Free)</a>
+                                <a href="PP.HTML#pricing-section">Intraday Charges</a>
+                                <a href="PP.HTML#pricing-section">F&amp;O Pricing</a>
+                            </div>
+                            <a href="PP.HTML#pricing-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="services-tab" class="tab-content">
+                            <h5>Our Services</h5>
+                            <div class="tab-links-list">
+                                <a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open An Account</a>
+                                <a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a>
+                                <a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a>
+                            </div>
+                            <a href="PP.HTML#services-section" class="view-all-btn">View All →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="AA.HTML">About us</a>
+            <a href="learn.html">Learn</a>
+            <a href="mm.html">Market info</a>
+            <a href="f&q.html">F&amp;Q</a>
+        </nav>
+        <div class="nav-buttons">
+            <button type="button" class="bag">LOG IN</button>
+            <button type="button" class="primary">Open Account</button>
+        </div>
+    </header>
+
+    <!-- ================= 02. LIVE STOCK TICKER ================= -->
+    <div class="stock-ticker-container">
+        <div class="ticker-wrap">
+            <div class="ticker-item">NIFTY 50 <span class="up">24,150.45 (+0.45%)</span></div>
+            <div class="ticker-item">SENSEX <span class="up">79,200.80 (+0.38%)</span></div>
+            <div class="ticker-item">RELIANCE <span class="down">2,450.15 (-0.12%)</span></div>
+            <div class="ticker-item">TCS <span class="up">4,120.30 (+1.20%)</span></div>
+            <div class="ticker-item">INFY <span class="up">1,940.65 (+0.75%)</span></div>
+            <div class="ticker-item">HDFC BANK <span class="down">1,650.00 (-0.40%)</span></div>
+        </div>
+    </div>
+
+    <!-- ================= 03. HERO BANNER ================= -->
+    <section class="prrasar-hero-section">
+        <div class="pr-hero-bg-circle"></div>
+        <div class="pr-hero-decoration"></div>
+
+        <div class="hero-main-container">
+            <div class="hero-left-content">
+                <div class="hero-pill-badge">
+                    <span class="pulse-dot"></span>
+                    <span>SEBI Registered &bull; Trusted by People</span>
+                </div>
+
+                <h1 class="hero-heading">
+                    Start Investing in Your <br>
+                    <span class="gradient-text">Bright Financial Future</span>
+                </h1>
+
+                <p class="hero-subtext">
+                    Open your free Trading &amp; Demat account in minutes with fast, secure e-KYC and begin your market journey today.
+                </p>
+
+                <div class="hero-features-grid">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Fast Paperless e-KYC</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Free Trading &amp; Demat</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Secure Trading Platform</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Trade, Invest &bull; One App</span>
+                    </div>
+                </div>
+
+                <div class="hero-form-wrapper">
+                    <form class="account-open-form" onsubmit="event.preventDefault();">
+                        <div class="input-group-box">
+                            <span class="country-prefix">+91</span>
+                            <input type="tel" maxlength="10" placeholder="Enter Mobile Number" required>
+                        </div>
+                        <button type="submit" class="btn-create-account">
+                            <span>Create Demat Account</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    <small class="terms-note">*T&amp;C Apply &bull; 100% Secure &amp; Paperless</small>
+                </div>
+            </div>
+
+            <div class="hero-right-visual">
+                <div class="image-stage">
+                    <img src="kg.png" alt="PRRSAAR Trading App" class="main-hero-img">
+
+                    <!-- Pair 1 -->
+                    <div class="floating-badge badge-top-left badge-pair-1">
+                        <div class="badge-icon">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                        <div>
+                            <small>NIFTY 50</small>
+                            <strong style="color: #008C45;">+24,632.45 (+1.32%)</strong>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-right badge-pair-1">
+                        <div class="badge-icon green-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <small>Trusted Platform</small>
+                            <strong style="color: #0E1E38;">100% Bank Grade Safety</strong>
+                        </div>
+                    </div>
+
+                    <!-- Pair 2 -->
+                    <div class="floating-badge badge-top-right badge-pair-2">
+                        <div class="badge-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <small>SENSEX</small>
+                            <strong style="color: #008C45;">+79,840.10 (+1.15%)</strong>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-left badge-pair-2">
+                        <div class="badge-icon green-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div>
+                            <small>Delivery Trades</small>
+                            <strong style="color: #008C45;">₹20 Brokerage Free</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 04. WHY CHOOSE PRRSAAR ================= -->
+    <section class="why-choose-section">
+        <div class="why-choose-container">
+            <div class="why-choose-header">
+                <h2>Why Choose PRRSAAR?</h2>
+                <p>
+                    Experience, technology and personalized support —
+                    everything you need to invest with greater confidence.
+                </p>
+            </div>
+
+            <div class="why-choose-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>20+ Years of Experience</h3>
+                    <p>Trusted market expertise built over two decades of serving investors and traders.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Powerful Trading Platform</h3>
+                    <p>Trade and invest through a fast, simple and reliable platform designed for today's investors.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Clear and competitive pricing with no unnecessary surprises.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Dedicated Investor Support</h3>
+                    <p>Get the assistance you need throughout your investment journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 05. OUR OFFERING ================= -->
+    <section class="products-section">
+        <div class="section-container">
+            <h2 class="section-title">Our Offering</h2>
+            <div class="products-grid">
+                <a class="product-box" href="PP.HTML#prod-mutual-funds">
+                    <div class="prod-icon"><img src="m.png" alt="Mutual Funds"></div>
+                    <h4>Mutual Funds</h4>
+                </a>
+                <a class="product-box" href="PP.HTML#prod-equity">
+                    <div class="prod-icon"><img src="st.png" alt="Stocks"></div>
+                    <h4>Stocks</h4>
+                </a>
+                <a class="product-box" href="PP.HTML#prod-derivatives">
+                    <div class="prod-icon"><img src="f.png" alt="F&O"></div>
+                    <h4>Futures &amp; Options</h4>
+                </a>
+                <a class="product-box" href="PP.HTML#prod-commodities">
+                    <div class="prod-icon"><img src="co.png" alt="Commodities"></div>
+                    <h4>Commodities</h4>
+                </a>
+                <a class="product-box" href="PP.HTML#prod-ipo">
+                    <div class="prod-icon"><img src="ipo.png" alt="IPOs"></div>
+                    <h4>IPOs</h4>
+                </a>
+                <a class="product-box" href="PP.HTML#prod-currency">
+                    <div class="prod-icon"><img src="coin.png" alt="Currencies"></div>
+                    <h4>Currencies</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 06. PRICING & CALCULATORS (FIXED) ================= -->
+    <section class="main-single-box" id="pricing">
+
+        <!-- Top Heading -->
+        <div class="top-center-block">
+            <h2>
+                Transparent Pricing. <br>
+                No Hidden Charges.
+            </h2>
+            <!-- FIXED LINK -->
+            <a href="PP.HTML#pricing-section" class="btn-pricing-link">
+                <button type="button" class="btn-view-pricing">View Pricing</button>
+            </a>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-cards-grid">
+            <div class="price-status-card">
+                <span class="price-number">₹0</span>
+                <span class="price-title">Account Opening</span>
+                <span class="price-subtext">Demat + Trading</span>
+            </div>
+
+            <div class="price-status-card">
+                <span class="price-number">₹299</span>
+                <span class="price-title">AMC*</span>
+                <span class="price-subtext">Maintenance</span>
+            </div>
+
+            <div class="price-status-card">
+                <span class="price-number">₹0</span>
+                <span class="price-title">Commissions</span>
+                <span class="price-subtext">MF and IPOs</span>
+            </div>
+
+            <div class="price-status-card">
+                <span class="price-number">₹20</span>
+                <span class="price-title">Brokerage*</span>
+                <span class="price-subtext">Equity, F&amp;O</span>
+            </div>
+        </div>
+
+        <!-- Bottom Calculator Grid -->
+        <div class="bottom-calc-section">
+            <div class="calculator-sidebar">
+                <h1>Brokerage &amp; Margin Calculator</h1>
+
+                <div class="calc-box-grid">
+                    <div class="calc-mini-box">
+                        <a href="PP.HTML#calculators-section">Brokerage Calculator</a>
+                    </div>
+                    <div class="calc-mini-box">
+                        <a href="PP.HTML#calculators-section">Margin Calculator</a>
+                    </div>
+                    <div class="calc-mini-box">
+                        <a href="PP.HTML#calculators-section">SIP Calculator</a>
+                    </div>
+                    <div class="calc-mini-box">
+                        <a href="PP.HTML#calculators-section">SWP Calculator</a>
+                    </div>
+                </div>
+
+                <div class="explore-wrap">
+                    <a href="PP.HTML#calculators-section" class="explore-all-link">
+                        Explore All Calculators →
+                    </a>
+                </div>
+            </div>
+
+            <div class="calc-image-box">
+                <img src="c.jpg" alt="Calculator Illustration">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ================= 07. HOW TO OPEN ACCOUNT ================= -->
+    <section class="account-section" id="how-to-open">
+        <div class="account-container">
+            <div class="account-header">
+                <h2>How to Open Your Account?</h2>
+                <p>
+                    Get started with PRRSAAR in just a few simple steps.
+                    Choose your preferred way to open your Trading &amp;
+                    Demat account.
+                </p>
+            </div>
+
+            <div class="account-methods">
+                <div class="account-method-card">
+                    <div class="account-method-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <div class="account-method-content">
+                        <h3>Open Account on Mobile App</h3>
+                        <p>
+                            Download the PRRSAAR mobile app, complete your
+                            e-KYC and open your Trading &amp; Demat account
+                            securely from your smartphone.
+                        </p>
+                        <a href="index.html#how-to-open" class="know-more-btn">Watch How to Open →</a>
+                    </div>
+                </div>
+
+                <div class="account-method-card">
+                    <div class="account-method-icon desktop-icon">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <div class="account-method-content">
+                        <h3>Open Account on Desktop</h3>
+                        <p>
+                            Open your Trading &amp; Demat account directly
+                            from your desktop with our simple and secure
+                            online account opening process.
+                        </p>
+                        <a href="index.html#how-to-open" class="know-more-btn">Watch How to Open →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 08. TESTIMONIALS ================= -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <h2>Clients’ Experiences</h2>
+
+            <div class="slider-window" id="sliderWindow">
+                <div class="testimonials-grid" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "We are proud to be associated with PRRSAAR. An association with PRRSAAR has a number of advantages. They have a highly professional approach, prompt service, customer friendly practices, firm business ethics and innovative services."
+                        </p>
+                        <div class="user-profile-info">
+                            <img src="https://i.pravatar.cc/100?img=1" alt="Mr. R.P. Singla" class="customer-pic">
+                            <div>
+                                <span class="profile-name">Mr. R.P. Singla</span>
+                                <span class="profile-role">Investor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card center-highlight">
+                        <p class="testimonial-text">
+                            "I am a working woman. Always keen to be part of equity as an investor. Then I tried PRRSAAR, it's just 3 months passed, but they are helping me to understand market, giving proper service as a new entrant in market. I wish all the very best to them."
+                        </p>
+                        <div class="user-profile-info">
+                            <img src="https://i.pravatar.cc/100?img=2" alt="Mrs. Monica Bharara" class="customer-pic">
+                            <div>
+                                <span class="profile-name">Mrs. Monica Bharara</span>
+                                <span class="profile-role">New Equity Investor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "Recommend to friends and relatives who ask for Genuine, as PRRSAAR are never seen focused on Brokerage generations, their support and dedication towards services to their clients are best till now I have experienced."
+                        </p>
+                        <div class="user-profile-info">
+                            <img src="https://i.pravatar.cc/100?img=3" alt="Dr. Rohit Bhanddari" class="customer-pic">
+                            <div>
+                                <span class="profile-name">Dr. Rohit Bhanddari</span>
+                                <span class="profile-role">Client</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "My last 5 years as an PRRSAAR Authorised Person have been very fruitful. 'Prompt people, straight service' is what describes them. They have transparent business practices and friendly dealing methodology. A relationship with PRRSAAR is like an ongoing pleasant journey."
+                        </p>
+                        <div class="user-profile-info">
+                            <img src="https://i.pravatar.cc/100?img=4" alt="Mr. Rohit Malhotra" class="customer-pic">
+                            <div>
+                                <span class="profile-name">Mr. Rohit Malhotra</span>
+                                <span class="profile-role">Authorised Person</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "My experience as an PRRSAAR Authorised Person has been very good. This is because of the seamless service offered by their back office. PRRSAAR has an advanced, technology-driven setup and strong risk parameters. I am proud to be a part of this progress."
+                        </p>
+                        <div class="user-profile-info">
+                            <img src="https://i.pravatar.cc/100?img=5" alt="Mr. Surender Goel" class="customer-pic">
+                            <div>
+                                <span class="profile-name">Mr. Surender Goel</span>
+                                <span class="profile-role">Authorised Person</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-controls-wrap">
+                <button type="button" class="nav-arrow-btn" id="prevBtn" aria-label="Previous testimonial">←</button>
+                <div class="slider-dots" id="sliderDots" aria-label="Testimonial pages"></div>
+                <button type="button" class="nav-arrow-btn" id="nextBtn" aria-label="Next testimonial">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 09. LEGACY BANNER ================= -->
+    <section class="legacy-banner">
+        <div class="banner-container">
+            <div class="banner-header">
+                <h2>Years of Trust. A Future of Growth.</h2>
+                <p>With decades of market experience, we empower investors with trusted solutions and opportunities built for long-term growth.</p>
+            </div>
+
+            <div class="banner-stats">
+                <div class="stat-item">
+                    <div class="icon-wrapper check-icon">
+                        <span class="icon">&#10003;</span>
+                    </div>
+                    <div class="stat-info">
+                        <h3>20 +</h3>
+                        <p>Years of Trust</p>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="icon-wrapper user-icon">
+                        <span class="icon">&#128100;</span>
+                    </div>
+                    <div class="stat-info">
+                        <h3>3000+</h3>
+                        <p>Investors</p>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="icon-wrapper branch-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>7</h3>
+                        <p>Branches</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 10. APP DOWNLOAD SECTION ================= -->
+    <section class="download-section">
+        <div class="download-container">
+            <div class="app-promo-info">
+                <h2>Trade Smarter, Faster, and Anywhere</h2>
+                <p>
+                    Track live markets, analyze charts instantly, and invest in Stocks, Mutual Funds, and F&amp;O seamlessly from anywhere with our lightning-fast mobile application.
+                </p>
+
+                <div class="store-buttons-wrap">
+                    <a href="https://play.google.com/store/apps/details?id=com.wave.prrsaarshri" target="_blank" rel="noopener" class="store-btn">
+                        <div>
+                            <span class="btn-text-small">GET IT ON</span>
+                            <div>Google Play</div>
+                        </div>
+                    </a>
+
+                    <a href="https://apps.apple.com/in/app/prrsaar-shri/id1603438370" target="_blank" rel="noopener" class="store-btn">
+                        <div>
+                            <span class="btn-text-small">DOWNLOAD ON THE</span>
+                            <div>App Store</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="P.png" alt="PRRSAAR Mobile App">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 11. FOOTER ================= -->
+    <footer class="prrasar-exact-footer">
+        <div class="footer-columns-container">
+            <div class="footer-box col-contact">
+                <h3 class="box-title">Contact Us</h3>
+                <div class="contact-row">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Phone:</strong>
+                        <p>91-11-45350000 (Board Lines)</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <a href="mailto:info@prrsaar.com">info@prrsaar.com</a>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address:</strong>
+                        <p>17A/35, 2nd Floor, West Punjabi Bagh, New Delhi - 110026</p>
+                    </div>
+                </div>
+
+                <div class="store-buttons-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.wave.prrsaarshri" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div>
+                            <small>ANDROID APP ON</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="https://apps.apple.com/in/app/prrsaar-shri/id1603438370" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-apple"></i>
+                        <div>
+                            <small>Download on the</small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <h3 class="box-title">We Are Offering</h3>
+                <ul class="footer-nav">
+                    <li><a href="PP.HTML#product-flow">Equity</a></li>
+                    <li><a href="PP.HTML#product-flow">Derivative (Future and Option)</a></li>
+                    <li><a href="PP.HTML#product-flow">Currency</a></li>
+                    <li><a href="PP.HTML#product-flow">Commodity</a></li>
+                    <li><a href="PP.HTML#product-flow">IPO</a></li>
+                    <li><a href="PP.HTML#product-flow">Mutual Fund</a></li>
+                    <li><a href="PP.HTML#product-flow">G-Bonds</a></li>
+                    <li><a href="PP.HTML#product-flow">Depository</a></li>
+                    <li><a href="PP.HTML#product-flow">API Key</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3 class="box-title">Policies</h3>
+                <ul class="footer-nav">
+                    <li><a href="policy1.html">Policy for voluntary freezing of client's online access</a></li>
+                    <li><a href="policy2.html">Privacy Policy</a></li>
+                    <li><a href="policy3.html">Surveillance Policy</a></li>
+                    <li><a href="policy4.html">PMLA Policy</a></li>
+                    <li><a href="policy5.html">Policy on prefunded instrument</a></li>
+                    <li><a href="policy6.html">Policy on Unauthenticated News Circulation</a></li>
+                    <li><a href="policy7.html">Policy of Limit Setting</a></li>
+                    <li><a href="policy8.html">Inactive Account Policy</a></li>
+                    <li><a href="policy9.html">Conflict of Interest Policy</a></li>
+                    <li><a href="policy10.html">CLD Policy</a></li>
+                    <li><a href="policy11.html">Refund &amp; Cancellation Policy</a></li>
+                    <li><a href="policy12.html">Investor Complaint Redressal Mechanism</a></li>
+                    <li><a href="policy13.html">Internal Policy</a></li>
+                    <li><a href="policy14.html">CUSPA Policy</a></li>
+                    <li><a href="policy15.html">Terms &amp; Condition</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3 class="box-title">Other</h3>
+                <ul class="footer-nav">
+                    <li><a href="other.html#research-disclaimer">Risk Disclaimer and Disclosure - Research Analysts</a></li>
+                    <li><a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open an Account</a></li>
+                    <li><a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a></li>
+                    <li><a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a></li>
+                    <li><a href="other.html#attention-investors">Investors Awareness</a></li>
+                    <li><a href="PD.html#payment-bank-details">Payment Bank Details</a></li>
+                    <li><a href="PD.html#downloads-section">Downloads</a></li>
+                    <li><a href="other.html#risk-derivatives">Risk Disclosures on Derivatives</a></li>
+                    <li><a href="https://www.sebi.gov.in/" target="_blank">SEBI Investor website</a></li>
+                    <li><a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a></li>
+                    <li><a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a></li>
+                    <li><a href="https://www.mcxindia.com/about-us#legal-framework">MCX Rules and Bye-Laws</a></li>
+                    <li><a href="other.html#demat-advisory">CDSL DOs &amp; DONTs</a></li>
+                    <li><a href="chartstock.html">Investors Charter For Stock</a></li>
+                    <li><a href="chartstock.html">Investors Charter For DP</a></li>
+                    <li><a href="other.html#kyc-validation">KYC Validation Process</a></li>
+                    <li><a href="other.html#pro-trading">Pro Trading Disclosure</a></li>
+                    <li><a href="other.html#fraud-alert">Fraud Alert</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="useful-links-row">
+            <h4>Useful Links</h4>
+            <div class="links-inline">
+                <a href="policy12.html">Investor Complaint Redressal Mechanism</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/inspection-and-audit#vernacularLanguage">Vernacular Language MCX</a>
+                <span>|</span>
+                <a href="https://www.ncdex.com/Investor/Client_Reg_Doc.aspx" target="_blank" rel="noopener">Vernacular Language NCDEX</a>
+                <span>|</span>
+                <a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a>
+                <span>|</span>
+                <a href="https://www.cdslindia.com/downloads/DP/SOP%20for%20Incapacitated%20investor%20Final.pdf">SOP for Depository Participants</a>
+            </div>
+        </div>
+
+        <div class="legal-compliance-section">
+            <p><strong>Statutory Warning:</strong> Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
+            <p><strong>Attention Investors:</strong> "Brokerage will not exceed the SEBI prescribed limit"</p>
+
+            <p class="notice-head">Filing of complaints through SEBI's online portal 'SCORES' and 'SMARTODR portal' - Easy &amp; Quick</p>
+            <p class="notice-sub">
+                a. Register on SCORES / SMARTODR Portal.<br>
+                b. Mandatory Details For Filing Complaints on SCORES:<br>
+                &gt; Name<br>
+                &gt; PAN<br>
+                &gt; Address<br>
+                &gt; Mobile Number<br>
+                &gt; Email ID<br>
+                c. Benefits:<br>
+                (i) Effective Communication<br>
+                (ii) Speedy Redressal of Grievance / Dispute
+            </p>
+
+            <p class="portal-links">
+                <a href="http://scores.sebi.gov.in" target="_blank">http://scores.sebi.gov.in</a><br>
+                <a href="https://smartodr.in/login" target="_blank">https://smartodr.in/login</a>
+            </p>
+
+            <p class="circular-title">SEBI Master Circular on ODR updated on December 28, 2023</p>
+            <p class="circular-link">
+                <a href="https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794.html" target="_blank">https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794</a>
+            </p>
+
+            <p class="disclaimer-text">
+                Disclaimer: "The Stock Exchange, Mumbai is not in any manner answerable, responsible or liable to any person or persons for any acts of omission or commission, errors, mistakes and/or violation, actual or perceived, by us or our partners, agents, associates etc., of any of the Rules, Regulations, Bye-laws of the Stock Exchange, Mumbai, SEBI Act or any other laws in force from time to time. The Stock Exchange, Mumbai is not answerable, responsible or liable for any information on this Website or for any services rendered by our employees, our servants, and us."
+            </p>
+        </div>
+
+        <div class="yellow-sliding-marquee-bar">
+            <div class="marquee-track">
+                <span class="marquee-item">
+                    1.&gt;Attention Investors   1. Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 01, 2020.
+                    2. Update your email id and mobile number with your stock broker / depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.
+                    3. Check your securities / MF / bonds in the consolidated account statement issued by NSDL/CDSL every month.   ... Issued in the interest of Investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    2.Information Regarding: SEBI Complaint Redress System (SCORES). Filing of Complaints on SCORES - Easy &amp; Quick.
+                    (a) Register on SCORES portal.
+                    (b) Mandatory details for filing complaints on SCORES:
+                    i). Name, PAN, Address, Mobile Number, Email ID. (c) Benefits: i). Effective communication. ii). Speedy redressal of the grievances.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    3.   ATTENTION INVESTORS: Prevent Unauthorized Transactions in your demat account --&gt; Update your Mobile Number with your Depository Participant.
+                    Receive alerts on your Registered Mobile for all debit and other important transactions in your demat account directly from CDSL on the same day issued in the interest of investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    4. "KYC is one time exercise while dealing in securities markets -
+                    once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">5. No need to issue cheques by investors while subscribing to IPO.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">6. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">7. No worries for refund as the money remains in investor's account.</span>
+                <span class="marquee-sep">✦</span>
+            </div>
+        </div>
+
+        <div class="grievance-compliance-block">
+            <p class="kyc-rule-note">
+                "KYC is one time exercise while dealing in securities markets - once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+            </p>
+            <p class="ipo-note">
+                No need to issue cheques by investors while subscribing to IPO. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment. No worries for refund as the money remains in investor's account.
+            </p>
+
+            <p class="grievance-contact-label">In case of any grievances/complaint against the Stock Broker /Depository Participant:</p>
+            <p class="grievance-email-links">
+                Email-id at:
+                <a href="mailto:grievance@prrsaar.com">grievance@prrsaar.com</a>,
+                <a href="mailto:dpgrievances@prrsaar.com">dpgrievances@prrsaar.com</a>
+            </p>
+
+            <div class="official-portal-links">
+                <a href="https://scores.sebi.gov.in" target="_blank" class="badge-link">SCORES PORTAL</a>
+                <span class="link-divider">|</span>
+                <a href="https://smartodr.in/login" target="_blank" class="badge-link odr-highlight">
+                    SMART<span>ODR</span> PORTAL
+                </a>
+            </div>
+
+            <p class="sebi-numbers">
+                SEBI Regn No: INZ000027432, DP IN-DP-563-2021<br>
+                NSE: 13457, BSE: 6270, MCX: 10815, NCDEX: 00536 &amp; CDSL-12091700
+            </p>
+        </div>
+
+        <div class="bottom-copyright-strip">
+            <p>© 2026 Prrsaar Sampada Private Limited | All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

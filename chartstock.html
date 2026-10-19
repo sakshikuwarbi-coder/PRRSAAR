@@ -1,0 +1,1068 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Charter for Stock - PRRSAAR</title>
+    <link rel="stylesheet" href="MAIN_FIXED.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="JAVA.js"></script>
+    <style>
+        /* Hero Banner */
+        .page-hero-banner {
+            background: linear-gradient(135deg, #091C38 0%, #03142E 100%);
+            padding: 60px 20px 70px;
+            color: #FFFFFF;
+            text-align: center;
+            border-bottom: 1px solid #1E3A8A;
+        }
+
+        .hero-banner-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 140, 69, 0.2);
+            color: #34D399;
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            font-size: 11.5px;
+            font-weight: 800;
+            padding: 6px 18px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .page-hero-banner h1 {
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+
+        .breadcrumb-text {
+            font-size: 14px;
+            color: #CBD5E1;
+            margin: 0;
+        }
+
+            .breadcrumb-text a {
+                color: #38BDF8;
+                text-decoration: none;
+            }
+
+        /* Container Layout */
+        .portal-stream-container {
+            max-width: 1140px;
+            margin: 40px auto 90px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+        }
+
+        /* Quick Stat Summary Widgets (Modern Fintech Header Strip) */
+        .metrics-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+
+        .metric-stat-box {
+            background: #FFFFFF;
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 18px 20px;
+            box-shadow: 0 2px 10px rgba(14, 30, 56, 0.03);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .stat-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: #F1F5F9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--prrasar-blue);
+            flex-shrink: 0;
+        }
+
+        .metric-stat-box.success .stat-icon {
+            background: var(--prrasar-green-soft);
+            color: var(--prrasar-green);
+        }
+
+        .stat-meta strong {
+            display: block;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--prrasar-navy);
+            line-height: 1.2;
+        }
+
+        .stat-meta span {
+            font-size: 12px;
+            color: #64748B;
+            font-weight: 600;
+        }
+
+        /* Modern Container Card */
+        .compliance-block-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-soft);
+            border-radius: var(--card-radius);
+            box-shadow: 0 6px 20px rgba(14, 30, 56, 0.04);
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+            .compliance-block-card:hover {
+                box-shadow: 0 10px 28px rgba(14, 30, 56, 0.06);
+            }
+
+        .card-custom-header {
+            background: #FFFFFF;
+            padding: 22px 28px 16px;
+            border-bottom: 1px solid #F1F5F9;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .card-custom-header h2 {
+                font-size: 19px;
+                font-weight: 800;
+                color: var(--prrasar-navy);
+                margin: 0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+                .card-custom-header h2 i {
+                    color: var(--prrasar-green);
+                    font-size: 17px;
+                }
+
+        .card-body-content {
+            padding: 24px 28px;
+        }
+
+        /* Interactive Accordions */
+        .modern-accordion-card {
+            border: 1.5px solid var(--border-soft);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            background: #FFFFFF;
+            transition: all 0.25s ease;
+        }
+
+            .modern-accordion-card:last-child {
+                margin-bottom: 0;
+            }
+
+            .modern-accordion-card:hover {
+                border-color: var(--prrasar-blue);
+            }
+
+        .accordion-btn-trigger {
+            width: 100%;
+            background: #FFFFFF;
+            border: none;
+            outline: none;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            text-align: left;
+            font-size: 15.5px;
+            font-weight: 700;
+            color: var(--prrasar-navy);
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+            .accordion-btn-trigger:hover {
+                background: #F8FAFC;
+                color: var(--prrasar-blue);
+            }
+
+        .btn-chevron-wrap {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #F1F5F9;
+            color: var(--prrasar-navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .modern-accordion-card.is-active {
+            border-color: var(--prrasar-green);
+            box-shadow: 0 4px 16px rgba(0, 140, 69, 0.08);
+        }
+
+            .modern-accordion-card.is-active .accordion-btn-trigger {
+                background: var(--prrasar-green-soft);
+                color: var(--prrasar-green);
+            }
+
+            .modern-accordion-card.is-active .btn-chevron-wrap {
+                background: var(--prrasar-green);
+                color: #FFFFFF;
+                transform: rotate(180deg);
+            }
+
+        .accordion-expand-container {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #FFFFFF;
+        }
+
+        .modern-accordion-card.is-active .accordion-expand-container {
+            max-height: 4000px;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        .accordion-body-inner {
+            padding: 26px 26px;
+            font-size: 14px;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        /* Inner Visual Highlight Cards */
+        .vision-mission-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 20px 22px;
+            margin-bottom: 16px;
+        }
+
+            .vision-mission-card.green-theme {
+                border-left: 4px solid var(--prrasar-green);
+            }
+
+            .vision-mission-card.blue-theme {
+                border-left: 4px solid var(--prrasar-blue);
+            }
+
+            .vision-mission-card h4 {
+                font-size: 15px;
+                font-weight: 800;
+                color: var(--prrasar-navy);
+                margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+        .charter-bullet-list {
+            margin: 8px 0 0 18px;
+        }
+
+            .charter-bullet-list li {
+                margin-bottom: 6px;
+                color: var(--text-body);
+            }
+
+        /* High Quality Clean Fintech Table */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 10px;
+            border: 1px solid var(--border-soft);
+            background: #FFFFFF;
+        }
+
+        .prrasar-modern-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: center;
+        }
+
+            .prrasar-modern-table th,
+            .prrasar-modern-table td {
+                border: 1px solid #E2E8F0;
+                padding: 12px 14px;
+                vertical-align: middle;
+            }
+
+            .prrasar-modern-table th {
+                background: #F8FAFC;
+                color: var(--prrasar-navy);
+                font-weight: 700;
+                white-space: nowrap;
+            }
+
+            .prrasar-modern-table.align-left td:nth-child(2),
+            .prrasar-modern-table.align-left td:nth-child(3) {
+                text-align: left;
+            }
+
+            .prrasar-modern-table tbody tr:hover {
+                background-color: #F8FAFC;
+            }
+
+            .prrasar-modern-table .sub-row-head th {
+                font-size: 12.5px;
+                background: #F1F5F9;
+                color: #475569;
+            }
+
+            .prrasar-modern-table .num-indexer-row th {
+                background: #FAFCFE;
+                font-size: 12px;
+                color: #94A3B8;
+                padding: 6px;
+            }
+
+            .prrasar-modern-table .table-highlight-total {
+                font-weight: 800;
+                background: #F1F5F9 !important;
+                color: var(--prrasar-navy);
+            }
+
+            .prrasar-modern-table td {
+                color: #0F172A;
+                font-weight: 500;
+            }
+
+
+        @media (max-width: 992px) {
+            .metrics-summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .metrics-summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-body-content {
+                padding: 18px 14px;
+            }
+
+            .accordion-btn-trigger {
+                padding: 15px 16px;
+                font-size: 14px;
+            }
+
+            .page-hero-banner h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LOGO.png" alt="PRRSAAR Logo">
+            </a>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="PP.HTML" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-left">
+                        <a href="PP.HTML#calculators-section" class="tab-link active" data-tab="calculators-tab">Calculators</a>
+                        <a href="PP.HTML#pricing-section" class="tab-link" data-tab="pricing-tab">Pricing</a>
+                        <a href="PP.HTML#services-section" class="tab-link" data-tab="services-tab">Services</a>
+                    </div>
+                    <div class="dropdown-right">
+                        <div id="calculators-tab" class="tab-content active">
+                            <h5>All Calculators</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#calculators-section">Brokerage Calculator</a>
+                                <a href="PP.HTML#calculators-section">Margin Calculator</a>
+                                <a href="PP.HTML#calculators-section">SIP Calculator</a>
+                            </div>
+                            <a href="PP.HTML#calculators-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="pricing-tab" class="tab-content">
+                            <h5>Pricing Plans</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#pricing-section">Equity Delivery (Free)</a>
+                                <a href="PP.HTML#pricing-section">Intraday Charges</a>
+                                <a href="PP.HTML#pricing-section">F&O Pricing</a>
+                            </div>
+                            <a href="PP.HTML#pricing-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="services-tab" class="tab-content">
+                            <h5>Our Services</h5>
+                            <div class="tab-links-list">
+                                <a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open An Account</a>
+                                <a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a>
+                                <a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a>
+                            </div>
+                            <a href="PP.HTML#services-section" class="view-all-btn">View All →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>      <a href="AA.HTML">About us</a>
+            <a href="learn.html">Learn</a>
+            <a href="mm.html">Market info</a>
+            <a href="f&q.html">F&Q</a>
+        </nav>
+        <div class="nav-buttons">
+            <button type="button" class="bag">LOG IN</button>
+            <button type="button" class="primary">Open Account</button>
+        </div>
+    </header>
+
+
+
+    <!-- HERO BANNER -->
+    <section class="page-hero-banner">
+        <div class="hero-banner-inner">
+            <span class="hero-badge-pill"><i class="fa-solid fa-scale-balanced"></i> INVESTOR CHARTER &amp; COMPLIANCE HUB</span>
+            <h1>Investor Charter for Stock</h1>
+            <p class="breadcrumb-text">
+                <a href="index.html">Home</a> / Investor Charter Stock Broker
+            </p>
+        </div>
+    </section>
+
+    <!-- MAIN STREAM CONTAINER -->
+    <main class="portal-stream-container">
+
+        <!-- METRICS SUMMARY WIDGETS -->
+        <div class="metrics-summary-grid">
+            <div class="metric-stat-box">
+                <div class="stat-icon"><i class="fa-solid fa-inbox"></i></div>
+                <div class="stat-meta">
+                    <strong>0</strong>
+                    <span>Total Received (Month)</span>
+                </div>
+            </div>
+            <div class="metric-stat-box success">
+                <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="stat-meta">
+                    <strong>0</strong>
+                    <span>Resolved Complaints</span>
+                </div>
+            </div>
+            <div class="metric-stat-box">
+                <div class="stat-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <div class="stat-meta">
+                    <strong>0</strong>
+                    <span>Total Pending</span>
+                </div>
+            </div>
+            <div class="metric-stat-box success">
+                <div class="stat-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="stat-meta">
+                    <strong>0 Days</strong>
+                    <span>Avg Resolution Time</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =====================================================
+             SECTION 1: ACCORDION BOXES
+        ===================================================== -->
+        <section class="compliance-block-card" id="investor-charter-stock-broker">
+            <div class="card-custom-header">
+                <h2><i class="fa-solid fa-file-contract"></i> Investor Charter Stock Broker</h2>
+            </div>
+            <div class="card-body-content">
+
+                <h3 style="font-size: 15.5px; font-weight: 800; color: #0E1E38; margin-bottom: 16px;">
+                    Investor Charter Stock Broker
+                </h3>
+
+                <!-- ACCORDION 1: CHARTER & DISCLOSURES -->
+                <div class="modern-accordion-card" id="accordionCharterDoc">
+                    <button type="button" class="accordion-btn-trigger" onclick="toggleFintechAccordion('accordionCharterDoc')">
+                        <span>Investor Charter and disclosure of Investor Complaints by Stock Brokers</span>
+                        <div class="btn-chevron-wrap"><i class="fa-solid fa-chevron-down"></i></div>
+                    </button>
+                    <div class="accordion-expand-container">
+                        <div class="accordion-body-inner">
+
+                            <div class="vision-mission-card green-theme">
+                                <h4><i class="fa-solid fa-eye"></i> 1. VISION</h4>
+                                <p>To follow highest standards of ethics and compliances while facilitating the trading by clients in securities in a fair and transparent manner, so as to contribute in creation of wealth for investors.</p>
+                            </div>
+
+                            <div class="vision-mission-card blue-theme">
+                                <h4><i class="fa-solid fa-bullseye"></i> 2. MISSION</h4>
+                                <ul class="charter-bullet-list">
+                                    <li>i) To provide high quality and dependable service through innovation, capacity enhancement and use of technology.</li>
+                                    <li>ii) To establish and maintain a relationship of trust and ethics with the investors.</li>
+                                    <li>iii) To observe highest standard of compliances and transparency.</li>
+                                    <li>iv) To always keep ‘protection of investors’ interest’ as goal while providing service.</li>
+                                </ul>
+                            </div>
+
+                            <div class="vision-mission-card">
+                                <h4><i class="fa-solid fa-handshake-angle"></i> 3. Services provided to Investors</h4>
+                                <ul class="charter-bullet-list">
+                                    <li>Execution of trades on behalf of investors.</li>
+                                    <li>Issuance of Contract Notes.</li>
+                                    <li>Issuance of intimations regarding margin due payments.</li>
+                                    <li>Facilitate execution of early pay-in obligation instructions.</li>
+                                    <li>Settlement of client's funds.</li>
+                                    <li>Intimation of securities held in Client Unpaid Securities Account (CUSA) Account.</li>
+                                    <li>Issuance of retention statement of funds.</li>
+                                    <li>Risk management systems to mitigate operational and market risk.</li>
+                                    <li>Facilitate client profile changes in the system as instructed by the client.</li>
+                                    <li>Information sharing with the client w.r.t. exchange circulars.</li>
+                                    <li>Redressal of Investor's grievances.</li>
+                                </ul>
+                            </div>
+
+                            <div class="vision-mission-card">
+                                <h4><i class="fa-solid fa-user-shield"></i> 4. Rights of Investors</h4>
+                                <ul class="charter-bullet-list">
+                                    <li>Ask for and receive information from a firm about the work history and background of the person handling your account, as well as information about the firm itself.</li>
+                                    <li>Receive complete information about the risks, obligations, and costs of any investment before investing.</li>
+                                    <li>Receive recommendations consistent with your financial needs and investment objectives.</li>
+                                    <li>Receive a copy of all completed account forms and agreements.</li>
+                                    <li>Receive account statements that are accurate and understandable.</li>
+                                    <li>Understand the terms and conditions of transactions you undertake.</li>
+                                    <li>Access your funds in a timely manner and receive information about any restrictions or limitations on access.</li>
+                                    <li>Receive complete information about maintenance or service charges, transaction or redemption fees, and penalties.</li>
+                                    <li>Discuss your grievances with compliance officer of the firm and receive prompt attention to and fair consideration of your concerns.</li>
+                                    <li>Deal with one or more stockbrokers of your choice without any compulsion of minimum business.</li>
+                                    <li>Have access to the escalation matrix for communication with the broker.</li>
+                                    <li>Not be bound by any clause prescribed by the Brokers which are contravening the Regulatory provisions.</li>
+                                </ul>
+                            </div>
+
+                            <div class="vision-mission-card">
+                                <h4><i class="fa-solid fa-list-check"></i> 5. DOs and DON’Ts for Investors</h4>
+                                <p><strong>DOs:</strong></p>
+                                <ul class="charter-bullet-list">
+                                    <li>Read all documents and conditions being agreed before signing the account opening form.</li>
+                                    <li>Receive a copy of KYC, copy of account opening documents and Unique Client Code.</li>
+                                    <li>Register your mobile number and email ID in your trading, demat and bank accounts to get regular alerts on your transactions.</li>
+                                    <li>Before granting Power of Attorney / DDPI, carefully examine the scope and implications of powers being granted.</li>
+                                    <li>In case of any grievances, approach stock broker or Stock Exchange or SEBI for getting the same resolved within prescribed timelines.</li>
+                                    <li>Retain documents for trading activity as it helps in resolving disputes, if they arise.</li>
+                                </ul>
+
+                                <p style="margin-top: 12px;"><strong>DON’Ts:</strong></p>
+                                <ul class="charter-bullet-list">
+                                    <li>Do not fall prey to fixed / guaranteed returns schemes.</li>
+                                    <li>Do not fall prey to fraudsters sending emails and SMSs luring to trade in stocks / securities promising huge profits.</li>
+                                    <li>Do not follow herd mentality for investments. Seek expert and professional advice for your investments.</li>
+                                    <li>Do not deal with unregistered stock broker.</li>
+                                    <li>Do not share your password or trading credentials with anyone.</li>
+                                </ul>
+                            </div>
+
+                            <div class="vision-mission-card">
+                                <h4><i class="fa-solid fa-headset"></i> 6. Grievance Redressal Mechanism</h4>
+                                <p><strong>Level 1:</strong> Approach the Stock Broker at designated email: <a href="mailto:grievance@prrsaar.com" style="color:var(--prrasar-blue); font-weight:700;">grievance@prrsaar.com</a>.</p>
+                                <p><strong>Level 2:</strong> Escalate to SEBI SCORES portal (<a href="https://scores.sebi.gov.in" target="_blank" style="color:var(--prrasar-blue);">https://scores.sebi.gov.in</a>) or SMARTODR portal (<a href="https://smartodr.in/login" target="_blank" style="color:var(--prrasar-blue);">https://smartodr.in/login</a>).</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACCORDION 2: TIMELINES TABLE -->
+                <div class="modern-accordion-card" id="accordionTimelinesTable">
+                    <button type="button" class="accordion-btn-trigger" onclick="toggleFintechAccordion('accordionTimelinesTable')">
+                        <span>Various activities of Stock Brokers with timelines</span>
+                        <div class="btn-chevron-wrap"><i class="fa-solid fa-chevron-down"></i></div>
+                    </button>
+                    <div class="accordion-expand-container">
+                        <div class="accordion-body-inner">
+                            <div class="table-responsive-wrapper">
+                                <table class="prrasar-modern-table align-left">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 70px;">S.No.</th>
+                                            <th style="width: 45%;">Activities</th>
+                                            <th>Expected Timelines</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>KYC entered into KRA System and CKYCR</td><td>10 days of account opening</td></tr>
+                                        <tr><td>2</td><td>Client Onboarding</td><td>Immediate, but not later than one week</td></tr>
+                                        <tr><td>3</td><td>Order execution</td><td>Immediate on receipt of order, but not later than the same day</td></tr>
+                                        <tr><td>4</td><td>Allocation of Unique Client Code</td><td>Before trading</td></tr>
+                                        <tr><td>5</td><td>Copy of duly completed Client Registration Documents to clients</td><td>7 days from the date of upload of Unique Client Code to the Exchange by the trading member</td></tr>
+                                        <tr><td>6</td><td>Issuance of contract notes</td><td>24 hours of execution of trades</td></tr>
+                                        <tr><td>7</td><td>Collection of upfront margin from client</td><td>Before initiation of trade</td></tr>
+                                        <tr><td>8</td><td>Issuance of intimations regarding other margin due payments</td><td>At the end of the T day</td></tr>
+                                        <tr><td>9</td><td>Settlement of client funds</td><td>30 days / 90 days for running account settlement (RAS) as per the preference of client. If consent not given for RAS – within 24 hours of pay-out</td></tr>
+                                        <tr><td>10</td><td>‘Statement of Accounts’ for Funds, Securities and Commodities</td><td>Weekly basis (Within four trading days of following week)</td></tr>
+                                        <tr><td>11</td><td>Issuance of retention statement of funds/commodities</td><td>5 days from the date of settlement</td></tr>
+                                        <tr><td>12</td><td>Issuance of Annual Global Statement</td><td>30 days from the end of the financial year</td></tr>
+                                        <tr><td>13</td><td>Investor grievances redressal</td><td>30 days from the receipt of the complaint</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SECTION 2: DATA FOR EVERY MONTH ENDING
+        ===================================================== -->
+        <section class="compliance-block-card" id="data-for-every-month-ending">
+            <div class="card-custom-header">
+                <h2><i class="fa-solid fa-calendar-check"></i> Data For Every Month Ending</h2>
+            </div>
+            <div class="card-body-content">
+                <div class="table-responsive-wrapper">
+                    <table class="prrasar-modern-table">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Sr. No.</th>
+                                <th rowspan="2">Received From</th>
+                                <th rowspan="2">Carried Forward From Previous Month</th>
+                                <th rowspan="2">Received During The Month</th>
+                                <th rowspan="2">Total Pending</th>
+                                <th rowspan="2">Resolved*</th>
+                                <th colspan="2">Pending At The End of The Month**</th>
+                                <th rowspan="2">Average Resolution Time^ (In Days)</th>
+                            </tr>
+                            <tr class="sub-row-head">
+                                <th>Pending for less than 3 months</th>
+                                <th>Pending for more Than 3 months</th>
+                            </tr>
+                            <tr class="num-indexer-row">
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                                <th colspan="2">7</th>
+                                <th>8</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td style="text-align: left; font-weight: 700;">Directly from Investors</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td style="text-align: left; font-weight: 700;">SEBI (SCORES 2.0)</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td style="text-align: left; font-weight: 700;">Stock Exchanges</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td style="text-align: left; font-weight: 700;">Other Sources (if any)</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="table-highlight-total">
+                                <td>5</td>
+                                <td style="text-align: left;">Grand Total</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SECTION 3: TREND OF MONTHLY DISPOSAL
+        ===================================================== -->
+        <section class="compliance-block-card" id="trend-monthly-disposal">
+            <div class="card-custom-header">
+                <h2><i class="fa-solid fa-chart-line"></i> Trend Of Monthly Disposal Of Complaints</h2>
+            </div>
+            <div class="card-body-content">
+                <div class="table-responsive-wrapper">
+                    <table class="prrasar-modern-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 80px;">Sr. No.</th>
+                                <th>Month</th>
+                                <th>Carried Forward From Previous Month</th>
+                                <th>Received</th>
+                                <th>Resolved*</th>
+                                <th>Pending**</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Oct-25</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>2</td><td>Nov-25</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>3</td><td>Dec-25</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>4</td><td>Jan-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>5</td><td>Feb-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>6</td><td>Mar-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>7</td><td>Apr-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>8</td><td>May-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>9</td><td>Jun-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>10</td><td>Jul-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>11</td><td>Aug-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>12</td><td>Sep-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             SECTION 4: TREND OF ANNUAL DISPOSAL
+        ===================================================== -->
+        <section class="compliance-block-card" id="trend-annual-disposal">
+            <div class="card-custom-header">
+                <h2><i class="fa-solid fa-chart-column"></i> Trend Of Annual Disposal Of Complaints</h2>
+            </div>
+            <div class="card-body-content">
+                <div class="table-responsive-wrapper">
+                    <table class="prrasar-modern-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 80px;">Sr. No.</th>
+                                <th>Year</th>
+                                <th>Carried Forward From Previous Year</th>
+                                <th>Received During The Year</th>
+                                <th>Resolved During The Year</th>
+                                <th>Pending At The End Of The Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>2021-22</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>2</td><td>2022-23</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>3</td><td>2023-24</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>4</td><td>2024-25</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr><td>5</td><td>2025-26</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                            <tr class="table-highlight-total">
+                                <td colspan="2">Grand Total</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+    08. FOOTER
+    ===================================================== -->
+    <!-- =====================================================
+     OFFICIAL PRRSAAR FOOTER
+     ===================================================== -->
+    <footer class="prrasar-exact-footer">
+
+        <!-- 01. MAIN 4-COLUMN SECTION -->
+        <div class="footer-columns-container">
+
+            <!-- COLUMN 1: CONTACT US -->
+            <div class="footer-box col-contact">
+                <a href="contact.html"</a>
+
+                <h3 class="box-title">Contact Us</h3>
+                <div class="contact-row">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <strong>Phone:</strong>
+                        <p>91-11-45350000 (Board Lines)</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <a href="mailto:info@prrsaar.com">info@prrsaar.com</a>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Address:</strong>
+                        <p>17A/35, 2nd Floor, West Punjabi Bagh, New Delhi - 110026</p>
+                    </div>
+                </div>
+
+                <div class="store-buttons-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.wave.prrsaarshri" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div>
+                            <small>ANDROID APP ON</small>
+                            <span>Google Play</span>
+                        </div>
+                    </a>
+                    <a href="https://apps.apple.com/in/app/prrsaar-shri/id1603438370" target="_blank" rel="noopener" class="btn-store">
+                        <i class="fa-brands fa-apple"></i>
+                        <div>
+                            <small>Download on the</small>
+                            <span>App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: WE ARE OFFERING -->
+            <div class="footer-box">
+                <h3 class="box-title">We Are Offering</h3>
+                <ul class="footer-nav">
+                    <li><a href="PP.HTML#product-flow">Equity</a></li>
+                    <li><a href="PP.HTML#product-flow">Derivative (Future and Option)</a></li>
+                    <li><a href="PP.HTML#product-flow">Currency</a></li>
+                    <li><a href="PP.HTML#product-flow">Commodity</a></li>
+                    <li><a href="PP.HTML#product-flow">IPO</a></li>
+                    <li><a href="PP.HTML#product-flow">Mutual Fund</a></li>
+                    <li><a href="PP.HTML#product-flow">G-Bonds</a></li>
+                    <li><a href="PP.HTML#product-flow">Depository</a></li>
+                    <li><a href="PP.HTML#product-flow">API Key</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 3: POLICIES -->
+            <div class="footer-box">
+                <h3 class="box-title">Policies</h3>
+                <ul class="footer-nav">
+                    <li><a href="policy1.html">Policy for voluntary freezing of client's online access</a></li>
+                    <li><a href="policy2.html">Privacy Policy</a></li>
+                    <li><a href="policy3.html">Surveillance Policy</a></li>
+                    <li><a href="policy4.html">PMLA Policy</a></li>
+                    <li><a href="policy5.html">Policy on prefunded instrument</a></li>
+                    <li><a href="policy6.html">Policy on Unauthenticated News Circulation</a></li>
+                    <li><a href="policy7.html">Policy of Limit Setting</a></li>
+                    <li><a href="policy8.html">Inactive Account Policy</a></li>
+                    <li><a href="policy9.html">Conflict of Interest Policy</a></li>
+                    <li><a href="policy10.html">CLD Policy</a></li>
+                    <li><a href="policy11.html">Refund &amp; Cancellation Policy</a></li>
+                    <li><a href="policy12.html">Investor Complaint Redressal Mechanism</a></li>
+                    <li><a href="policy13.html">Internal Policy</a></li>
+                    <li><a href="policy14.html">CUSPA Policy</a></li>
+                    <li><a href="policy15.html">Terms &amp; Condition</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 4: OTHER -->
+            <div class="footer-box">
+                <h3 class="box-title">Other</h3>
+                <ul class="footer-nav">
+                    <li><a href="other.html#research-disclaimer">Risk Disclaimer and Disclosure - Research Analysts</a></li>
+                    <li><a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open an Account</a></li>
+                    <li><a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a></li>
+                    <li><a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a></li>
+                    <li><a href="other.html#attention-investors">Investors Awareness</a></li>
+                    <li><a href="PD.html#payment-bank-details">Payment Bank Details</a></li>
+                    <li><a href="PD.html#downloads-section">Downloads</a></li>
+                    <li><a href="other.html#risk-derivatives">Risk Disclosures on Derivatives</a></li>
+                    <li><a href="https://www.sebi.gov.in/" target="_blank">SEBI Investor website</a></li>
+                    <li><a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a></li>
+                    <li><a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a></li>
+                    <li><a href="https://www.mcxindia.com/about-us#legal-framework">MCX Rules and Bye-Laws</a></li>
+                    <li><a href="other.html#demat-advisory">CDSL DOs &amp; DONTs</a></li>
+                    <li><a href="chartstock.html">Investors Charter For Stock</a></li>
+                    <li><a href="chartstock.html">Investors Charter For DP</a></li>
+                    <li><a href="other.html#kyc-validation">KYC Validation Process</a></li>
+                    <li><a href="other.html#pro-trading">Pro Trading Disclosure</a></li>
+                    <li><a href="other.html#fraud-alert">Fraud Alert</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- 02. USEFUL LINKS STRIP -->
+        <div class="useful-links-row">
+            <h4>Useful Links</h4>
+            <div class="links-inline">
+                <a href="policy12.html">Investor Complaint Redressal Mechanism</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/inspection-and-audit#vernacularLanguage">Vernacular Language MCX</a>
+                <span>|</span>
+                <a href="https://www.ncdex.com/Investor/Client_Reg_Doc.aspx" target="_blank" rel="noopener">Vernacular Language NCDEX</a>
+                <span>|</span>
+                <a href="https://www.bseindia.com/investors/invgrievstats">BSE Investor Complaints</a>
+                <span>|</span>
+                <a href="https://www.mcxindia.com/Investor-Services">MCX Investor Services</a>
+                <span>|</span>
+                <a href="https://www.cdslindia.com/downloads/DP/SOP%20for%20Incapacitated%20investor%20Final.pdf">SOP for Depository Participants</a>
+            </div>
+        </div>
+
+        <!-- 03. STATUTORY WARNINGS & DISCLOSURES -->
+        <div class="legal-compliance-section">
+            <p><strong>Statutory Warning:</strong> Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
+            <p><strong>Attention Investors:</strong> "Brokerage will not exceed the SEBI prescribed limit"</p>
+
+            <p class="notice-head">Filing of complaints through SEBI's online portal 'SCORES' and 'SMARTODR portal' - Easy &amp; Quick</p>
+            <p class="notice-sub">
+                a. Register on SCORES / SMARTODR Portal.<br>
+                b. Mandatory Details For Filing Complaints on SCORES:<br>
+                &gt; Name<br>
+                &gt; PAN<br>
+                &gt; Address<br>
+                &gt; Mobile Number<br>
+                &gt; Email ID<br>
+                c. Benefits:<br>
+                (i) Effective Communication<br>
+                (ii) Speedy Redressal of Grievance / Dispute
+            </p>
+
+            <p class="portal-links">
+                <a href="http://scores.sebi.gov.in" target="_blank">http://scores.sebi.gov.in</a><br>
+                <a href="https://smartodr.in/login" target="_blank">https://smartodr.in/login</a>
+            </p>
+
+            <p class="circular-title">SEBI Master Circular on ODR updated on December 28, 2023</p>
+            <p class="circular-link">
+                <a href="https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794.html" target="_blank">https://www.sebi.gov.in/legal/circulars/jul-2023/online-resolution-of-disputes-in-the-indian-securities-market_74794</a>
+            </p>
+
+            <p class="disclaimer-text">
+                Disclaimer: "The Stock Exchange, Mumbai is not in any manner answerable, responsible or liable to any person or persons for any acts of omission or commission, errors, mistakes and/or violation, actual or perceived, by us or our partners, agents, associates etc., of any of the Rules, Regulations, Bye-laws of the Stock Exchange, Mumbai, SEBI Act or any other laws in force from time to time. The Stock Exchange, Mumbai is not answerable, responsible or liable for any information on this Website or for any services rendered by our employees, our servants, and us."
+            </p>
+        </div>
+
+        <!-- 04. YELLOW SLIDING MARQUEE LINE (SEBI Rules / Notices Sliding Bar) -->
+        <div class="yellow-sliding-marquee-bar">
+            <div class="marquee-track">
+                <span class="marquee-item">
+                    1.>Attention Investors   1. Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 01, 2020.
+                    2. Update your email id and mobile number with your stock broker / depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.
+                    3. Check your securities / MF / bonds in the consolidated account statement issued by NSDL/CDSL every month.   ... Issued in the interest of Investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    2.Information Regarding: SEBI Complaint Redress System (SCORES). Filing of Complaints on SCORES - Easy & Quick.
+                    (a) Register on SCORES portal.
+                    (b) Mandatory details for filing complaints on SCORES:
+                    i). Name, PAN, Address, Mobile Number, Email ID. (c) Benefits: i). Effective communication. ii). Speedy redressal of the grievances.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    3.                 ATTENTION INVESTORS: Prevent Unauthorized Transactions in your demat account --> Update your Mobile Number with your Depository Participant.
+                    Receive alerts on your Registered Mobile for all debit and other important transactions in your demat account directly from CDSL on the same day issued in the interest of investors.
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">
+                    4.
+                    "KYC is one time exercise while dealing in securities markets -
+                    once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+                </span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">5.  No need to issue cheques by investors while subscribing to IPO.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">6. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment.</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">7. No worries for refund as the money remains in investor's account.</span>
+                <span class="marquee-sep">✦<</span>
+            </div>
+        </div>
+
+        <!-- 05. GRIEVANCE SECTION & REGISTRATIONS -->
+        <div class="grievance-compliance-block">
+            <p class="kyc-rule-note">
+                "KYC is one time exercise while dealing in securities markets - once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again when you approach another intermediary."
+            </p>
+            <p class="ipo-note">
+                No need to issue cheques by investors while subscribing to IPO. Just write the bank account number and sign in the application form to authorise your bank to make payment in case of allotment. No worries for refund as the money remains in investor's account.
+            </p>
+
+            <p class="grievance-contact-label">In case of any grievances/complaint against the Stock Broker /Depository Participant:</p>
+            <p class="grievance-email-links">
+                Email-id at:
+                <a href="mailto:grievance@prrsaar.com">grievance@prrsaar.com</a>,
+                <a href="mailto:dpgrievances@prrsaar.com">dpgrievances@prrsaar.com</a>
+            </p>
+
+            <!-- OFFICIAL BUTTONS -->
+            <div class="official-portal-links">
+                <a href="https://scores.sebi.gov.in" target="_blank" class="badge-link">SCORES PORTAL</a>
+                <span class="link-divider">|</span>
+                <a href="https://smartodr.in/login" target="_blank" class="badge-link odr-highlight">
+                    SMART<span>ODR</span> PORTAL
+                </a>
+            </div>
+
+            <p class="sebi-numbers">
+                SEBI Regn No: INZ000027432, DP IN-DP-563-2021<br>
+                NSE: 13457, BSE: 6270, MCX: 10815, NCDEX: 00536 &amp; CDSL-12091700
+            </p>
+        </div>
+
+        <!-- 06. COPYRIGHT BAR -->
+        <div class="bottom-copyright-strip">
+            <p>© 2026 Prrsaar Sampada Private Limited | All Rights Reserved.</p>
+        </div>
+
+    </footer>
+    <!--arrow -->
+    <script>
+                                function toggleFintechAccordion(cardId) {
+                                    const card = document.getElementById(cardId);
+                                    if (!card) return;
+
+                                    card.classList.toggle('is-active');
+                                }
+    </script>
+
+</body>
+
+</html>

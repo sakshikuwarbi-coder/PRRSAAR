@@ -1,0 +1,1054 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTHERS LINK - PRRSAAR</title>
+    <link rel="stylesheet" href="MAIN_FIXED.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="JAVA.js"></script>
+
+    <style>
+        :root {
+            --prrasar-navy: #0E1E38;
+            --prrasar-dark: #07152B;
+            --prrasar-blue: #123B8F;
+            --prrasar-blue-accent: #1D4ED8;
+            --prrasar-green: #008C45;
+            --prrasar-green-light: #E8F5E9;
+            --prrasar-green-border: #A7F3D0;
+            --prrasar-sky: #38BDF8;
+            --border-light: #E2E8F0;
+            --bg-light: #F8FAFC;
+            --text-dark: #0F172A;
+            --text-muted: #64748B;
+            --text-soft: #334155;
+            --card-radius: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #F4F7FB;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Banner */
+        .page-hero-banner {
+            background: linear-gradient(135deg, #091C38 0%, #03142E 100%);
+            padding: 60px 20px 70px;
+            color: #FFFFFF;
+            text-align: center;
+            border-bottom: 1px solid #1E3A8A;
+            position: relative;
+        }
+
+        .hero-banner-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 140, 69, 0.18);
+            color: #34D399;
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            font-size: 11.5px;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .page-hero-banner h1 {
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            color: #FFFFFF;
+        }
+
+        .page-hero-banner p {
+            font-size: 15px;
+            color: #CBD5E1;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Main Single Flow Container */
+        .portal-stream-container {
+            max-width: 1040px;
+            margin: 45px auto 90px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+        }
+
+        /* Modern Card Wrapper */
+        .compliance-block-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: var(--card-radius);
+            padding: 38px 42px;
+            box-shadow: 0 6px 20px rgba(14, 30, 56, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            scroll-margin-top: 105px;
+            position: relative;
+        }
+
+            .compliance-block-card:hover {
+                border-color: #CBD5E1;
+                box-shadow: 0 12px 30px rgba(14, 30, 56, 0.07);
+            }
+
+        /* Card Header & Badges */
+        .card-top-bar {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .card-category-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+            .card-category-badge.badge-blue {
+                background: #EFF6FF;
+                color: var(--prrasar-blue);
+                border: 1px solid #BFDBFE;
+            }
+
+            .card-category-badge.badge-amber {
+                background: #FFFBEB;
+                color: #B45309;
+                border: 1px solid #FDE68A;
+            }
+
+            .card-category-badge.badge-green {
+                background: #ECFDF5;
+                color: var(--prrasar-green);
+                border: 1px solid #A7F3D0;
+            }
+
+            .card-category-badge.badge-purple {
+                background: #F5F3FF;
+                color: #6D28D9;
+                border: 1px solid #DDD6FE;
+            }
+
+        .card-title-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border-bottom: 1px solid #F1F5F9;
+            padding-bottom: 16px;
+            margin-bottom: 22px;
+        }
+
+            .card-title-row .title-icon-box {
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 19px;
+                flex-shrink: 0;
+                background: rgba(0, 140, 69, 0.1);
+                color: var(--prrasar-green);
+            }
+
+            .card-title-row.warning-theme .title-icon-box {
+                background: #FEF3C7;
+                color: #D97706;
+            }
+
+            .card-title-row.danger-theme .title-icon-box {
+                background: #FEE2E2;
+                color: #DC2626;
+            }
+
+            .card-title-row h2 {
+                font-size: 21px;
+                font-weight: 800;
+                color: var(--prrasar-navy);
+                margin: 0;
+                line-height: 1.35;
+            }
+
+        /* Typography */
+        .compliance-block-card p {
+            font-size: 14.5px;
+            color: var(--text-soft);
+            margin-bottom: 16px;
+            line-height: 1.75;
+        }
+
+            .compliance-block-card p:last-child {
+                margin-bottom: 0;
+            }
+
+        .compliance-block-card strong {
+            color: var(--prrasar-navy);
+            font-weight: 700;
+        }
+
+        .compliance-block-card a {
+            color: var(--prrasar-blue);
+            text-decoration: underline;
+            word-break: break-all;
+            transition: color 0.2s ease;
+        }
+
+            .compliance-block-card a:hover {
+                color: var(--prrasar-green);
+            }
+
+        /* =========================================================
+           READ MORE / ACCORDION STYLING (FOR ALL SECTIONS)
+           ========================================================= */
+        .collapsible-text-wrapper {
+            position: relative;
+        }
+
+        .collapsible-hidden-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+        }
+
+        .collapsible-text-wrapper.is-expanded .collapsible-hidden-content {
+            max-height: 3500px;
+            opacity: 1;
+        }
+
+        .read-more-action-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px dashed #E2E8F0;
+        }
+
+        .btn-read-more-pill {
+            background: #F1F5F9;
+            border: 1px solid #CBD5E1;
+            color: var(--prrasar-navy);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 100px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+            .btn-read-more-pill:hover {
+                background: var(--prrasar-green);
+                border-color: var(--prrasar-green);
+                color: #FFFFFF;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 140, 69, 0.25);
+            }
+
+            .btn-read-more-pill i {
+                font-size: 11px;
+                transition: transform 0.3s ease;
+            }
+
+        .collapsible-text-wrapper.is-expanded .btn-read-more-pill i {
+            transform: rotate(180deg);
+        }
+
+        /* Numbered & Bullet Lists */
+        .styled-num-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px;
+            counter-reset: custom-counter;
+        }
+
+            .styled-num-list li {
+                counter-increment: custom-counter;
+                display: flex;
+                align-items: flex-start;
+                gap: 14px;
+                margin-bottom: 14px;
+                font-size: 14.5px;
+                color: var(--text-soft);
+                line-height: 1.65;
+            }
+
+                .styled-num-list li::before {
+                    content: counter(custom-counter);
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 8px;
+                    background: #F1F5F9;
+                    color: var(--prrasar-blue);
+                    font-size: 12px;
+                    font-weight: 800;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    margin-top: 2px;
+                    border: 1px solid #E2E8F0;
+                }
+
+        .styled-bullet-list {
+            margin: 0 0 16px 20px;
+        }
+
+            .styled-bullet-list li {
+                font-size: 14.5px;
+                color: var(--text-soft);
+                margin-bottom: 10px;
+                line-height: 1.65;
+            }
+
+        /* Derivatives (F&O) Stat Cards Grid */
+        .fno-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 20px 0 22px;
+        }
+
+        .fno-stat-item {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+            .fno-stat-item i {
+                color: #DC2626;
+                font-size: 16px;
+                margin-top: 3px;
+            }
+
+            .fno-stat-item p {
+                margin: 0;
+                font-size: 13.5px;
+                color: #1E293B;
+                line-height: 1.55;
+            }
+
+        .sebi-citation-strip {
+            background: #F1F5F9;
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: 13px;
+            color: #475569;
+            font-style: italic;
+            border-left: 4px solid var(--prrasar-blue);
+            margin-top: 10px;
+        }
+
+        /* Advisory Sequential Paragraphs */
+        .advisory-para-group {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .advisory-para-card {
+            border-radius: 14px;
+            padding: 24px 28px;
+            border: 1px solid;
+        }
+
+            .advisory-para-card.card-dos {
+                background: #F0FDF4;
+                border-color: #BBF7D0;
+            }
+
+            .advisory-para-card.card-donts {
+                background: #FEF2F2;
+                border-color: #FECACA;
+            }
+
+            .advisory-para-card .para-head {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 16px;
+                font-weight: 800;
+                margin-bottom: 14px;
+                padding-bottom: 8px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+        .card-dos .para-head {
+            color: #008C45;
+        }
+
+        .card-donts .para-head {
+            color: #DC2626;
+        }
+
+        .advisory-para-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .advisory-para-card li {
+            font-size: 14px;
+            margin-bottom: 12px;
+            line-height: 1.65;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .card-dos li {
+            color: #166534;
+        }
+
+        .card-donts li {
+            color: #991B1B;
+        }
+
+        .card-dos li i {
+            color: #008C45;
+            font-size: 14px;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .card-donts li i {
+            color: #DC2626;
+            font-size: 14px;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        /* KYC KRA Action Cards Grid */
+        .kra-grid-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin: 16px 0 20px;
+        }
+
+        .kra-tile-link {
+            background: #FFFFFF;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 10px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+        }
+
+            .kra-tile-link:hover {
+                border-color: var(--prrasar-green);
+                background: #F0FDF4;
+                transform: translateY(-2px);
+            }
+
+            .kra-tile-link span {
+                font-weight: 700;
+                color: var(--prrasar-navy);
+                font-size: 13.5px;
+            }
+
+            .kra-tile-link i {
+                color: var(--prrasar-green);
+                font-size: 13px;
+            }
+
+        /* Proprietary Trading Feature Box */
+        .pro-trade-banner-box {
+            background: linear-gradient(135deg, #091C38 0%, #03142E 100%);
+            color: #FFFFFF;
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin: 18px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+            .pro-trade-banner-box h3 {
+                font-size: 18px;
+                font-weight: 800;
+                color: #38BDF8;
+                margin: 0;
+                letter-spacing: 0.3px;
+            }
+
+            .pro-trade-banner-box .badge-active {
+                background: rgba(0, 140, 69, 0.3);
+                color: #34D399;
+                border: 1px solid rgba(52, 211, 153, 0.4);
+                font-size: 11px;
+                font-weight: 800;
+                padding: 5px 12px;
+                border-radius: 100px;
+                text-transform: uppercase;
+            }
+
+        /* Compliance Contact Footer Strip */
+        .contact-signature-strip {
+            background: #F8FAFC;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-top: 18px;
+            border-left: 4px solid var(--prrasar-blue);
+        }
+
+            .contact-signature-strip p {
+                margin: 0 0 4px;
+                font-size: 13.5px;
+                color: var(--text-soft);
+            }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .compliance-block-card {
+                padding: 30px 24px;
+            }
+
+            .fno-stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page-hero-banner h1 {
+                font-size: 26px;
+            }
+
+            .card-title-row h2 {
+                font-size: 18px;
+            }
+
+            .compliance-block-card {
+                padding: 22px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+     01. MASTER NAVBAR
+     ===================================================== -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="LOGO.png" alt="PRRSAAR Logo">
+            </a>
+        </div>
+
+        <nav>
+            <div class="dropdown">
+                <a href="PP.HTML" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-left">
+                        <a href="PP.HTML#calculators-section" class="tab-link active" data-tab="calculators-tab">Calculators</a>
+                        <a href="PP.HTML#pricing-section" class="tab-link" data-tab="pricing-tab">Pricing</a>
+                        <a href="PP.HTML#services-section" class="tab-link" data-tab="services-tab">Services</a>
+                    </div>
+                    <div class="dropdown-right">
+                        <div id="calculators-tab" class="tab-content active">
+                            <h5>All Calculators</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#calculators-section">Brokerage Calculator</a>
+                                <a href="PP.HTML#calculators-section">Margin Calculator</a>
+                                <a href="PP.HTML#calculators-section">SIP Calculator</a>
+                            </div>
+                            <a href="PP.HTML#calculators-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="pricing-tab" class="tab-content">
+                            <h5>Pricing Plans</h5>
+                            <div class="tab-links-list">
+                                <a href="PP.HTML#pricing-section">Equity Delivery (Free)</a>
+                                <a href="PP.HTML#pricing-section">Intraday Charges</a>
+                                <a href="PP.HTML#pricing-section">F&O Pricing</a>
+                            </div>
+                            <a href="PP.HTML#pricing-section" class="view-all-btn">View All →</a>
+                        </div>
+                        <div id="services-tab" class="tab-content">
+                            <h5>Our Services</h5>
+                            <div class="tab-links-list">
+                                <a href="https://live.meon.co.in/prrsaar/individual" target="_blank" rel="noopener">Open An Account</a>
+                                <a href="https://backoffice.prrsaar.com:8085/capexweb/capexweb" target="_blank" rel="noopener">Back Office Login (Branches)</a>
+                                <a href="https://prrsaar.webappreports.com/" target="_blank" rel="noopener">Back Office Dashboard (Clients)</a>
+                            </div>
+                            <a href="PP.HTML#services-section" class="view-all-btn">View All →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="AA.HTML">About us</a>
+            <a href="mm.html">Market info</a>
+            <a href="learn.html">Learn</a>
+            <a href="f&amp;q.html">F&amp;Q</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button type="button" class="bag">LOG IN</button>
+            <button type="button" class="primary">Open Account</button>
+        </div>
+    </header>
+
+    <!-- =====================================================
+     HERO BANNER
+     ===================================================== -->
+    <section class="page-hero-banner">
+        <div class="hero-banner-inner">
+            <span class="hero-badge-pill"><i class="fa-solid fa-shield-halved"></i> STATUTORY NOTICES &amp; REGULATORY DISCLOSURES</span>
+            <h1>Investor Information &amp; Regulatory Hub</h1>
+            <p>Direct official circulars, market risk disclosures, investor advisories, and mandatory declarations published in compliance with SEBI and Exchange directives.</p>
+        </div>
+    </section>
+
+    <!-- =====================================================
+     MAIN STREAM (STREAMLINED CARDS)
+     ===================================================== -->
+    <main class="portal-stream-container">
+
+        <!-- 1. RESEARCH DISCLAIMER (WITH SERIAL NUMBERS & READ MORE) -->
+        <section class="compliance-block-card" id="research-disclaimer">
+            <div class="card-top-bar">
+                <span class="card-category-badge badge-blue"><i class="fa-solid fa-scale-balanced"></i> SEBI REGULATION</span>
+            </div>
+            <div class="card-title-row">
+                <div class="title-icon-box"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <h2>Research Disclaimer and Disclosure under SEBI (Research Analysts) Regulations 2014</h2>
+            </div>
+
+            <div class="collapsible-text-wrapper" id="researchDisclaimerAccordion">
+                <!-- Visible Numbered Clauses -->
+                <ul class="styled-num-list">
+                    <li>
+                        <div>PRRSAAR SAMPADA PRIVATE LIMITED (hereinafter referred as “PRRSAAR SAMPADA”) is engaged into the business of Stock Broking, Depository Participant and Distribution of various financial product. Prrsaar Sampada is also registered as a Research Analyst under SEBI (Research Analyst) Regulations, 2014, SEBI Reg. No INH000020323.</div>
+                    </li>
+                    <li>
+                        <div>The report / information / opinions have been prepared by PRRSAAR SAMPADA and are subject to change without any notice. The report and information contained herein is strictly confidential and meant solely for the selected recipient and may not be altered in any way, transmitted to, copied or distributed, in part or in whole, to any other person or to the media or reproduced in any form, without prior written consent of PRRSAAR SAMPADA. The information provided in the Report is from publicly available data, which we believe, are reliable. While reasonable endeavors have been made to present reliable data in the Report so far as it relates to current and historical information, but PRRSAAR SAMPADA does not guarantee the accuracy or completeness of the data in the Report.
+                        Accordingly, PRRSAAR SAMPADA or any of its connected person including its directors or subsidiaries or associates or employees shall not be in any way responsible for any loss or damage that may arise to any person from any inadvertent error in the information contained, views and opinions expressed in this publication.</div>
+                    </li>
+                </ul>
+
+                <!-- Remaining Numbered Clauses Hidden Under Read More -->
+                <div class="collapsible-hidden-content">
+                    <ul class="styled-num-list" style="counter-reset: custom-counter 2;">
+                        <li>
+                            <div>This report is not directed to, or intended for display, downloading, printing, reproducing or for distribution to or use by, any person or entity who is a citizen or resident or located in any locality, state, country or other jurisdiction where such distribution, publication, reproduction, availability or use would be contrary to law or regulation or what would subject PRRSAAR SAMPADA or
+                            its affiliates to any registration or licensing requirement within such jurisdiction. If this report is inadvertently sent or has reached any person in such country, especially, United States of America, the same should be ignored and brought to the attention of the sender. This document may not be reproduced, distributed or published in whole or in part, directly or indirectly, for any purposes or in any manner.</div>
+                        </li>
+                        <li>
+                            <div>Foreign currencies denominated securities, wherever mentioned, are subject to exchange rate fluctuations, which could have an adverse effect on their value or price, or the income derived from them. In addition, investors in securities such as ADRs, the values of which are influenced by foreign currencies, effectively assume currency risk. 
+                            It should not be considered to be taken as an offer to sell or a solicitation to buy any security. Past performance should not be taken as an indication or guarantee of future performance, and no representation or warranty, express or implied, is made regarding future performance. The price, value of and income from any of the securities or financial instruments mentioned in this report can fall as well as rise.</div>
+                        </li>
+                        <li>
+                            <div>The Report also includes analysis and views of our research team. The Report is purely for information purposes and does not construe to be investment recommendation/advice or an offer or solicitation of an offer to buy/sell any securities. 
+                            The opinions expressed in the Report are our current opinions as of the date of the Report and may be subject to change from time to time without notice. PRRSAAR SAMPADA or any person connected with it do not accept any liability arising from the use of this document. 
+                            Investors should not solely rely on the information contained in this Report and must make investment decisions based on their own investment objectives, judgment, risk profile and financial position. The recipients of this Report may take professional advice before acting on this information.</div>
+                        </li>
+                        <li>
+                            <div>As PRRSAAR SAMPADA along with its associates, are engaged in various financial services business and so might have financial,
+                            business or other interests in other entities including the subject company/ies mentioned in this Report. However, PRRSAAR SAMPADA encourages independence in preparation of research reports and strives to minimize conflict in preparation of research reports.
+                            PRRSAAR SAMPADA and its associates did not receive any compensation or other benefits from the subject company/ies mentioned in the Report or from a third party in connection with preparation of the Report. Accordingly, PRRSAAR SAMPADA, its research analyst or associates,
+                            do not have any material conflict of interest at the time of publication of this Report.</div>
+                        </li>
+                        <li>
+                            <div>PRRSAAR SAMPADA or its associates might have received any compensation from the companies mentioned in the report during the period preceding twelve months from the date of this report for services in respect of managing or co-managing public offerings, corporate finance, investment banking or merchant banking, brokerage services or other advisory service in a merger or specific transaction in the normal course of business. 
+                            PRRSAAR SAMPADA or its analysts did not receive any compensation or other benefits from the companies mentioned in the report or third party in connection with preparation of the research report. Please note that PRRSAAR SAMPADA has a proprietary trading desk. 
+                            This desk maintains an arm’s length distance with the Research team and all its activities are segregated from Research activities. The proprietary desk operates independently, potentially leading to investment decisions that may deviate from research views.</div>
+                        </li>
+                        <li>
+                            <div>PRRSAAR SAMPADA does not have actual/beneficial ownership of 1% or more securities of the subject company(ies) at the end of the month immediately preceding the date of publication of Research Report. Associates of PRRSAAR SAMPADA may have actual/beneficial ownership of 1% or more securities of the subject companies at the end of the month immediately preceding the date of publication of Research Report; however, 
+                            the same shall have no impact whatsoever on the specific recommendations made by the analyst(s) in the research report.
+                            We confirm that the Research Analysts preparing these recommendations rely solely on their professional expertise and do not utilize Artificial Intelligence tools in delivering research services</div>
+                        </li>
+                        <li>
+                            <div>We submit that no material disciplinary action has been taken on us by any regulatory authority impacting Research activities.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="read-more-action-bar">
+                    <button type="button" class="btn-read-more-pill" onclick="toggleReadMore('researchDisclaimerAccordion', this)">
+                        <span>Read More</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- 2. ATTENTION INVESTORS (WITH READ MORE) -->
+        <section class="compliance-block-card" id="attention-investors">
+            <div class="card-top-bar">
+                <span class="card-category-badge badge-amber"><i class="fa-solid fa-bell"></i> INVESTOR ALERT</span>
+            </div>
+            <div class="card-title-row warning-theme">
+                <div class="title-icon-box"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <h2>⚠️ Attention Investors!!</h2>
+            </div>
+
+            <div class="collapsible-text-wrapper" id="attentionInvestorsAccordion">
+                <!-- Top Key Guidelines Visible -->
+                <ul class="styled-num-list">
+                    <li>
+                        <div>
+                            <strong>Beware of fixed/guaranteed/regular returns/capital protection schemes.</strong> Brokers or their authorized persons or any of their associates are not authorized to offer fixed/guaranteed/regular returns/capital protection on your investment or authorized to enter into any loan agreement with you to pay interest on the funds offered by you. Please note that in case of default of a member claim for funds or securities given to the broker under any arrangement/agreement of indicative return will not be accepted by the relevant Committee of the Exchange as per the approved norms.
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Do not keep funds idle with the Stock Broker.</strong> Please note that your stock broker has to return the credit balance lying with them, within three working days in case you have not done any transaction within last 30 calendar days. Please note that in case of default of a Member, claim for funds and securities, without any transaction on the exchange will not be accepted by the relevant Committee of the Exchange as per the approved norms.
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Remaining Guidelines Hidden Under Read More -->
+                <div class="collapsible-hidden-content">
+                    <ul class="styled-num-list" style="counter-reset: custom-counter 2;">
+                        <li>
+                            <div>
+                                <strong>Check the frequency of accounts settlement opted for.</strong> If you have opted for running account, please ensure that your broker settles your account and, in any case, not later than once in 90 days (or 30 days if you have opted for 30 days settlement). In case of declaration of trading member as defaulter, the claims of clients against such defaulter member would be subject to norms for eligibility of claims for compensation from IPF to the clients of the defaulter member. These norms are available on Exchange website at: <a href="https://www.nseindia.com/invest/about-defaulter-section" target="_blank">https://www.nseindia.com/invest/about-defaulter-section</a>.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>Brokers are not permitted to accept transfer of securities as margin.</strong> Securities offered as margin/collateral MUST remain in the account of the client and can be pledged to the broker only by way of 'margin pledge', created in the Depository system. Clients are not permitted to place any securities with the broker or associate of the broker or authorized person of the broker for any reason. Broker can take securities belonging to clients only for settlement of securities sold by the client.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>Always keep your contact details updated.</strong> Mobile number/Email ID must be updated with the stock broker. Email and mobile number is mandatory and you must provide the same to your broker for updation in Exchange records. You must immediately take up the matter with Stock Broker/Exchange if you are not receiving the messages from Exchange/Depositories regularly.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>Don't ignore any emails/SMSs received from the Exchange for trades done by you.</strong> Verify the same with the Contract notes/Statement of accounts received from your broker and report discrepancy, if any, to your broker in writing immediately and if the Stock Broker does not respond, please take this up with the Exchange/Depositories forthwith.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>Check messages sent by Exchanges on a weekly basis regarding funds and securities balances reported by the trading member.</strong> compare it with the weekly statement of account sent by broker and immediately raise a concern to the exchange if you notice a discrepancy.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <strong>Please do not transfer funds, for the purposes of trading to anyone.</strong> including an authorized person or an associate of the broker, other than a SEBI registered Stock broker.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="read-more-action-bar">
+                    <button type="button" class="btn-read-more-pill" onclick="toggleReadMore('attentionInvestorsAccordion', this)">
+                        <span>Read More</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. RISK DISCLOSURES ON DERIVATIVES -->
+        <section class="compliance-block-card" id="risk-derivatives">
+            <div class="card-top-bar">
+                <span class="card-category-badge badge-blue"><i class="fa-solid fa-chart-pie"></i> SEBI MANDATE</span>
+            </div>
+            <div class="card-title-row danger-theme">
+                <div class="title-icon-box"><i class="fa-solid fa-arrow-trend-down"></i></div>
+                <h2>RISK DISCLOSURES ON DERIVATIVES</h2>
+            </div>
+
+            <div class="fno-stats-grid">
+                <div class="fno-stat-item">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>9 out of 10 individual traders in equity Futures and Options Segment, incurred net losses.</p>
+                </div>
+                <div class="fno-stat-item">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>On an average, loss makers registered net trading loss close to ₹ 50,000.</p>
+                </div>
+                <div class="fno-stat-item">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>Over and above the net trading losses incurred, loss makers expended an additional 28% of net trading losses as transaction costs.</p>
+                </div>
+                <div class="fno-stat-item">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p>Those making net trading profits, incurred between 15% to 50% of such profits as transaction cost.</p>
+                </div>
+            </div>
+
+            <div class="sebi-citation-strip">
+                SEBI study dated January 25, 2023 on “Analysis of Profit and Loss of Individual Traders dealing in equity Futures and Options (F&amp;O) Segment”, wherein Aggregate Level findings are based on annual Profit/Loss incurred by individual traders in equity F&amp;O during FY 2021-22.
+            </div>
+        </section>
+
+        <!-- 4. ADVISORY TO DEMAT ACCOUNT HOLDERS (WITH READ MORE) -->
+        <section class="compliance-block-card" id="demat-advisory">
+            <div class="card-top-bar">
+                <span class="card-category-badge badge-green"><i class="fa-solid fa-building-columns"></i> CDSL CIRCULAR</span>
+            </div>
+            <div class="card-title-row">
+                <div class="title-icon-box"><i class="fa-solid fa-vault"></i></div>
+                <h2>ADVISORY TO DEMAT ACCOUNT HOLDERS</h2>
+            </div>
+
+            <p style="color:#64748B; font-size:13.5px; margin-bottom: 20px;">
+                Ref. CDSL communique to DP i.e CDSL/OPS/DP/GENRL/2020/15 dt. January 08,2020.
+            </p>
+
+            <div class="collapsible-text-wrapper" id="dematAdvisoryAccordion">
+                <div class="advisory-para-group">
+                    <!-- DO'S FIRST 4 KEY BULLETS VISIBLE -->
+                    <div class="advisory-para-card card-dos">
+                        <div class="para-head">
+                            <i class="fa-solid fa-circle-check"></i> Do`s-.
+                        </div>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Register your email ID in Your demat account by approaching your Depository Participant. You will receive email alert for all transactions in your demat account.</li>
+                            <li><i class="fa-solid fa-check"></i> Register your mobile number for CDSL`s free of cost SMS Alert facilitySMART and obtain alert on mobile for any debit transaction or credits due to corporate action or demographic changes in your demat account.</li>
+                            <li><i class="fa-solid fa-check"></i> Register for ‘easi’ CDSL`s free of cost internet base facility to access your demat account and check the details of your holding and/ or transactions, anytime anywhere. You can easily register for easi by accessing the link – <a href="https://web.cdslindia.com/myeasi/home/login" target="_blank">https://web.cdslindia.com/myeasi/home/login</a></li>
+                            <li><i class="fa-solid fa-check"></i> Ensure that your holding and transaction statements are received periodically. You are entitled to receive a transaction statement every month if you have any transactions and once every six months if there have been no transactions in your account.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- REMAINING DO'S AND ALL DON'TS UNDER READ MORE -->
+                <div class="collapsible-hidden-content">
+                    <div class="advisory-para-group" style="margin-top: 14px;">
+                        <div class="advisory-para-card card-dos" style="border-top:none;">
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Check your demat account statement on receipt. In case you notice any unauthorized debits or credits, contact your Depository Participant. If not satisfied with the response, contact CDSL. You may email to <a href="mailto:complaints@cdslindia.com">complaints@cdslindia.com</a>.</li>
+                                <li><i class="fa-solid fa-check"></i> Accept the Delivery Instruction Slip (DIS) book from your DP only if each slip has been pre-printed with a serial number along with your demat account number and keep it in safe custody.</li>
+                                <li><i class="fa-solid fa-check"></i> Before granting Power of Attorney (PoA) to operate your demat account to anyone, carefully examine the scope &amp; implications of powers being granted.</li>
+                                <li><i class="fa-solid fa-check"></i> POA is not mandatory for opening a demat account.</li>
+                                <li><i class="fa-solid fa-check"></i> Update change in details like email id, mobile number, address etc. immediately.</li>
+                                <li><i class="fa-solid fa-check"></i> The demat account has a nomination facility and it is advisable to appoint a nominee, especially in case of sole account holders.</li>
+                            </ul>
+                        </div>
+
+                        <!-- DON'TS PARAGRAPH CARD -->
+                        <div class="advisory-para-card card-donts">
+                            <div class="para-head">
+                                <i class="fa-solid fa-circle-xmark"></i> Don’ts-.
+                            </div>
+                            <ul>
+                                <li><i class="fa-solid fa-xmark"></i> Do not leave your DIS book with anyone else.</li>
+                                <li><i class="fa-solid fa-xmark"></i> Do not sign blank DIS as it is equivalent to a bearer cheque.</li>
+                                <li><i class="fa-solid fa-xmark"></i> Avoid over-writing, cancellations, misspellings, changing of the name of quantity of securities on DIS.</li>
+                                <li><i class="fa-solid fa-xmark"></i> Do not share your easi / easiest login id and password with any other person.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="read-more-action-bar">
+                    <button type="button" class="btn-read-more-pill" onclick="toggleReadMore('dematAdvisoryAccordion', this)">
+                        <span>Read More</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. KYC VALIDATION PROCESS (WITH READ MORE) -->
+        <section class="compliance-block-card" id="kyc-validation">
+            <div class="card-top-bar">
+                <span class="card-category-badge badge-purple"><i class="fa-solid fa-id-card"></i> KRA GUIDELINES</span>
+            </div>
+            <div class="card-title-row">
+                <div class="title-icon-box"><i class="fa-solid fa-user-check"></i></div>
+                <h2>KYC Validation Process</h2>
+            </div>
+
+            <div class="collapsible-text-wrapper" id="kycValidationAccordion">
+                <!-- Upfront Essential Notice -->
+                <p><strong>DEAR CLIENTS,</strong></p>
+                <p>As per the latest SEBI circular SEBI/HO/MIRSD/FATF/P/CIR/2023/0144 dated August 11, 2023 on KRA Regulations, KYC Registration Agencies (KRA) are responsible for validating clients’ KYC details as per their records.</p>
+
+                <p><strong>Impact of the above regulation, if it is not followed:</strong></p>
+                <ul class="styled-bullet-list">
+                    <li>Clients shall not be allowed to trade on any exchange or manage their open positions (if any) until they comply with the KYC requirements</li>
+                    <li>Clients trading and demat account will remain deactivated till the KRA details are updated and validated.</li>
+                </ul>
+
+                <!-- Deep Technical Steps & Portal Links Hidden Under Read More -->
+                <div class="collapsible-hidden-content">
+                    <p><strong>How to Validate Your KRA Status “On Hold”/”Rejected” with KRA Agency?</strong></p>
+                    <p>As per SEBI guidelines, it is mandatory to verify your KYC details such as email ID and mobile number registered with the KRA (KYC Registration Agency).</p>
+
+                    <p><strong>Updation Process:</strong></p>
+                    <p>This is usually done when your KYC details are incorrect in the KRA portal. We will update your KRA details</p>
+                    <ul class="styled-bullet-list">
+                        <li>Duly filled and signed KRA form with photo</li>
+                        <li>Self-attested copy of PAN card</li>
+                        <li>Self-attested copy of [Aadhaar Redacted] card.</li>
+                    </ul>
+                    <p>Once we receive the above documents, it shall be updated in our record.</p>
+
+                    <p><strong>Validation process:</strong></p>
+                    <p>After we process your request, we will inform KRA to update their record. After the KRA has updated the details, you shall receive an SMS to your registered mobile number to validate your mobile number and receive an email to your registered email ID to validate your email ID. Check your spam, trash or deleted folder if you do not find the email.</p>
+
+                    <p><strong>Alternative validation process:</strong></p>
+                    <p>Check with which KRA your KYC is registered. To do this, please follow the steps mentioned below:</p>
+                    <ul class="styled-num-list">
+                        <li><div>Visit cvlkra.com</div></li>
+                        <li><div>Click the KYC inquiry section</div></li>
+                        <li><div>Enter your PAN and captcha details</div></li>
+                        <li><div>Click ‘Submit’ to fetch your status</div></li>
+                        <li><div>Refer to the ‘KRA’ column to find out the name of your KRA where KYC is registered</div></li>
+                        <li><div>It will be one of these 5 - CVL KRA, KARVY KRA, NDML KRA, DOTEX KRA, CAMS KRA</div></li>
+                        <li><div>Now where your KYC is registered go to that website and follow the on-screen instructions to verify your mobile number and email ID</div></li>
+                    </ul>
+                    <p>There are 3 Type of KYC status – on Hold, Registered and Validated.</p>
+
+                    <p><strong>If your email/mobile number isincorrect:</strong></p>
+                    <p>Update your email ID and mobile number. Once this will be done, follow the below procedure</p>
+                    <p>The modification request shall be processed. When the KRA will update the details, you shall receive an email and SMS from your respective KRA to validate your email ID and mobile number. Your task is done once you validate your email ID/mobile number.</p>
+                    <p>After the contact details are validated with KRA, it would be processed in 5-7 workings days to update your records and activate your trading account if deactivated.</p>
+
+                    <p style="margin-top: 24px;"><strong>Links to Validate Your Mobile and Email with KRA Agency:</strong></p>
+
+                    <div class="kra-grid-box">
+                        <a href="https://validate.cvlindia.com/CVLKRAVerification_V1/" target="_blank" class="kra-tile-link">
+                            <span>CVL KRA</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="https://www.karvykra.com/KYC_Validation/Default.aspx" target="_blank" class="kra-tile-link">
+                            <span>KARVY KRA</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="https://kra.ndml.in/kra/ckyc/#/initiate" target="_blank" class="kra-tile-link">
+                            <span>NDML KRA</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="https://www.nsekra.com/" target="_blank" class="kra-tile-link">
+                            <span>DOTEX KRA</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="https://qrkra.camsonline.com/KRAAADHAARWEB/MobileApp/ARV.aspx" target="_blank" class="kra-tile-link">
+                            <span>CAMS KRA</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="read-more-action-bar">
+                    <button type="button" class="btn-read-more-pill" onclick="toggleReadMore('kycValidationAccordion', this)">
+                        <span>Read More</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PRO TRADING DISCLOSURE -->
+        <section class="compliance-block-card" id="pro-trading">
+            <div class="card-top-bar">
+                <span class="card-category-badge badge-green"><i class="fa-solid fa-circle-check"></i> REGULATORY DISCLOSURE</span>
+            </div>
+            <div class="card-title-row">
+                <div class="title-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h2>Pro Trading Disclosure</h2>
+            </div>
+
+            <p><strong>DEAR CLIENTS,</strong></p>
+            <p>As required under Circular No. SEBI/MRD/SE/CIR-42/2003 dated 19.11.2003 issued by the Securities and Exchange Board of India, I/We hereby disclose that in addition to client based business,</p>
+
+            <div class="pro-trade-banner-box">
+                <h3>I/WE AM/ARE ALSO DOING PROPRIETARY TRADING.</h3>
+                <span class="badge-active">ACTIVE DISCLOSURE</span>
+            </div>
+
+            <div class="contact-signature-strip">
+                <p>Thanks &amp; Regards</p>
+                <p><strong>Compliance Team</strong></p>
+                <p><i class="fa-solid fa-phone" style="color:var(--prrasar-green); margin-right:6px;"></i> 011-45350023</p>
+            </div>
+        </section>
+
+        <!-- 7. FRAUD ALERT -->
+        <section class="compliance-block-card" id="fraud-alert">
+            <div class="card-top-bar">
+                <span class="card-category-badge badge-amber"><i class="fa-solid fa-shield-virus"></i> CYBER SECURITY</span>
+            </div>
+            <div class="card-title-row danger-theme">
+                <div class="title-icon-box"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <h2>⚠️ FRAUD ALERT</h2>
+            </div>
+
+            <p><strong>Dear Investors,</strong></p>
+            <p>Please be cautioned, certain individuals/entities are falsely claiming association with PRRSAAR SAMPADA PVT LTD (PRRSAAR) and unauthorizedly using the logo of PRRSAAR, name &amp; profile of its directors/officials, similar logo, fake website &amp; group to connect public for account opening/advisory/shares trading tips/receiving money/other prohibitive activities.</p>
+
+            <p>Kindly beware of such groups/fraudsters and do not join/use such groups/channels/apps for making payments or other services.</p>
+
+            <p>We do not have any connection or association whatsoever with these or other such individuals or WhatsApp groups/channels/apps/platforms. Please note that we always connect through our official channels and never ask for money or any personal information for any illegal activity. We request you to stay vigilant and refrain from subscription to any such illegal platform/group. Please be advised that any correspondence with such entities/individuals in any manner whatsoever will be at your own risk. Only trust our official contacts.</p>
+
+            <div class="contact-signature-strip">
+                <p>Regards,</p>
+                <p><strong>Prrsaar Sampada Pvt. Ltd.</strong></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+                        // Multi-Card Read More / Read Less Toggle Function
+                        function toggleReadMore(wrapperId, btnElement) {
+                            const wrapper = document.getElementById(wrapperId);
+                            if (!wrapper) return;
+
+                            const isExpanded = wrapper.classList.toggle('is-expanded');
+                            const btnText = btnElement.querySelector('span');
+
+                            if (isExpanded) {
+                                btnText.textContent = 'Read Less';
+                            } else {
+                                btnText.textContent = 'Read More';
+                                // User ke collapse karne par card ke top par smoothly le aayega
+                                wrapper.closest('.compliance-block-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                            }
+                        }
+    </script>
+
+</body>
+
+</html>
